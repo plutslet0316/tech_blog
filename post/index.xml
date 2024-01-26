@@ -5,13 +5,13 @@
         <link>https://plutslet0316.github.io/post/</link>
         <description>Recent content in Posts on Plutslet0316</description>
         <generator>Hugo -- gohugo.io</generator>
-        <language>en-us</language>
+        <language>ko</language>
         <lastBuildDate>Wed, 24 Jan 2024 23:06:58 +0900</lastBuildDate><atom:link href="https://plutslet0316.github.io/post/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>HUGO로 블로그 만들기</title>
-        <link>https://plutslet0316.github.io/post/hugo%EB%A1%9C-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0/</link>
+        <title>HUGO와 GitHub로 블로그 만들기</title>
+        <link>https://plutslet0316.github.io/post/hugo%EB%A1%9C_%EB%B8%94%EB%A1%9C%EA%B7%B8_%EB%A7%8C%EB%93%A4%EA%B8%B0/</link>
         <pubDate>Wed, 24 Jan 2024 23:06:58 +0900</pubDate>
         
-        <guid>https://plutslet0316.github.io/post/hugo%EB%A1%9C-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0/</guid>
+        <guid>https://plutslet0316.github.io/post/hugo%EB%A1%9C_%EB%B8%94%EB%A1%9C%EA%B7%B8_%EB%A7%8C%EB%93%A4%EA%B8%B0/</guid>
         <description>&lt;h3 id=&#34;hugo&#34;&gt;Hugo&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;빌드 속도가 빠릅니다.&lt;/li&gt;
@@ -100,11 +100,14 @@
 &lt;li&gt;Hugo가 랜더링한 정적 블로그 html (public)&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/li&gt;
-&lt;li&gt;레파지토리를 만든 이후 아래의 명령을 수정하여 입력하여 업로드합니다.&lt;/li&gt;
+&lt;li&gt;레파지토리를 만든 이후 아래의 명령을 수정하고 입력하여 깃허브의 초기 설정을 진행합니다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git remote add origin 1번레파짓토리git주소
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git submodule add -b master 2번레파짓토리git주소 public
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;hugo -D
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;깃허브 설정 이후 아래의 명령을 통해 빌드하여 깃허브에 업로드 합니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;hugo -D
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git add .
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git commit -m &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;test&amp;#34;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git push origin master
@@ -124,16 +127,6 @@
     &gt;https://docs.github.com/ko/pages/quickstart&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;깃허브 페이지(GitHub Pages) 만들기: &lt;a class=&#34;link&#34; href=&#34;https://phodobit.kr/49&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://phodobit.kr/49&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;추가-사항&#34;&gt;추가 사항&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Hugo.toml 파일에 설정을 추가할 수 있습니다.&lt;/li&gt;
-&lt;li&gt;글의 템플릿을 미리 만들어서 원하는 템플릿으로 글 쓰기를 시작할 수 있습니다.
-&lt;ul&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.hahwul.com/2021/08/15/hugo-archetypes/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://www.hahwul.com/2021/08/15/hugo-archetypes/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
 &lt;/ul&gt;
 </description>
         </item>
