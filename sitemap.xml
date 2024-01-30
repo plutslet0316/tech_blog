@@ -2,37 +2,40 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://plutslet0316.github.io/</loc>
+    <loc>https://blog.plutslet.pe.kr/</loc>
+    <lastmod>2024-01-30T22:36:50+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.plutslet.pe.kr/categories/</loc>
+    <lastmod>2024-01-30T22:36:50+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.plutslet.pe.kr/post/github_%EC%BB%A4%EC%8A%A4%ED%85%80_%EB%8F%84%EB%A9%94%EC%9D%B8/</loc>
+    <lastmod>2024-01-30T22:36:50+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.plutslet.pe.kr/tags/hugo/</loc>
+    <lastmod>2024-01-30T22:36:50+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.plutslet.pe.kr/categories/hugo/</loc>
+    <lastmod>2024-01-30T22:36:50+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.plutslet.pe.kr/post/</loc>
+    <lastmod>2024-01-30T22:36:50+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.plutslet.pe.kr/tags/</loc>
+    <lastmod>2024-01-30T22:36:50+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.plutslet.pe.kr/post/hugo%EB%A1%9C_%EB%B8%94%EB%A1%9C%EA%B7%B8_%EB%A7%8C%EB%93%A4%EA%B8%B0/</loc>
     <lastmod>2024-01-24T23:06:58+09:00</lastmod>
   </url><url>
-    <loc>https://plutslet0316.github.io/categories/</loc>
-    <lastmod>2024-01-24T23:06:58+09:00</lastmod>
-  </url><url>
-    <loc>https://plutslet0316.github.io/tags/hugo/</loc>
-    <lastmod>2024-01-24T23:06:58+09:00</lastmod>
-  </url><url>
-    <loc>https://plutslet0316.github.io/categories/hugo/</loc>
-    <lastmod>2024-01-24T23:06:58+09:00</lastmod>
-  </url><url>
-    <loc>https://plutslet0316.github.io/post/hugo%EB%A1%9C_%EB%B8%94%EB%A1%9C%EA%B7%B8_%EB%A7%8C%EB%93%A4%EA%B8%B0/</loc>
-    <lastmod>2024-01-24T23:06:58+09:00</lastmod>
-  </url><url>
-    <loc>https://plutslet0316.github.io/post/</loc>
-    <lastmod>2024-01-24T23:06:58+09:00</lastmod>
-  </url><url>
-    <loc>https://plutslet0316.github.io/tags/</loc>
-    <lastmod>2024-01-24T23:06:58+09:00</lastmod>
-  </url><url>
-    <loc>https://plutslet0316.github.io/post/%ED%85%8C%EC%8A%A4%ED%8A%B8/</loc>
+    <loc>https://blog.plutslet.pe.kr/post/%ED%85%8C%EC%8A%A4%ED%8A%B8/</loc>
     <lastmod>2023-10-05T18:25:29+09:00</lastmod>
   </url><url>
-    <loc>https://plutslet0316.github.io/post/%EC%B2%AB%ED%8F%AC%EC%8A%A4%ED%8A%B8/</loc>
+    <loc>https://blog.plutslet.pe.kr/post/%EC%B2%AB%ED%8F%AC%EC%8A%A4%ED%8A%B8/</loc>
     <lastmod>2023-10-05T18:14:05+09:00</lastmod>
   </url><url>
-    <loc>https://plutslet0316.github.io/page/</loc>
+    <loc>https://blog.plutslet.pe.kr/page/</loc>
   </url><url>
-    <loc>https://plutslet0316.github.io/page/search/</loc>
+    <loc>https://blog.plutslet.pe.kr/page/search/</loc>
   </url><url>
-    <loc>https://plutslet0316.github.io/page/archives/</loc>
+    <loc>https://blog.plutslet.pe.kr/page/archives/</loc>
   </url>
 </urlset>
