@@ -6,10 +6,26 @@
         <description>Recent content in Categories on Plutslet0316</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>ko</language>
-        <lastBuildDate>Tue, 30 Jan 2024 22:36:50 +0900</lastBuildDate><atom:link href="https://blog.plutslet.pe.kr/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 02 Feb 2024 22:41:19 +0900</lastBuildDate><atom:link href="https://blog.plutslet.pe.kr/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>JavaScript</title>
+        <link>https://blog.plutslet.pe.kr/categories/javascript/</link>
+        <pubDate>Fri, 02 Feb 2024 22:41:19 +0900</pubDate>
+        
+        <guid>https://blog.plutslet.pe.kr/categories/javascript/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>GitHub</title>
+        <link>https://blog.plutslet.pe.kr/categories/github/</link>
+        <pubDate>Tue, 30 Jan 2024 22:36:50 +0900</pubDate>
+        
+        <guid>https://blog.plutslet.pe.kr/categories/github/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>Hugo</title>
         <link>https://blog.plutslet.pe.kr/categories/hugo/</link>
-        <pubDate>Tue, 30 Jan 2024 22:36:50 +0900</pubDate>
+        <pubDate>Wed, 24 Jan 2024 23:06:58 +0900</pubDate>
         
         <guid>https://blog.plutslet.pe.kr/categories/hugo/</guid>
         <description></description>

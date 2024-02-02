@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>커스텀 도메인 on Plutslet0316</title>
+        <link>https://blog.plutslet.pe.kr/tags/%EC%BB%A4%EC%8A%A4%ED%85%80-%EB%8F%84%EB%A9%94%EC%9D%B8/</link>
+        <description>Recent content in 커스텀 도메인 on Plutslet0316</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>ko</language>
+        <lastBuildDate>Tue, 30 Jan 2024 22:36:50 +0900</lastBuildDate><atom:link href="https://blog.plutslet.pe.kr/tags/%EC%BB%A4%EC%8A%A4%ED%85%80-%EB%8F%84%EB%A9%94%EC%9D%B8/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>GitHub 페이지 커스텀 도메인 설정하기</title>
+        <link>https://blog.plutslet.pe.kr/post/github_%EC%BB%A4%EC%8A%A4%ED%85%80_%EB%8F%84%EB%A9%94%EC%9D%B8/</link>
+        <pubDate>Tue, 30 Jan 2024 22:36:50 +0900</pubDate>
+        
+        <guid>https://blog.plutslet.pe.kr/post/github_%EC%BB%A4%EC%8A%A4%ED%85%80_%EB%8F%84%EB%A9%94%EC%9D%B8/</guid>
+        <description>&lt;p&gt;깃허브 페이지로 블로그를 만들 때부터 개인 도메인으로 연결하고 싶다는 생각이 있었습니다. 이 글은 깃허브 페이지에서 커스텀 도메인 설정하며 정리한 내용입니다.&lt;/p&gt;
+&lt;h3 id=&#34;시작&#34;&gt;시작&lt;/h3&gt;
+&lt;p&gt;기본적으로 깃허브 페이지를 만들면 아래의 URL 형태로 만들어 집니다.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;https://깃허브아이디.github.io/
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;저의 경우는 &lt;a class=&#34;link&#34; href=&#34;https://plutslet0316.github.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://plutslet0316.github.io/&lt;/a&gt; 입니다.&lt;br&gt;
+위의 URL을 아래처럼 제 개인 도메인으로 변경할 생각입니다.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;https://blog.plutslet.pe.kr/
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;도메인-dns-설정&#34;&gt;도메인 DNS 설정&lt;/h3&gt;
+&lt;p&gt;현재 사용 중인 DNS 관리 사이트에서 아래의 설정을 진행합니다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;레코드 타입: CNAME&lt;/li&gt;
+&lt;li&gt;서브 도메인(Name): 원하는 도메인 - blog&lt;/li&gt;
+&lt;li&gt;대상 주소: 깃허브아이디.github.io&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;저는 클라우드플레어를 이용중이고 설정한 예시 이미지는 아래와 같습니다.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.plutslet.pe.kr/post/github_%EC%BB%A4%EC%8A%A4%ED%85%80_%EB%8F%84%EB%A9%94%EC%9D%B8/DNS_%EC%84%A4%EC%A0%95.png&#34;
+	width=&#34;1515&#34;
+	height=&#34;370&#34;
+	srcset=&#34;https://blog.plutslet.pe.kr/post/github_%EC%BB%A4%EC%8A%A4%ED%85%80_%EB%8F%84%EB%A9%94%EC%9D%B8/DNS_%EC%84%A4%EC%A0%95_hub793ff0d4dab954f8da665cd88b8c675_40166_480x0_resize_box_3.png 480w, https://blog.plutslet.pe.kr/post/github_%EC%BB%A4%EC%8A%A4%ED%85%80_%EB%8F%84%EB%A9%94%EC%9D%B8/DNS_%EC%84%A4%EC%A0%95_hub793ff0d4dab954f8da665cd88b8c675_40166_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;DNS 설정&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;409&#34;
+		data-flex-basis=&#34;982px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;깃허브에서-커스텀-도메인-설정&#34;&gt;깃허브에서 커스텀 도메인 설정&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;원하는 저장소에서 Setting → Pages 을 차례로 클릭해 깃허브 페이지 설정창으로 이동합니다.&lt;/li&gt;
+&lt;li&gt;Custom domain 항목을 찾아 입력란에 원하는 도메인을 입력 후 Save 버튼을 클릭합니다.&lt;/li&gt;
+&lt;li&gt;깃허브에서 DNS 확인을 진행하고, 이후 완료가 되면 해당 도메인으로 접근할 수 있게 됩니다.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;아래의 사진은 DNS 설정 후 확인까지 마친 예시 이미지 입니다.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.plutslet.pe.kr/post/github_%EC%BB%A4%EC%8A%A4%ED%85%80_%EB%8F%84%EB%A9%94%EC%9D%B8/%EC%BB%A4%EC%8A%A4%ED%85%80_%EB%8F%84%EB%A9%94%EC%9D%B8_%EC%84%A4%EC%A0%95.png&#34;
+	width=&#34;1373&#34;
+	height=&#34;199&#34;
+	srcset=&#34;https://blog.plutslet.pe.kr/post/github_%EC%BB%A4%EC%8A%A4%ED%85%80_%EB%8F%84%EB%A9%94%EC%9D%B8/%EC%BB%A4%EC%8A%A4%ED%85%80_%EB%8F%84%EB%A9%94%EC%9D%B8_%EC%84%A4%EC%A0%95_hufbc0e08b86941e92a378c1a2e1541f24_21749_480x0_resize_box_3.png 480w, https://blog.plutslet.pe.kr/post/github_%EC%BB%A4%EC%8A%A4%ED%85%80_%EB%8F%84%EB%A9%94%EC%9D%B8/%EC%BB%A4%EC%8A%A4%ED%85%80_%EB%8F%84%EB%A9%94%EC%9D%B8_%EC%84%A4%EC%A0%95_hufbc0e08b86941e92a378c1a2e1541f24_21749_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;커스텀 도메인 설정&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;689&#34;
+		data-flex-basis=&#34;1655px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;참고자료&#34;&gt;참고자료&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;깃허브 공식: &lt;a class=&#34;link&#34; href=&#34;https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Github 블로그에 Custom도메인 연결하기: &lt;a class=&#34;link&#34; href=&#34;https://mishka.kr/12&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://mishka.kr/12&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;깃허브에 커스텀 도메인 사용하기: &lt;a class=&#34;link&#34; href=&#34;https://taedonn.tistory.com/22&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://taedonn.tistory.com/22&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;깃허브 블로그 개인 도메인: &lt;a class=&#34;link&#34; href=&#34;https://wonderbout.tistory.com/120&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://wonderbout.tistory.com/120&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
