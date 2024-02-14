@@ -17,8 +17,8 @@
 &lt;p&gt;위에서 언급했듯이 S3 URL을 가지고 있었고, 해당 링크를 이용해 다운로드 되도록 기능을 구현한 상태였습니다.&lt;br&gt;
 다른 페이지에서는 모두 동작하는데, 이미지를 보여주고 해당 이미지를 다운로드 할 수 있는 페이지에서만 CORS 문제를 일으켰습니다.&lt;/p&gt;
 &lt;p&gt;콘솔 창에 나타난 문구는 대략 이런 문구였습니다.&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;No &amp;#39;Access-Control-Allow-Origin&amp;#39; header is present on the requested resource. Origin &amp;#39;http://localhost:5173&amp;#39; is therefore not allowed access. If an opaque response serves your needs, set the request&amp;#39;s mode to &amp;#39;no-cors&amp;#39; to fetch the resource with CORS disabled.
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;그래서 오류 메시지 대로 fetch의 모드를 &amp;rsquo;no-cors&amp;rsquo;로 변경하고 다시 테스트 해봤습니다.&lt;br&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;No &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Access-Control-Allow-Origin&amp;#39;&lt;/span&gt; header is present on the requested resource. Origin &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;http://localhost:5173&amp;#39;&lt;/span&gt; is therefore not allowed access. If an opaque response serves your needs, set the request&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;s mode to &amp;#39;&lt;/span&gt;no-cors&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&amp;#39;&lt;/span&gt; to fetch the resource with CORS disabled.
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;그래서 오류 메시지 대로 fetch의 모드를 &amp;rsquo;no-cors&amp;rsquo;로 변경하고 다시 테스트 해봤습니다.&lt;br&gt;
 하지만 이제는 파일을 정상적으로 다운로드 받지 못하고 용량이 모두 0 사이즈였습니다.&lt;br&gt;
 그래서 다시 돌려놓고 다른 방향으로 문제를 보기 시작했습니다.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;혹시 페이지에서 이미지를 먼저 불러온게 문제가 된 건 아닐까.&lt;/strong&gt;&lt;/p&gt;
