@@ -297,9 +297,10 @@ npm run dev 통해 실행한 프로젝트에서는 위의 코드로도 잘 작�
 <blockquote>
 <p>require 사용해 이미지 불러오기</p>
 </blockquote>
-<p>이미지를 <code>import</code>한다는 의미로 <code>require</code> 구문을 사용할 수 있습니다.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>    <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">`@/assets/images/img.png`</span>)
-</span></span></code></pre></div><blockquote>
+</span></span></code></pre></div><p>이미지를 <code>import</code>한다는 의미로 <code>require</code> 구문을 사용할 수 있습니다.
+config에 사용하도록 설정된 module에 따라 사용할 수 없는 경우가 있습니다.</p>
+<blockquote>
 <p>동적으로 URL 만들기</p>
 </blockquote>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>    <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">URL</span>(<span style="color:#e6db74">`/src/assets/images/img.png`</span>, <span style="color:#66d9ef">import</span>.<span style="color:#a6e22e">meta</span>.<span style="color:#a6e22e">url</span>).<span style="color:#a6e22e">href</span>;
@@ -308,14 +309,13 @@ npm run dev 통해 실행한 프로젝트에서는 위의 코드로도 잘 작�
 <blockquote>
 <p>public 폴더에 이미지 넣기</p>
 </blockquote>
-<p>말 그대로 이미지를 프로젝트 내부에서 <code>assets</code> 폴더가 아닌 <code>public</code>에 넣어두는 방법입니다.<br>
-해당 방법처럼 public 폴더에 넣어두면 상대 주소를 사용해도 정상적으로 불러옵니다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>    <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">img</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/images/img.png&#34;</span> <span style="color:#f92672">/&gt;</span>;
+</span></span></code></pre></div><p>말 그대로 이미지를 프로젝트 내부에서 <code>assets</code> 폴더가 아닌 <code>public</code>에 넣어두는 방법입니다.<br>
+public 폴더에 넣어두면 상대 주소를 사용해도 정상적으로 불러옵니다.</p>
 <h3 id="참고링크">참고링크</h3>
 <ul>
 <li><a class="link" href="https://blogcreator.blog/post/39"  target="_blank" rel="noopener"
     >https://blogcreator.blog/post/39</a></li>
-<li><a class="link" href="https://stackoverflow.com/questions/40491506/vue-js-dynamic-images-not-working-with-webpack"  target="_blank" rel="noopener"
-    >https://stackoverflow.com/questions/40491506/vue-js-dynamic-images-not-working-with-webpack</a></li>
 <li><a class="link" href="https://stackoverflow.com/questions/40491506/vue-js-dynamic-images-not-working-with-webpack"  target="_blank" rel="noopener"
     >https://stackoverflow.com/questions/40491506/vue-js-dynamic-images-not-working-with-webpack</a></li>
 </ul>

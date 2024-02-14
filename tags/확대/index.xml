@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>확대 on Plutslet0316</title>
+        <link>https://blog.plutslet.pe.kr/tags/%ED%99%95%EB%8C%80/</link>
+        <description>Recent content in 확대 on Plutslet0316</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>ko</language>
+        <lastBuildDate>Wed, 14 Feb 2024 23:19:25 +0900</lastBuildDate><atom:link href="https://blog.plutslet.pe.kr/tags/%ED%99%95%EB%8C%80/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>html 모바일에서 input 태그 클릭시 확대 방지</title>
+        <link>https://blog.plutslet.pe.kr/post/html%EB%AA%A8%EB%B0%94%EC%9D%BC%EC%97%90%EC%84%9C%EC%9E%85%EB%A0%A5%EB%9E%80%ED%81%B4%EB%A6%AD%EC%8B%9C%ED%99%95%EB%8C%80%EB%B0%A9%EC%A7%80/</link>
+        <pubDate>Wed, 14 Feb 2024 23:19:25 +0900</pubDate>
+        
+        <guid>https://blog.plutslet.pe.kr/post/html%EB%AA%A8%EB%B0%94%EC%9D%BC%EC%97%90%EC%84%9C%EC%9E%85%EB%A0%A5%EB%9E%80%ED%81%B4%EB%A6%AD%EC%8B%9C%ED%99%95%EB%8C%80%EB%B0%A9%EC%A7%80/</guid>
+        <description>&lt;p&gt;가끔 모바일 브라우저에서 &lt;code&gt;input&lt;/code&gt; 태그를 사용한 입력란을 터치해 입력을 시작할 때 해당 입력란을 확대 시켜서 보여주는 경우가 있습니다.&lt;br&gt;
+확대하지 않는 동작이 프로세스 상 올바른 동작일 때 이를 방지하는 방법이 있습니다.&lt;/p&gt;
+&lt;p&gt;방법은 간단한데, &lt;code&gt;index.html&lt;/code&gt;의 &lt;code&gt;header&lt;/code&gt; 태그 안에서 &lt;code&gt;meta&lt;/code&gt; 태그로 viewport 관련해서 설정하는 부분이 있습니다.&lt;br&gt;
+해당 태그 안 &lt;code&gt;content&lt;/code&gt; 부분에 &lt;code&gt;user-scalable=no&lt;/code&gt; 구문을 추가해주면 입력란을 터치할 때마다 확대하는 걸 방지할 수 있습니다.&lt;/p&gt;
+&lt;p&gt;대략 아래와 같이 작성할 수 있습니다.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;meta&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;name&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;viewport&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;content&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;width=device-width,initial-scale=1.0,user-scalable=no&amp;#34;&lt;/span&gt; /&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;mata&lt;/code&gt; 태그 안에 지정할 수 있는 다양한 옵션값이 있으니 관심있으시면 조금 더 알아보는 것도 좋을 것 같습니다.&lt;/p&gt;
+&lt;h3 id=&#34;참고-링크&#34;&gt;참고 링크&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://talkwithcode.tistory.com/7&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://talkwithcode.tistory.com/7&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://taeminimini.tistory.com/438&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://taeminimini.tistory.com/438&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
