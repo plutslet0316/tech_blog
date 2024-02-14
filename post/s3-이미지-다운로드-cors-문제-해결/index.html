@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='최근 Vue 프로젝트에서 S3 URL을 다운로드되는 기능을 구현해야 하는 일이 있었습니다. fetch를 이용해서 파일을 blob 형태로 받아와 다운로드 시키도록 하도록 처리했죠. 다른 파일들은 다운로드가 잘 이뤄졌는데, 어떤 페이지에서는 이미지가 CORS 오류로 다운로드되지 않는 문제가 발생했습니다. 이 글은 해당 문제를 정리한 내용입니다.
+문제 위에서 언급했듯이 S3 URL을 가지고 있었고, 해당 링크를 이용해 다운로드 되도록 기능을 구현한 상태였습니다.
+다른 페이지에서는 모두 동작하는데, 이미지를 보여주고 해당 이미지를 다운로드 할 수 있는 페이지에서만 CORS 문제를 일으켰습니다.'>
+<title>S3 이미지 다운로드 CORS 문제 해결</title>
+
+<link rel='canonical' href='https://blog.plutslet.pe.kr/post/s3-%EC%9D%B4%EB%AF%B8%EC%A7%80-%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C-cors-%EB%AC%B8%EC%A0%9C-%ED%95%B4%EA%B2%B0/'>
+
+<link rel="stylesheet" href="/scss/style.min.24ef1cc321916467896e8c70c10c0ad7b98c2a8df14298032fb637216e397f50.css"><meta property='og:title' content='S3 이미지 다운로드 CORS 문제 해결'>
+<meta property='og:description' content='최근 Vue 프로젝트에서 S3 URL을 다운로드되는 기능을 구현해야 하는 일이 있었습니다. fetch를 이용해서 파일을 blob 형태로 받아와 다운로드 시키도록 하도록 처리했죠. 다른 파일들은 다운로드가 잘 이뤄졌는데, 어떤 페이지에서는 이미지가 CORS 오류로 다운로드되지 않는 문제가 발생했습니다. 이 글은 해당 문제를 정리한 내용입니다.
+문제 위에서 언급했듯이 S3 URL을 가지고 있었고, 해당 링크를 이용해 다운로드 되도록 기능을 구현한 상태였습니다.
+다른 페이지에서는 모두 동작하는데, 이미지를 보여주고 해당 이미지를 다운로드 할 수 있는 페이지에서만 CORS 문제를 일으켰습니다.'>
+<meta property='og:url' content='https://blog.plutslet.pe.kr/post/s3-%EC%9D%B4%EB%AF%B8%EC%A7%80-%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C-cors-%EB%AC%B8%EC%A0%9C-%ED%95%B4%EA%B2%B0/'>
+<meta property='og:site_name' content='Plutslet0316'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='AWS S3' /><meta property='article:tag' content='fetch' /><meta property='article:tag' content='CORS' /><meta property='article:tag' content='다운로드' /><meta property='article:tag' content='이미지' /><meta property='article:tag' content='캐시' /><meta property='article:published_time' content='2024-02-02T22:41:19&#43;09:00'/><meta property='article:modified_time' content='2024-02-02T22:41:19&#43;09:00'/>
+<meta name="twitter:title" content="S3 이미지 다운로드 CORS 문제 해결">
+<meta name="twitter:description" content="최근 Vue 프로젝트에서 S3 URL을 다운로드되는 기능을 구현해야 하는 일이 있었습니다. fetch를 이용해서 파일을 blob 형태로 받아와 다운로드 시키도록 하도록 처리했죠. 다른 파일들은 다운로드가 잘 이뤄졌는데, 어떤 페이지에서는 이미지가 CORS 오류로 다운로드되지 않는 문제가 발생했습니다. 이 글은 해당 문제를 정리한 내용입니다.
+문제 위에서 언급했듯이 S3 URL을 가지고 있었고, 해당 링크를 이용해 다운로드 되도록 기능을 구현한 상태였습니다.
+다른 페이지에서는 모두 동작하는데, 이미지를 보여주고 해당 이미지를 다운로드 할 수 있는 페이지에서만 CORS 문제를 일으켰습니다."><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#2b5797">
+<meta name="theme-color" content="#ffffff">
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column compact"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="메뉴 여닫기">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu52bd33c688b76e0fb8c0eafc869aa6ce_721785_300x0_resize_box_3.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Plutslet0316</a></h1>
+            <h2 class="site-description"></h2>
+        </div>
+    </header><ol class="social-menu">
+            
+                <li>
+                    <a 
+                        href='https://github.com/plutslet0316'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>홈</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/page/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>아카이브</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/page/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>검색</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>다크 모드</span>
+                </li>
+            
+        </div>
+    </ol>
+</aside>
+
+    
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/javascript/" style="background-color: #2a9d8f; color: #fff;">
+                JavaScript
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/post/s3-%EC%9D%B4%EB%AF%B8%EC%A7%80-%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C-cors-%EB%AC%B8%EC%A0%9C-%ED%95%B4%EA%B2%B0/">S3 이미지 다운로드 CORS 문제 해결</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">2024년 02월 02일</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    2 분 정도
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <p>최근 Vue 프로젝트에서 S3 URL을 다운로드되는 기능을 구현해야 하는 일이 있었습니다. fetch를 이용해서 파일을 blob 형태로 받아와 다운로드 시키도록 하도록 처리했죠. 다른 파일들은 다운로드가 잘 이뤄졌는데, 어떤 페이지에서는 이미지가 CORS 오류로 다운로드되지 않는 문제가 발생했습니다. 이 글은 해당 문제를 정리한 내용입니다.</p>
+<h3 id="문제">문제</h3>
+<p>위에서 언급했듯이 S3 URL을 가지고 있었고, 해당 링크를 이용해 다운로드 되도록 기능을 구현한 상태였습니다.<br>
+다른 페이지에서는 모두 동작하는데, 이미지를 보여주고 해당 이미지를 다운로드 할 수 있는 페이지에서만 CORS 문제를 일으켰습니다.</p>
+<p>콘솔 창에 나타난 문구는 대략 이런 문구였습니다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>No <span style="color:#e6db74">&#39;Access-Control-Allow-Origin&#39;</span> header is present on the requested resource. Origin <span style="color:#e6db74">&#39;http://localhost:5173&#39;</span> is therefore not allowed access. If an opaque response serves your needs, set the request<span style="color:#e6db74">&#39;s mode to &#39;</span>no-cors<span style="color:#960050;background-color:#1e0010">&#39;</span> to fetch the resource with CORS disabled.
+</span></span></code></pre></div><p>그래서 오류 메시지 대로 fetch의 모드를 &rsquo;no-cors&rsquo;로 변경하고 다시 테스트 해봤습니다.<br>
+하지만 이제는 파일을 정상적으로 다운로드 받지 못하고 용량이 모두 0 사이즈였습니다.<br>
+그래서 다시 돌려놓고 다른 방향으로 문제를 보기 시작했습니다.</p>
+<p><strong>혹시 페이지에서 이미지를 먼저 불러온게 문제가 된 건 아닐까.</strong></p>
+<p>다르게 말하면 이미지가 캐시된 상태라서 그런 건 아닐까.</p>
+<p>정답부터 말하자면,</p>
+<blockquote>
+<p><strong>캐시가 문제였습니다.</strong></p>
+</blockquote>
+<h3 id="해결">해결</h3>
+<p>문제의 원인은 생각보다 간단했습니다.<br>
+S3의 이미지가 이미 다운로드되어 페이지에서 노출이 되는 상태였고, 해당 이미지는 그렇게 캐시된 상태가 되었습니다.<br>
+그런 다음 fetch를 이용해 이미지 다운로드 받을 경우, 이미 해당 이미지의 캐시가 남아있기 때문에 다운로드 받지 못하는 상태였던 거죠.</p>
+<p>해당 문제를 해결할 때 도움받은 블로그 글은 이사님이 찾아주셨습니다. 아래의 링크를 남겨두었으니 참고해주세요.</p>
+<p>이미지가 캐시가 된 상태라면 캐시 없이 다운로드 받으면 문제는 해결입니다.<br>
+저는 fetch를 이용해 다운로드 받아오기 때문에 아래처럼 옵션을 추가해 주었습니다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tsx" data-lang="tsx"><span style="display:flex;"><span><span style="color:#a6e22e">fetch</span>(<span style="color:#e6db74">&#39;URL&#39;</span>, { <span style="color:#a6e22e">cache</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;no-cache&#39;</span>});
+</span></span></code></pre></div><p>저는 추가로 CORS 모드로 설정하는  <code>mode: &quot;cors&quot;</code> 같은 부분 도 추가로 작성해서 다운로드 받도록 하고 있습니다.<br>
+아직 모르는 게 많은 저이지만,</p>
+<p>오늘도 하나씩 배워갑니다.</p>
+<h3 id="참고자료">참고자료</h3>
+<ul>
+<li><a class="link" href="https://velog.io/@hyesungoh/Webview-app%ec%97%90%ec%84%9c-%ec%9d%b4%eb%af%b8%ec%a7%80-%ec%a0%80%ec%9e%a5-%ea%b8%b0%eb%8a%a5-%ea%b0%9c%eb%b0%9c%ea%b8%b0-w-AWS-s3#aws-s3-cors"  target="_blank" rel="noopener"
+    >https://velog.io/@hyesungoh/Webview-app에서-이미지-저장-기능-개발기-w-AWS-s3#aws-s3-cors</a></li>
+</ul>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/aws-s3/">AWS S3</a>
+        
+            <a href="/tags/fetch/">fetch</a>
+        
+            <a href="/tags/cors/">CORS</a>
+        
+            <a href="/tags/%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C/">다운로드</a>
+        
+            <a href="/tags/%EC%9D%B4%EB%AF%B8%EC%A7%80/">이미지</a>
+        
+            <a href="/tags/%EC%BA%90%EC%8B%9C/">캐시</a>
+        
+    </section>
+
+
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+     
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2024 Plutslet0316
+    </section>
+    
+    <section class="powerby">
+        <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a>로 만듦 <br />
+        <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>의 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.20.0">Stack</a></b> 테마 사용 중
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

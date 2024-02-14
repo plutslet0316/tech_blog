@@ -8,10 +8,10 @@
         <language>ko</language>
         <lastBuildDate>Wed, 14 Feb 2024 23:19:25 +0900</lastBuildDate><atom:link href="https://blog.plutslet.pe.kr/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>html 모바일에서 input 태그 클릭시 확대 방지</title>
-        <link>https://blog.plutslet.pe.kr/post/html%EB%AA%A8%EB%B0%94%EC%9D%BC%EC%97%90%EC%84%9C%EC%9E%85%EB%A0%A5%EB%9E%80%ED%81%B4%EB%A6%AD%EC%8B%9C%ED%99%95%EB%8C%80%EB%B0%A9%EC%A7%80/</link>
+        <link>https://blog.plutslet.pe.kr/post/html-%EB%AA%A8%EB%B0%94%EC%9D%BC%EC%97%90%EC%84%9C-input-%ED%83%9C%EA%B7%B8-%ED%81%B4%EB%A6%AD%EC%8B%9C-%ED%99%95%EB%8C%80-%EB%B0%A9%EC%A7%80/</link>
         <pubDate>Wed, 14 Feb 2024 23:19:25 +0900</pubDate>
         
-        <guid>https://blog.plutslet.pe.kr/post/html%EB%AA%A8%EB%B0%94%EC%9D%BC%EC%97%90%EC%84%9C%EC%9E%85%EB%A0%A5%EB%9E%80%ED%81%B4%EB%A6%AD%EC%8B%9C%ED%99%95%EB%8C%80%EB%B0%A9%EC%A7%80/</guid>
+        <guid>https://blog.plutslet.pe.kr/post/html-%EB%AA%A8%EB%B0%94%EC%9D%BC%EC%97%90%EC%84%9C-input-%ED%83%9C%EA%B7%B8-%ED%81%B4%EB%A6%AD%EC%8B%9C-%ED%99%95%EB%8C%80-%EB%B0%A9%EC%A7%80/</guid>
         <description>&lt;p&gt;가끔 모바일 브라우저에서 &lt;code&gt;input&lt;/code&gt; 태그를 사용한 입력란을 터치해 입력을 시작할 때 해당 입력란을 확대 시켜서 보여주는 경우가 있습니다.&lt;br&gt;
 확대하지 않는 동작이 프로세스 상 올바른 동작일 때 이를 방지하는 방법이 있습니다.&lt;/p&gt;
 &lt;p&gt;방법은 간단한데, &lt;code&gt;index.html&lt;/code&gt;의 &lt;code&gt;header&lt;/code&gt; 태그 안에서 &lt;code&gt;meta&lt;/code&gt; 태그로 viewport 관련해서 설정하는 부분이 있습니다.&lt;br&gt;
@@ -30,10 +30,10 @@
         </item>
         <item>
         <title>Vue에서 이미지 src 동적으로 할당하기</title>
-        <link>https://blog.plutslet.pe.kr/post/vue%EC%97%90%EC%84%9C%EC%9D%B4%EB%AF%B8%EC%A7%80src%EB%8F%99%EC%A0%81%EC%9C%BC%EB%A1%9C%ED%95%A0%EB%8B%B9%ED%95%98%EA%B8%B0/</link>
+        <link>https://blog.plutslet.pe.kr/post/vue%EC%97%90%EC%84%9C-%EC%9D%B4%EB%AF%B8%EC%A7%80-src-%EB%8F%99%EC%A0%81%EC%9C%BC%EB%A1%9C-%ED%95%A0%EB%8B%B9%ED%95%98%EA%B8%B0/</link>
         <pubDate>Wed, 14 Feb 2024 00:34:14 +0900</pubDate>
         
-        <guid>https://blog.plutslet.pe.kr/post/vue%EC%97%90%EC%84%9C%EC%9D%B4%EB%AF%B8%EC%A7%80src%EB%8F%99%EC%A0%81%EC%9C%BC%EB%A1%9C%ED%95%A0%EB%8B%B9%ED%95%98%EA%B8%B0/</guid>
+        <guid>https://blog.plutslet.pe.kr/post/vue%EC%97%90%EC%84%9C-%EC%9D%B4%EB%AF%B8%EC%A7%80-src-%EB%8F%99%EC%A0%81%EC%9C%BC%EB%A1%9C-%ED%95%A0%EB%8B%B9%ED%95%98%EA%B8%B0/</guid>
         <description>&lt;p&gt;Vue에서 이미지를 동적으로 할당해야하는 부분이 있었습니다.&lt;br&gt;
 대략 &lt;code&gt;/src/assets/images/img.png&lt;/code&gt; 이런 느낌의 string 타입을 반환하는 함수를 만들었고, 대략 &lt;code&gt;&amp;lt;img :src=&amp;quot;imgSrc()&amp;quot;&amp;gt;&lt;/code&gt; 이런 느낌으로 할당해봤죠.&lt;br&gt;
 &lt;code&gt;npm run dev&lt;/code&gt; 통해 실행한 프로젝트에서는 위의 코드로도 잘 작동해서 문제가 없을 줄 알았습니다.&lt;br&gt;
@@ -77,10 +77,10 @@ public 폴더에 넣어두면 상대 주소를 사용해도 정상적으로 불�
         </item>
         <item>
         <title>모바일 환경에서의 css 높이 단위</title>
-        <link>https://blog.plutslet.pe.kr/post/%EB%AA%A8%EB%B0%94%EC%9D%BC%EA%B8%B0%EA%B8%B0%EC%97%90%EC%84%9Cvh%EB%8B%A8%EC%9C%84/</link>
+        <link>https://blog.plutslet.pe.kr/post/%EB%AA%A8%EB%B0%94%EC%9D%BC-%ED%99%98%EA%B2%BD%EC%97%90%EC%84%9C%EC%9D%98-css-%EB%86%92%EC%9D%B4-%EB%8B%A8%EC%9C%84/</link>
         <pubDate>Thu, 08 Feb 2024 00:31:19 +0900</pubDate>
         
-        <guid>https://blog.plutslet.pe.kr/post/%EB%AA%A8%EB%B0%94%EC%9D%BC%EA%B8%B0%EA%B8%B0%EC%97%90%EC%84%9Cvh%EB%8B%A8%EC%9C%84/</guid>
+        <guid>https://blog.plutslet.pe.kr/post/%EB%AA%A8%EB%B0%94%EC%9D%BC-%ED%99%98%EA%B2%BD%EC%97%90%EC%84%9C%EC%9D%98-css-%EB%86%92%EC%9D%B4-%EB%8B%A8%EC%9C%84/</guid>
         <description>&lt;p&gt;css에서 hight를 조절하다가 알게된 점을 기록합니다.&lt;/p&gt;
 &lt;h3 id=&#34;문제&#34;&gt;문제&lt;/h3&gt;
 &lt;p&gt;대략 상황은 이랬습니다.&lt;br&gt;
@@ -112,10 +112,10 @@ main 태그의 높이를 vh 단위로 지정해서 사용하던 중 모바일 �
         </item>
         <item>
         <title>S3 이미지 다운로드 CORS 문제 해결</title>
-        <link>https://blog.plutslet.pe.kr/post/s3_%EC%9D%B4%EB%AF%B8%EC%A7%80_%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C_%EC%98%A4%EB%A5%98/</link>
+        <link>https://blog.plutslet.pe.kr/post/s3-%EC%9D%B4%EB%AF%B8%EC%A7%80-%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C-cors-%EB%AC%B8%EC%A0%9C-%ED%95%B4%EA%B2%B0/</link>
         <pubDate>Fri, 02 Feb 2024 22:41:19 +0900</pubDate>
         
-        <guid>https://blog.plutslet.pe.kr/post/s3_%EC%9D%B4%EB%AF%B8%EC%A7%80_%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C_%EC%98%A4%EB%A5%98/</guid>
+        <guid>https://blog.plutslet.pe.kr/post/s3-%EC%9D%B4%EB%AF%B8%EC%A7%80-%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C-cors-%EB%AC%B8%EC%A0%9C-%ED%95%B4%EA%B2%B0/</guid>
         <description>&lt;p&gt;최근 Vue 프로젝트에서 S3 URL을 다운로드되는 기능을 구현해야 하는 일이 있었습니다. fetch를 이용해서 파일을 blob 형태로 받아와 다운로드 시키도록 하도록 처리했죠. 다른 파일들은 다운로드가 잘 이뤄졌는데, 어떤 페이지에서는 이미지가 CORS 오류로 다운로드되지 않는 문제가 발생했습니다. 이 글은 해당 문제를 정리한 내용입니다.&lt;/p&gt;
 &lt;h3 id=&#34;문제&#34;&gt;문제&lt;/h3&gt;
 &lt;p&gt;위에서 언급했듯이 S3 URL을 가지고 있었고, 해당 링크를 이용해 다운로드 되도록 기능을 구현한 상태였습니다.&lt;br&gt;
@@ -151,10 +151,10 @@ S3의 이미지가 이미 다운로드되어 페이지에서 노출이 되는 �
         </item>
         <item>
         <title>GitHub 페이지 커스텀 도메인 설정하기</title>
-        <link>https://blog.plutslet.pe.kr/post/github_%EC%BB%A4%EC%8A%A4%ED%85%80_%EB%8F%84%EB%A9%94%EC%9D%B8/</link>
+        <link>https://blog.plutslet.pe.kr/post/github-%ED%8E%98%EC%9D%B4%EC%A7%80-%EC%BB%A4%EC%8A%A4%ED%85%80-%EB%8F%84%EB%A9%94%EC%9D%B8-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0/</link>
         <pubDate>Tue, 30 Jan 2024 22:36:50 +0900</pubDate>
         
-        <guid>https://blog.plutslet.pe.kr/post/github_%EC%BB%A4%EC%8A%A4%ED%85%80_%EB%8F%84%EB%A9%94%EC%9D%B8/</guid>
+        <guid>https://blog.plutslet.pe.kr/post/github-%ED%8E%98%EC%9D%B4%EC%A7%80-%EC%BB%A4%EC%8A%A4%ED%85%80-%EB%8F%84%EB%A9%94%EC%9D%B8-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0/</guid>
         <description>&lt;p&gt;깃허브 페이지로 블로그를 만들 때부터 개인 도메인으로 연결하고 싶다는 생각이 있었습니다. 이 글은 깃허브 페이지에서 커스텀 도메인 설정하며 정리한 내용입니다.&lt;/p&gt;
 &lt;h3 id=&#34;시작&#34;&gt;시작&lt;/h3&gt;
 &lt;p&gt;기본적으로 깃허브 페이지를 만들면 아래의 URL 형태로 만들어 집니다.&lt;/p&gt;
@@ -171,10 +171,10 @@ S3의 이미지가 이미 다운로드되어 페이지에서 노출이 되는 �
 &lt;li&gt;대상 주소: 깃허브아이디.github.io&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;저는 클라우드플레어를 이용중이고 설정한 예시 이미지는 아래와 같습니다.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.plutslet.pe.kr/post/github_%EC%BB%A4%EC%8A%A4%ED%85%80_%EB%8F%84%EB%A9%94%EC%9D%B8/DNS_%EC%84%A4%EC%A0%95.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.plutslet.pe.kr/post/github-%ED%8E%98%EC%9D%B4%EC%A7%80-%EC%BB%A4%EC%8A%A4%ED%85%80-%EB%8F%84%EB%A9%94%EC%9D%B8-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0/DNS_%EC%84%A4%EC%A0%95.png&#34;
 	width=&#34;1515&#34;
 	height=&#34;370&#34;
-	srcset=&#34;https://blog.plutslet.pe.kr/post/github_%EC%BB%A4%EC%8A%A4%ED%85%80_%EB%8F%84%EB%A9%94%EC%9D%B8/DNS_%EC%84%A4%EC%A0%95_hub793ff0d4dab954f8da665cd88b8c675_40166_480x0_resize_box_3.png 480w, https://blog.plutslet.pe.kr/post/github_%EC%BB%A4%EC%8A%A4%ED%85%80_%EB%8F%84%EB%A9%94%EC%9D%B8/DNS_%EC%84%A4%EC%A0%95_hub793ff0d4dab954f8da665cd88b8c675_40166_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.plutslet.pe.kr/post/github-%ED%8E%98%EC%9D%B4%EC%A7%80-%EC%BB%A4%EC%8A%A4%ED%85%80-%EB%8F%84%EB%A9%94%EC%9D%B8-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0/DNS_%EC%84%A4%EC%A0%95_hub793ff0d4dab954f8da665cd88b8c675_40166_480x0_resize_box_3.png 480w, https://blog.plutslet.pe.kr/post/github-%ED%8E%98%EC%9D%B4%EC%A7%80-%EC%BB%A4%EC%8A%A4%ED%85%80-%EB%8F%84%EB%A9%94%EC%9D%B8-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0/DNS_%EC%84%A4%EC%A0%95_hub793ff0d4dab954f8da665cd88b8c675_40166_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;DNS 설정&#34;
@@ -192,10 +192,10 @@ S3의 이미지가 이미 다운로드되어 페이지에서 노출이 되는 �
 &lt;li&gt;깃허브에서 DNS 확인을 진행하고, 이후 완료가 되면 해당 도메인으로 접근할 수 있게 됩니다.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;아래의 사진은 DNS 설정 후 확인까지 마친 예시 이미지 입니다.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.plutslet.pe.kr/post/github_%EC%BB%A4%EC%8A%A4%ED%85%80_%EB%8F%84%EB%A9%94%EC%9D%B8/%EC%BB%A4%EC%8A%A4%ED%85%80_%EB%8F%84%EB%A9%94%EC%9D%B8_%EC%84%A4%EC%A0%95.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.plutslet.pe.kr/post/github-%ED%8E%98%EC%9D%B4%EC%A7%80-%EC%BB%A4%EC%8A%A4%ED%85%80-%EB%8F%84%EB%A9%94%EC%9D%B8-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0/%EC%BB%A4%EC%8A%A4%ED%85%80_%EB%8F%84%EB%A9%94%EC%9D%B8_%EC%84%A4%EC%A0%95.png&#34;
 	width=&#34;1373&#34;
 	height=&#34;199&#34;
-	srcset=&#34;https://blog.plutslet.pe.kr/post/github_%EC%BB%A4%EC%8A%A4%ED%85%80_%EB%8F%84%EB%A9%94%EC%9D%B8/%EC%BB%A4%EC%8A%A4%ED%85%80_%EB%8F%84%EB%A9%94%EC%9D%B8_%EC%84%A4%EC%A0%95_hufbc0e08b86941e92a378c1a2e1541f24_21749_480x0_resize_box_3.png 480w, https://blog.plutslet.pe.kr/post/github_%EC%BB%A4%EC%8A%A4%ED%85%80_%EB%8F%84%EB%A9%94%EC%9D%B8/%EC%BB%A4%EC%8A%A4%ED%85%80_%EB%8F%84%EB%A9%94%EC%9D%B8_%EC%84%A4%EC%A0%95_hufbc0e08b86941e92a378c1a2e1541f24_21749_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.plutslet.pe.kr/post/github-%ED%8E%98%EC%9D%B4%EC%A7%80-%EC%BB%A4%EC%8A%A4%ED%85%80-%EB%8F%84%EB%A9%94%EC%9D%B8-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0/%EC%BB%A4%EC%8A%A4%ED%85%80_%EB%8F%84%EB%A9%94%EC%9D%B8_%EC%84%A4%EC%A0%95_hufbc0e08b86941e92a378c1a2e1541f24_21749_480x0_resize_box_3.png 480w, https://blog.plutslet.pe.kr/post/github-%ED%8E%98%EC%9D%B4%EC%A7%80-%EC%BB%A4%EC%8A%A4%ED%85%80-%EB%8F%84%EB%A9%94%EC%9D%B8-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0/%EC%BB%A4%EC%8A%A4%ED%85%80_%EB%8F%84%EB%A9%94%EC%9D%B8_%EC%84%A4%EC%A0%95_hufbc0e08b86941e92a378c1a2e1541f24_21749_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;커스텀 도메인 설정&#34;
@@ -221,10 +221,10 @@ S3의 이미지가 이미 다운로드되어 페이지에서 노출이 되는 �
         </item>
         <item>
         <title>Hugo와 GitHub로 블로그 만들기</title>
-        <link>https://blog.plutslet.pe.kr/post/hugo%EB%A1%9C_%EB%B8%94%EB%A1%9C%EA%B7%B8_%EB%A7%8C%EB%93%A4%EA%B8%B0/</link>
+        <link>https://blog.plutslet.pe.kr/post/hugo%EC%99%80-github%EB%A1%9C-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0/</link>
         <pubDate>Wed, 24 Jan 2024 23:06:58 +0900</pubDate>
         
-        <guid>https://blog.plutslet.pe.kr/post/hugo%EB%A1%9C_%EB%B8%94%EB%A1%9C%EA%B7%B8_%EB%A7%8C%EB%93%A4%EA%B8%B0/</guid>
+        <guid>https://blog.plutslet.pe.kr/post/hugo%EC%99%80-github%EB%A1%9C-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0/</guid>
         <description>&lt;h3 id=&#34;hugo&#34;&gt;Hugo&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;빌드 속도가 빠릅니다.&lt;/li&gt;

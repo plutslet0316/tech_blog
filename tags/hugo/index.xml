@@ -8,10 +8,10 @@
         <language>ko</language>
         <lastBuildDate>Wed, 24 Jan 2024 23:06:58 +0900</lastBuildDate><atom:link href="https://blog.plutslet.pe.kr/tags/hugo/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Hugo와 GitHub로 블로그 만들기</title>
-        <link>https://blog.plutslet.pe.kr/post/hugo%EB%A1%9C_%EB%B8%94%EB%A1%9C%EA%B7%B8_%EB%A7%8C%EB%93%A4%EA%B8%B0/</link>
+        <link>https://blog.plutslet.pe.kr/post/hugo%EC%99%80-github%EB%A1%9C-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0/</link>
         <pubDate>Wed, 24 Jan 2024 23:06:58 +0900</pubDate>
         
-        <guid>https://blog.plutslet.pe.kr/post/hugo%EB%A1%9C_%EB%B8%94%EB%A1%9C%EA%B7%B8_%EB%A7%8C%EB%93%A4%EA%B8%B0/</guid>
+        <guid>https://blog.plutslet.pe.kr/post/hugo%EC%99%80-github%EB%A1%9C-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0/</guid>
         <description>&lt;h3 id=&#34;hugo&#34;&gt;Hugo&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;빌드 속도가 빠릅니다.&lt;/li&gt;
