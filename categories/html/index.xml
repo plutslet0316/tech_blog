@@ -6,7 +6,41 @@
         <description>Recent content in HTML on Plutslet0316</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>ko</language>
-        <lastBuildDate>Wed, 14 Feb 2024 23:19:25 +0900</lastBuildDate><atom:link href="https://blog.plutslet.pe.kr/categories/html/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 23 Feb 2024 22:01:31 +0900</lastBuildDate><atom:link href="https://blog.plutslet.pe.kr/categories/html/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Input 태그 file 확장자 제한하기</title>
+        <link>https://blog.plutslet.pe.kr/post/input-%ED%83%9C%EA%B7%B8-file-%ED%99%95%EC%9E%A5%EC%9E%90-%EC%A0%9C%ED%95%9C%ED%95%98%EA%B8%B0/</link>
+        <pubDate>Fri, 23 Feb 2024 22:01:31 +0900</pubDate>
+        
+        <guid>https://blog.plutslet.pe.kr/post/input-%ED%83%9C%EA%B7%B8-file-%ED%99%95%EC%9E%A5%EC%9E%90-%EC%A0%9C%ED%95%9C%ED%95%98%EA%B8%B0/</guid>
+        <description>&lt;p&gt;input 태그를 사용할 떄 특정 타입만 허용하고 싶을 때가 있습니다.&lt;br&gt;
+input의 accept를 지정하기만 하면 간단하게 제한할 수 있죠.&lt;br&gt;
+예를 들어 image만 허용하려고 한다면 대략 아래와 같습니다.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;input&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;type&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;file&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;accept&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;image/*&amp;#34;&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;그런데 파일 선택하는 창에서 모든 파일(&lt;em&gt;.&lt;/em&gt;)을 선택할 수 있고, 이때는 accept를 지정해도 의미가 없어집니다.&lt;br&gt;
+이때는 선택한 파일의 확장자를 확인하는 스크립트가 필요하게 되죠.&lt;/p&gt;
+&lt;p&gt;선택한 파일을 가져와서 파일의 확장자를 확인하고, 파일의 확장자가 지정해둔 확장자가 맞다면 파일을 허용하는, 그런 절차가 필요해지게 됩니다.&lt;/p&gt;
+&lt;p&gt;이런 상황에서 사용할 함수는 아래처럼 작성할 수 있습니다.&lt;br&gt;
+선택한 파일들을 전부 확인하고 모두 image 형태라면 false를 image 형태가 하나라도 아니면 true를 반환하는 함수입니다.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-typescript&#34; data-lang=&#34;typescript&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;const&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;checkFileType&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; (&lt;span style=&#34;color:#a6e22e&#34;&gt;files&lt;/span&gt;: &lt;span style=&#34;color:#66d9ef&#34;&gt;File&lt;/span&gt;[]) &lt;span style=&#34;color:#f92672&#34;&gt;=&amp;gt;&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;result&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;false&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; (&lt;span style=&#34;color:#66d9ef&#34;&gt;const&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;file&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;of&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;files&lt;/span&gt;) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; (&lt;span style=&#34;color:#a6e22e&#34;&gt;file&lt;/span&gt;.&lt;span style=&#34;color:#66d9ef&#34;&gt;type&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;includes&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;image&amp;#39;&lt;/span&gt;) &lt;span style=&#34;color:#f92672&#34;&gt;!==&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;true&lt;/span&gt;) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#a6e22e&#34;&gt;result&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;true&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;result&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;파일 입력을 받을 때의 이벤트에 아래처럼 사용하면 됩니다.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-typescript&#34; data-lang=&#34;typescript&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; (&lt;span style=&#34;color:#a6e22e&#34;&gt;checkFileType&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;files&lt;/span&gt;)) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;inputFileEl&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;value&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;value&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;null&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;alert&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;이미지 파일만 첨부 가능합니다.&amp;#39;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;저는 vue3에서, 그리고 타입스크립트로 작성하고 사용해서 위의 형태지만, 함수 내부와 if문 내부는 원하는 방식으로 수정하면 됩니다.&lt;br&gt;
+함수의 bool 값을 반대로 설정한다던지, 타입을 다르게 한다던지, 아래 if 내부 처리를 다르게 한다던지 등처럼 말이죠.&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>html 모바일에서 input 태그 클릭시 확대 방지</title>
         <link>https://blog.plutslet.pe.kr/post/html-%EB%AA%A8%EB%B0%94%EC%9D%BC%EC%97%90%EC%84%9C-input-%ED%83%9C%EA%B7%B8-%ED%81%B4%EB%A6%AD%EC%8B%9C-%ED%99%95%EB%8C%80-%EB%B0%A9%EC%A7%80/</link>
         <pubDate>Wed, 14 Feb 2024 23:19:25 +0900</pubDate>

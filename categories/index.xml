@@ -9,10 +9,10 @@
         <lastBuildDate>Fri, 23 Feb 2024 22:01:31 +0900</lastBuildDate><atom:link href="https://blog.plutslet.pe.kr/categories/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>HTML</title>
         <link>https://blog.plutslet.pe.kr/categories/html/</link>
-        <pubDate>Wed, 14 Feb 2024 23:19:25 +0900</pubDate>
+        <pubDate>Fri, 23 Feb 2024 22:01:31 +0900</pubDate>
         
         <guid>https://blog.plutslet.pe.kr/categories/html/</guid>
-        <description></description>
+        <description>&lt;img src="https://blog.plutslet.pe.kr/categories/html/HTML5_Logo.svg" alt="Featured image of post HTML" /&gt;</description>
         </item>
         <item>
         <title>Vue</title>
@@ -20,7 +20,7 @@
         <pubDate>Wed, 14 Feb 2024 00:34:14 +0900</pubDate>
         
         <guid>https://blog.plutslet.pe.kr/categories/vue/</guid>
-        <description></description>
+        <description>&lt;img src="https://blog.plutslet.pe.kr/categories/vue/logo.png" alt="Featured image of post Vue" /&gt;</description>
         </item>
         <item>
         <title>CSS</title>
@@ -28,7 +28,7 @@
         <pubDate>Thu, 08 Feb 2024 00:31:19 +0900</pubDate>
         
         <guid>https://blog.plutslet.pe.kr/categories/css/</guid>
-        <description></description>
+        <description>&lt;img src="https://blog.plutslet.pe.kr/categories/css/CSS3_logo_and_wordmark.svg" alt="Featured image of post CSS" /&gt;</description>
         </item>
         <item>
         <title>JavaScript</title>
@@ -36,7 +36,7 @@
         <pubDate>Fri, 02 Feb 2024 22:41:19 +0900</pubDate>
         
         <guid>https://blog.plutslet.pe.kr/categories/javascript/</guid>
-        <description></description>
+        <description>&lt;img src="https://blog.plutslet.pe.kr/categories/javascript/js.png" alt="Featured image of post JavaScript" /&gt;</description>
         </item>
         <item>
         <title>GitHub</title>
@@ -44,7 +44,7 @@
         <pubDate>Tue, 30 Jan 2024 22:36:50 +0900</pubDate>
         
         <guid>https://blog.plutslet.pe.kr/categories/github/</guid>
-        <description></description>
+        <description>&lt;img src="https://blog.plutslet.pe.kr/categories/github/github-mark.svg" alt="Featured image of post GitHub" /&gt;</description>
         </item>
         <item>
         <title>Hugo</title>
@@ -52,7 +52,7 @@
         <pubDate>Wed, 24 Jan 2024 23:06:58 +0900</pubDate>
         
         <guid>https://blog.plutslet.pe.kr/categories/hugo/</guid>
-        <description></description>
+        <description>&lt;img src="https://blog.plutslet.pe.kr/categories/hugo/hugo-logo-wide.svg" alt="Featured image of post Hugo" /&gt;</description>
         </item>
         
     </channel>
