@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>C# on Plutslet0316</title>
+        <link>https://blog.plutslet.pe.kr/categories/c#/</link>
+        <description>Recent content in C# on Plutslet0316</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>ko</language>
+        <lastBuildDate>Tue, 27 Feb 2024 22:44:50 +0900</lastBuildDate><atom:link href="https://blog.plutslet.pe.kr/categories/c#/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>EF Core 시작하기</title>
+        <link>https://blog.plutslet.pe.kr/post/ef-core-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0/</link>
+        <pubDate>Tue, 27 Feb 2024 22:44:50 +0900</pubDate>
+        
+        <guid>https://blog.plutslet.pe.kr/post/ef-core-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0/</guid>
+        <description>&lt;h3 id=&#34;ef-core&#34;&gt;EF Core&lt;/h3&gt;
+&lt;p&gt;데이터베이스와 객체 지향 언어 간에 호환되지 않는 데이터를 변환해 매핑해주는 기법을 객체 관계 매핑(ORM)이라고 합니다.&lt;br&gt;
+EF Core 는 .Net 기반 개체를 이용하여 데이터베이스를 작업할 수 있도록 해줍니다.&lt;/p&gt;
+&lt;h3 id=&#34;요구사항&#34;&gt;요구사항&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;.NET SDK&lt;/strong&gt; : &lt;a class=&#34;link&#34; href=&#34;https://dotnet.microsoft.com/en-us/download&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://dotnet.microsoft.com/en-us/download&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Visual Studio&lt;/strong&gt; : &lt;a class=&#34;link&#34; href=&#34;https://visualstudio.microsoft.com/ko/vs/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://visualstudio.microsoft.com/ko/vs/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;설치&#34;&gt;설치&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;EntityFrameworkCore 패키지 설치&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;검색을 통해 설치
+&lt;ul&gt;
+&lt;li&gt;도구 &amp;gt; NuGet 패키지 관리자 &amp;gt; NuGet 패키지 관리&lt;/li&gt;
+&lt;li&gt;패키지 검색: &lt;code&gt;EntityFrameworkCore&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;명령을 실행해 설치
+&lt;ul&gt;
+&lt;li&gt;도구 &amp;gt; NuGet 패키지 관리자 &amp;gt; 패키지 관리자 콘솔&lt;/li&gt;
+&lt;li&gt;명령 실행: &lt;code&gt;Install-Package Microsoft.EntityFrameworkCore&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Provider 패키지 설치&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;아래의 패키지 중에서 사용하는 DB의 패키지를 설치하면 됩니다.&lt;br&gt;
+자세한 내용은 이 &lt;a class=&#34;link&#34; href=&#34;https://learn.microsoft.com/ko-kr/ef/core/what-is-new/nuget-packages&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;링크&lt;/a&gt;를 확인해주세요.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;데이터베이스 시스템&lt;/th&gt;
+&lt;th&gt;패키지&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;SQL Server 및 SQL Azure&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.SqlServer&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.SqlServer&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;SQLite&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.Sqlite&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.Sqlite&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Azure Cosmos DB&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.Cosmos&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.Cosmos&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;PostgreSQL&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.nuget.org/packages/Npgsql.EntityFrameworkCore.PostgreSQL/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.nuget.org/packages/Npgsql.EntityFrameworkCore.PostgreSQL/&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;MySQL&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.nuget.org/packages/Pomelo.EntityFrameworkCore.MySql/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.nuget.org/packages/Pomelo.EntityFrameworkCore.MySql/&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;EF Core 메모리 내 데이터베이스**&lt;/td&gt;
+&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.InMemory&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.InMemory&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;패키지 관리자 콘솔 도구 설치&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;설치: &lt;code&gt;Install-Package Microsoft.EntityFrameworkCore.Tools&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;ef-core-시작하기&#34;&gt;EF Core 시작하기&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Visual Studio 실행 후 새 프로젝트 만들기&lt;/li&gt;
+&lt;li&gt;C# 태그가 있는 콘솔 앱을 선택해 다음 클릭&lt;/li&gt;
+&lt;li&gt;이름(예, EFCoreTest)을 입력하고 만들기 클릭&lt;/li&gt;
+&lt;li&gt;위의 설치 방법을 참고해 원하는 방법으로 패키지 설치&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;dbcontext-구성&#34;&gt;&lt;strong&gt;DBContext 구성&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;데이터베이스와 연결하고 쿼리 및 저장하는 데 필수적인 요소&lt;/li&gt;
+&lt;li&gt;아래와 같이 &lt;code&gt;DbContext&lt;/code&gt; 를 상속한 클래스 내부에 &lt;code&gt;Entity&lt;/code&gt; 와 DB 연결 정보 등을 추가할 수 있습니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-csharp&#34; data-lang=&#34;csharp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;TestDbContext&lt;/span&gt;  : DbContext
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;여기서 사용한 방식은 디자인 타임 팩터리라는 인터페이스를 구성하여 DbContext를 만드는 방법을 도구에 알리는 방법입니다.&lt;br&gt;
+DB와의 연결은 여러가지 방식을 사용할 수 있습니다. 자세한 사항은 맨 아래의 참고링크를 확인해주세요.&lt;br&gt;
+디자인 타임 팩터리 방식은 이 &lt;a class=&#34;link&#34; href=&#34;https://learn.microsoft.com/ko-kr/ef/core/cli/dbcontext-creation?tabs=vs&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;링크&lt;/a&gt;를 확인하세요.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;DbContext&lt;/code&gt; 을 아래와 같이 구성합니다.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-csharp&#34; data-lang=&#34;csharp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;TestDbContext&lt;/span&gt;  : DbContext
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; TestDbContext(DbContextOptions&amp;lt;TestDbContext&amp;gt; options) : &lt;span style=&#34;color:#66d9ef&#34;&gt;base&lt;/span&gt;(options)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;아래과 같이 디자인 타임 팩터리에서 &lt;code&gt;DbContext&lt;/code&gt; 를 만드는 방법을 구성합니다.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-csharp&#34; data-lang=&#34;csharp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;TestContextFactory&lt;/span&gt; : IDesignTimeDbContextFactory&amp;lt;TestDbContext&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; TestDbContext CreateDbContext(&lt;span style=&#34;color:#66d9ef&#34;&gt;string&lt;/span&gt;[] args)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;var&lt;/span&gt; optionsBuilder = &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; DbContextOptionsBuilder&amp;lt;TestDbContext&amp;gt;();
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        optionsBuilder.UseNpgsql(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Server=server.maum.in; Port=25432; Database=plutslet0316; user id=plutslet0316;  password=plutslet0316&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; TestDbContext(optionsBuilder.Options);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;모델-만들기&#34;&gt;모델 만들기&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;클래스 형태로 구성한 &lt;code&gt;Entity&lt;/code&gt; 를 위에서 만든 &lt;code&gt;DbContext&lt;/code&gt; 에 속성으로 정의하는 것만으로도 DB의 테이블과 연결시킬 수 있습니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;다음과 같이 사용자 정보와 사용자의 좋아하는 것들이 담길 클래스 생성합니다.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-csharp&#34; data-lang=&#34;csharp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;UserInfo&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; Id { &lt;span style=&#34;color:#66d9ef&#34;&gt;get&lt;/span&gt;; &lt;span style=&#34;color:#66d9ef&#34;&gt;set&lt;/span&gt;; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;string&lt;/span&gt; Name { &lt;span style=&#34;color:#66d9ef&#34;&gt;get&lt;/span&gt;; &lt;span style=&#34;color:#66d9ef&#34;&gt;set&lt;/span&gt;; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; ICollection&amp;lt;Favorite&amp;gt; Favorites { &lt;span style=&#34;color:#66d9ef&#34;&gt;get&lt;/span&gt;; &lt;span style=&#34;color:#66d9ef&#34;&gt;set&lt;/span&gt;; } = &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; List&amp;lt;Favorite&amp;gt;();
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Favorite&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; Id { &lt;span style=&#34;color:#66d9ef&#34;&gt;get&lt;/span&gt;; &lt;span style=&#34;color:#66d9ef&#34;&gt;set&lt;/span&gt;; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;string&lt;/span&gt; Value { &lt;span style=&#34;color:#66d9ef&#34;&gt;get&lt;/span&gt;; &lt;span style=&#34;color:#66d9ef&#34;&gt;set&lt;/span&gt;; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; UserId { &lt;span style=&#34;color:#66d9ef&#34;&gt;get&lt;/span&gt;; &lt;span style=&#34;color:#66d9ef&#34;&gt;set&lt;/span&gt;; } &lt;span style=&#34;color:#75715e&#34;&gt;// &lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; UserInfo User { &lt;span style=&#34;color:#66d9ef&#34;&gt;get&lt;/span&gt;; &lt;span style=&#34;color:#66d9ef&#34;&gt;set&lt;/span&gt;; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;구성한 &lt;code&gt;DbContext&lt;/code&gt; 에 해당 클래스를 &lt;code&gt;DBSet&lt;/code&gt;으로 정의합니다.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-csharp&#34; data-lang=&#34;csharp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;TestDbContext&lt;/span&gt;  : DbContext
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; DbSet&amp;lt;UserInfo&amp;gt; UserInfos { &lt;span style=&#34;color:#66d9ef&#34;&gt;get&lt;/span&gt;; &lt;span style=&#34;color:#66d9ef&#34;&gt;set&lt;/span&gt;; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; DbSet&amp;lt;Favorite&amp;gt; Favorites { &lt;span style=&#34;color:#66d9ef&#34;&gt;get&lt;/span&gt;; &lt;span style=&#34;color:#66d9ef&#34;&gt;set&lt;/span&gt;; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    ...
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;데이터베이스-만들기&#34;&gt;데이터베이스 만들기&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;위에서 구성한 데이터베이스를 서버에서 만들기 위해서는 마이그레이션이라는 과정이 필요합니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;패키지 관리자 콘솔에서 &lt;code&gt;Add-Migration 고유값&lt;/code&gt; 실행
+&lt;ul&gt;
+&lt;li&gt;각각의 마이그레이션은 고유한 값이 필요합니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;패키지 관리자 콘솔에서 &lt;code&gt;Update-Database&lt;/code&gt; 실행
+&lt;ul&gt;
+&lt;li&gt;해당 명령어로 C#으로 작성한 데로 테이블을 만들거나 수정하는 등 데이터베이스에 업데이트합니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;기본적인-사용-방법&#34;&gt;기본적인 사용 방법&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;데이터베이스 연결&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;위에서 만든 &lt;code&gt;DBContext&lt;/code&gt; 를 가져옵니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-csharp&#34; data-lang=&#34;csharp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;using&lt;/span&gt; var dc = &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; TestContextFactory().CreateDbContext([]);
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;생성/수정&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-csharp&#34; data-lang=&#34;csharp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;var&lt;/span&gt; favorites = &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; List&amp;lt;Favorite&amp;gt;();
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;favorites.Add(&lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; Favorite { Value = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;포도&amp;#34;&lt;/span&gt; });
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;favorites.Add(&lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; Favorite { Value = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;바나나&amp;#34;&lt;/span&gt; });
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;favorites.Add(&lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; Favorite { Value = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;망고&amp;#34;&lt;/span&gt; });
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;var&lt;/span&gt; info = &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; UserInfo { Name = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;User 1&amp;#34;&lt;/span&gt;, Favorites = favorites };
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// 해당 메서드를 이용해 모든 변경사항을 DB에 저장할 수 있다.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;dc.SaveChanges();
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;읽기&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-csharp&#34; data-lang=&#34;csharp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;var&lt;/span&gt; result = &lt;span style=&#34;color:#66d9ef&#34;&gt;await&lt;/span&gt; dc.UserInfos
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    .Include(x =&amp;gt; x.Favorites)  &lt;span style=&#34;color:#75715e&#34;&gt;// 목록 불러오기&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    .ToListAsync();
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;foreach&lt;/span&gt; (&lt;span style=&#34;color:#66d9ef&#34;&gt;var&lt;/span&gt; info &lt;span style=&#34;color:#66d9ef&#34;&gt;in&lt;/span&gt; result)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;var&lt;/span&gt; favoriteText = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;var&lt;/span&gt; favorites = info.Favorites.ToList();
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;var&lt;/span&gt; count = favorites.Count();
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; (&lt;span style=&#34;color:#66d9ef&#34;&gt;var&lt;/span&gt; i = &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;; i &amp;lt; count; i++)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        favoriteText += favorites[i].Value;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; (i &amp;lt; count - &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;) favoriteText += &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;, &amp;#34;&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  Console.WriteLine(&lt;span style=&#34;color:#e6db74&#34;&gt;$&amp;#34;{info.Id}: {info.Name}&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  Console.WriteLine(&lt;span style=&#34;color:#e6db74&#34;&gt;$&amp;#34;{favoriteText}&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;삭제&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-csharp&#34; data-lang=&#34;csharp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;dc.UserInfos.RemoveRange(dc.UserInfos);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;dc.SaveChanges();
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;이번엔 설치와 간단한 사용법까지 알아봤습니다.&lt;br&gt;
+다음에 기회가 되면 더 많은 내용을 다뤄보겠습니다.&lt;/p&gt;
+&lt;h3 id=&#34;참고링크&#34;&gt;참고링크&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;공식:  &lt;a class=&#34;link&#34; href=&#34;https://learn.microsoft.com/ko-kr/ef/core/get-started/overview/first-app?tabs=visual-studio&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://learn.microsoft.com/ko-kr/ef/core/get-started/overview/first-app?tabs=visual-studio&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.entityframeworktutorial.net/efcore/entity-framework-core.aspx&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.entityframeworktutorial.net/efcore/entity-framework-core.aspx&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

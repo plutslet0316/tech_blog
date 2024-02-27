@@ -3,10 +3,22 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://blog.plutslet.pe.kr/</loc>
-    <lastmod>2024-02-23T22:01:31+09:00</lastmod>
+    <lastmod>2024-02-27T22:44:50+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.plutslet.pe.kr/categories/c#/</loc>
+    <lastmod>2024-02-27T22:44:50+09:00</lastmod>
   </url><url>
     <loc>https://blog.plutslet.pe.kr/categories/</loc>
-    <lastmod>2024-02-23T22:01:31+09:00</lastmod>
+    <lastmod>2024-02-27T22:44:50+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.plutslet.pe.kr/categories/ef-core/</loc>
+    <lastmod>2024-02-27T22:44:50+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.plutslet.pe.kr/post/ef-core-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0/</loc>
+    <lastmod>2024-02-27T22:44:50+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.plutslet.pe.kr/post/</loc>
+    <lastmod>2024-02-27T22:44:50+09:00</lastmod>
   </url><url>
     <loc>https://blog.plutslet.pe.kr/tags/file/</loc>
     <lastmod>2024-02-23T22:01:31+09:00</lastmod>
@@ -18,9 +30,6 @@
     <lastmod>2024-02-23T22:01:31+09:00</lastmod>
   </url><url>
     <loc>https://blog.plutslet.pe.kr/post/input-%ED%83%9C%EA%B7%B8-file-%ED%99%95%EC%9E%A5%EC%9E%90-%EC%A0%9C%ED%95%9C%ED%95%98%EA%B8%B0/</loc>
-    <lastmod>2024-02-23T22:01:31+09:00</lastmod>
-  </url><url>
-    <loc>https://blog.plutslet.pe.kr/post/</loc>
     <lastmod>2024-02-23T22:01:31+09:00</lastmod>
   </url><url>
     <loc>https://blog.plutslet.pe.kr/tags/</loc>
@@ -142,6 +151,8 @@
   </url><url>
     <loc>https://blog.plutslet.pe.kr/post/%EC%B2%AB%ED%8F%AC%EC%8A%A4%ED%8A%B8/</loc>
     <lastmod>2023-10-05T18:14:05+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.plutslet.pe.kr/categories/ef-core/</loc>
   </url><url>
     <loc>https://blog.plutslet.pe.kr/page/</loc>
   </url><url>
