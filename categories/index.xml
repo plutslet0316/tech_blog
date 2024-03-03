@@ -6,16 +6,24 @@
         <description>Recent content in Categories on Plutslet0316</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>ko</language>
-        <lastBuildDate>Tue, 27 Feb 2024 22:44:50 +0900</lastBuildDate><atom:link href="https://blog.plutslet.pe.kr/categories/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>C#</title>
-        <link>https://blog.plutslet.pe.kr/categories/c#/</link>
-        <pubDate>Tue, 27 Feb 2024 22:44:50 +0900</pubDate>
+        <lastBuildDate>Sun, 03 Mar 2024 23:34:50 +0900</lastBuildDate><atom:link href="https://blog.plutslet.pe.kr/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Uno Platform</title>
+        <link>https://blog.plutslet.pe.kr/categories/uno-platform/</link>
+        <pubDate>Sun, 03 Mar 2024 23:34:50 +0900</pubDate>
         
-        <guid>https://blog.plutslet.pe.kr/categories/c#/</guid>
+        <guid>https://blog.plutslet.pe.kr/categories/uno-platform/</guid>
         <description></description>
         </item>
         <item>
-        <title>ef core</title>
+        <title>C#</title>
+        <link>https://blog.plutslet.pe.kr/categories/c-sharp/</link>
+        <pubDate>Tue, 27 Feb 2024 22:44:50 +0900</pubDate>
+        
+        <guid>https://blog.plutslet.pe.kr/categories/c-sharp/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>EF Core</title>
         <link>https://blog.plutslet.pe.kr/categories/ef-core/</link>
         <pubDate>Tue, 27 Feb 2024 22:44:50 +0900</pubDate>
         
@@ -69,14 +77,6 @@
         
         <guid>https://blog.plutslet.pe.kr/categories/hugo/</guid>
         <description>&lt;img src="https://blog.plutslet.pe.kr/categories/hugo/hugo-logo-wide.svg" alt="Featured image of post Hugo" /&gt;</description>
-        </item>
-        <item>
-        <title>EF Core</title>
-        <link>https://blog.plutslet.pe.kr/categories/ef-core/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://blog.plutslet.pe.kr/categories/ef-core/</guid>
-        <description></description>
         </item>
         
     </channel>
