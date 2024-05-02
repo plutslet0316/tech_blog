@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>WinUI3 on Plutslet0316</title>
+        <link>https://blog.plutslet.pe.kr/categories/winui3/</link>
+        <description>Recent content in WinUI3 on Plutslet0316</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>ko</language>
+        <lastBuildDate>Mon, 08 Apr 2024 23:01:27 +0900</lastBuildDate><atom:link href="https://blog.plutslet.pe.kr/categories/winui3/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Uno Platform 마우스 커서 버튼 위에 올렸을 때 모양 바꾸기</title>
+        <link>https://blog.plutslet.pe.kr/post/uno-platform-%EB%A7%88%EC%9A%B0%EC%8A%A4-%EC%BB%A4%EC%84%9C-%EB%B2%84%ED%8A%BC-%EC%9C%84%EC%97%90-%EC%98%AC%EB%A0%B8%EC%9D%84-%EB%95%8C-%EB%AA%A8%EC%96%91-%EB%B0%94%EA%BE%B8%EA%B8%B0/</link>
+        <pubDate>Mon, 08 Apr 2024 23:01:27 +0900</pubDate>
+        
+        <guid>https://blog.plutslet.pe.kr/post/uno-platform-%EB%A7%88%EC%9A%B0%EC%8A%A4-%EC%BB%A4%EC%84%9C-%EB%B2%84%ED%8A%BC-%EC%9C%84%EC%97%90-%EC%98%AC%EB%A0%B8%EC%9D%84-%EB%95%8C-%EB%AA%A8%EC%96%91-%EB%B0%94%EA%BE%B8%EA%B8%B0/</guid>
+        <description>&lt;p&gt;WinUI3에서 마우스 커서를 변경하는 방법 중에는 UIElement 내부에 있는 ProtectedCursor를 변경하는 방법이 있습니다. 하지만 이름 그대로 Protected, 외부에서 접근이 되지 않기 때문에 해당 변수를 변경할 수 있는 내부 메서드가 필요합니다. 이는 상속으로 해결할 수 있는데, 버튼으로 예를 들면 아래와 같은 형태로 작성할 수 있습니다.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-csharp&#34; data-lang=&#34;csharp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Button2&lt;/span&gt; : Button
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; ChangeCursor(InputCursor cursor)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;this&lt;/span&gt;.ProtectedCursor = cursor;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;해당 버튼을 만들고 &lt;code&gt;ChangeCursor&lt;/code&gt; 메서드에 새로운 커서 모양을 넘겨주면 이제 해당 버튼 위에서는 커서가 지정한 모양대로 변경할 수 있게 됩니다.&lt;/p&gt;
+&lt;p&gt;메서드의 호출은 아래처럼 작성할 수 있습니다.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-csharp&#34; data-lang=&#34;csharp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;button.ChangeCursor(InputSystemCursor.Create(InputSystemCursorShape.Hand));
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+        </item>
+        
+    </channel>
+</rss>
