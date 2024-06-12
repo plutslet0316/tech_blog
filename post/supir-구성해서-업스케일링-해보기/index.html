@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='오늘은 오픈 소스로 공개되어 있는 ‘SUPIR’ 라는 업스케일링 툴을 설치 및 구성하고 실행하기 까지의 과정을 기록하고자 합니다.
+일단 SUPIR은 우분투 환경에서 구성해야 하며, 저 같은 윈도우 환경일 경우에는 wsl을 활용하면 윈도우에서도 우분투 환경을 쉽게 구성할 수 있습니다.
+wsl 관련 설치법 등은 구글에 검색하면 많이 나오니 윈도우 환경에서 구성하고자 하면 해당 부분을 참고하여 우선 설치를 진행해주세요.
+요구 사양 업스케일링 툴에서 사양을 많이 요구하는 것으로 보입니다. 깃허브의 가이드를 따라 대략 설치를 진행하게 되면 업스케일링 모델을 포함하여 대략 160GB 가량의 저장 용량을 차지하게 됩니다.'>
+<title>SUPIR 구성해서 업스케일링 해보기</title>
+
+<link rel='canonical' href='https://blog.plutslet.pe.kr/post/supir-%EA%B5%AC%EC%84%B1%ED%95%B4%EC%84%9C-%EC%97%85%EC%8A%A4%EC%BC%80%EC%9D%BC%EB%A7%81-%ED%95%B4%EB%B3%B4%EA%B8%B0/'>
+
+<link rel="stylesheet" href="/scss/style.min.24ef1cc321916467896e8c70c10c0ad7b98c2a8df14298032fb637216e397f50.css"><meta property='og:title' content='SUPIR 구성해서 업스케일링 해보기'>
+<meta property='og:description' content='오늘은 오픈 소스로 공개되어 있는 ‘SUPIR’ 라는 업스케일링 툴을 설치 및 구성하고 실행하기 까지의 과정을 기록하고자 합니다.
+일단 SUPIR은 우분투 환경에서 구성해야 하며, 저 같은 윈도우 환경일 경우에는 wsl을 활용하면 윈도우에서도 우분투 환경을 쉽게 구성할 수 있습니다.
+wsl 관련 설치법 등은 구글에 검색하면 많이 나오니 윈도우 환경에서 구성하고자 하면 해당 부분을 참고하여 우선 설치를 진행해주세요.
+요구 사양 업스케일링 툴에서 사양을 많이 요구하는 것으로 보입니다. 깃허브의 가이드를 따라 대략 설치를 진행하게 되면 업스케일링 모델을 포함하여 대략 160GB 가량의 저장 용량을 차지하게 됩니다.'>
+<meta property='og:url' content='https://blog.plutslet.pe.kr/post/supir-%EA%B5%AC%EC%84%B1%ED%95%B4%EC%84%9C-%EC%97%85%EC%8A%A4%EC%BC%80%EC%9D%BC%EB%A7%81-%ED%95%B4%EB%B3%B4%EA%B8%B0/'>
+<meta property='og:site_name' content='Plutslet0316'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2024-06-13T00:30:18&#43;09:00'/><meta property='article:modified_time' content='2024-06-13T00:30:18&#43;09:00'/>
+<meta name="twitter:title" content="SUPIR 구성해서 업스케일링 해보기">
+<meta name="twitter:description" content="오늘은 오픈 소스로 공개되어 있는 ‘SUPIR’ 라는 업스케일링 툴을 설치 및 구성하고 실행하기 까지의 과정을 기록하고자 합니다.
+일단 SUPIR은 우분투 환경에서 구성해야 하며, 저 같은 윈도우 환경일 경우에는 wsl을 활용하면 윈도우에서도 우분투 환경을 쉽게 구성할 수 있습니다.
+wsl 관련 설치법 등은 구글에 검색하면 많이 나오니 윈도우 환경에서 구성하고자 하면 해당 부분을 참고하여 우선 설치를 진행해주세요.
+요구 사양 업스케일링 툴에서 사양을 많이 요구하는 것으로 보입니다. 깃허브의 가이드를 따라 대략 설치를 진행하게 되면 업스케일링 모델을 포함하여 대략 160GB 가량의 저장 용량을 차지하게 됩니다."><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#2b5797">
+<meta name="theme-color" content="#ffffff">
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column compact"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="메뉴 여닫기">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu52bd33c688b76e0fb8c0eafc869aa6ce_721785_300x0_resize_box_3.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Plutslet0316</a></h1>
+            <h2 class="site-description"></h2>
+        </div>
+    </header><ol class="social-menu">
+            
+                <li>
+                    <a 
+                        href='https://github.com/plutslet0316'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>홈</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/page/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>아카이브</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/page/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>검색</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>다크 모드</span>
+                </li>
+            
+        </div>
+    </ol>
+</aside>
+
+    
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/post/supir-%EA%B5%AC%EC%84%B1%ED%95%B4%EC%84%9C-%EC%97%85%EC%8A%A4%EC%BC%80%EC%9D%BC%EB%A7%81-%ED%95%B4%EB%B3%B4%EA%B8%B0/">SUPIR 구성해서 업스케일링 해보기</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">2024년 06월 13일</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    3 분 정도
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <p>오늘은 오픈 소스로 공개되어 있는 ‘SUPIR’ 라는 업스케일링 툴을 설치 및 구성하고 실행하기 까지의 과정을 기록하고자 합니다.<br>
+일단 SUPIR은 우분투 환경에서 구성해야 하며, 저 같은 윈도우 환경일 경우에는 wsl을 활용하면 윈도우에서도 우분투 환경을 쉽게 구성할 수 있습니다.<br>
+wsl 관련 설치법 등은 구글에 검색하면 많이 나오니 윈도우 환경에서 구성하고자 하면 해당 부분을 참고하여 우선 설치를 진행해주세요.</p>
+<h2 id="요구-사양">요구 사양</h2>
+<p>업스케일링 툴에서 사양을 많이 요구하는 것으로 보입니다. 깃허브의 가이드를 따라 대략 설치를 진행하게 되면 업스케일링 모델을 포함하여 대략 160GB 가량의 저장 용량을 차지하게 됩니다. 모델을 불러올 RAM 용량과 그래픽 카드의 메모리도 충분해야 원할하게 실행 및 업스케일링을 진행할 수 있습니다.</p>
+<p>저는 위에서 설명 드린 것처럼 wsl 환경에서 진행하였고, wsl의 프로필을 활용하여 메모리 용량을 지정하여 구성하였습니다. 스왑 메모리도 지정하였는데, 일단 테스트 목적으로 진행하다 보니 일단 RAM 과 동일하게 지정하고 설치를 진행했습니다.</p>
+<p>모델 불러오는 과정이 있다보니 SSD에 설치하는 것이 좋겠으나 용량 문제로 HDD에 설치를 진행했습니다. SSD의 여유가 있다면 로딩 속도를 위해 SSD에 설치하는 것도 고려해보시면 좋겠습니다.</p>
+<h4 id="구성-사양">구성 사양</h4>
+<ul>
+<li>GPU: RTX 4070 SUPER 12GB</li>
+<li>RAM: 20GM</li>
+<li>SWAP: 20GM</li>
+</ul>
+<h2 id="설치-및-구성">설치 및 구성</h2>
+<h3 id="아나콘다conda-설치">아나콘다(conda) 설치</h3>
+<p>SUPIR는 다양한 패키지, 종속성및 환경 관리를 제공해주는 아나콘다(conda)를 사용하고 있습니다.<br>
+이미 아나콘다가 설치되어 있으면 넘어가도 좋습니다.<br>
+설치되어 있지 않다면 우선 아나콘다를 설치해야 합니다.</p>
+<p>설치:</p>
+<ol>
+<li>버전 확인 <a class="link" href="https://repo.anaconda.com/archive/"  target="_blank" rel="noopener"
+    >https://repo.anaconda.com/archive/</a></li>
+<li>wget으로 최신 설치 파일 받아오기</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>wget https://repo.anaconda.com/archive/Anaconda3-2024.02-1-Linux-x86_64.sh
+</span></span></code></pre></div><ol start="3">
+<li>sh 파일 실행하여 안내에 따라 설치 진행하기</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>./Anaconda3-2024.02-1-Linux-x86_64.sh
+</span></span></code></pre></div><ol start="4">
+<li>초기화 과정 진행
+<ul>
+<li>설치 경로는 다를 수 있으니 확인하여 입력</li>
+</ul>
+</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>source /설치경로/anaconda3/bin/activate
+</span></span><span style="display:flex;"><span>conda init
+</span></span><span style="display:flex;"><span>source ~/.bashrc
+</span></span></code></pre></div><p>참고 링크</p>
+<ul>
+<li><a class="link" href="https://velog.io/@boom109/Anaconda-%EC%84%A4%EC%B9%98-on-Ubuntu-20.04-LTS"  target="_blank" rel="noopener"
+    >https://velog.io/@boom109/Anaconda-설치-on-Ubuntu-20.04-LTS</a></li>
+</ul>
+<h4 id="supir-설치-및-구성">SUPIR 설치 및 구성</h4>
+<p>SUPIR: <a class="link" href="https://github.com/Fanghua-Yu/SUPIR?tab=readme-ov-file"  target="_blank" rel="noopener"
+    >https://github.com/Fanghua-Yu/SUPIR?tab=readme-ov-file</a><br>
+위의 링크로 이동하여 설치 가이드를 보고 진행해도 됩니다.<br>
+아래의 내용은 정리의 느낌으로 크게 다르지 않습니다.</p>
+<ol>
+<li>Git 복제</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git clone https://github.com/Fanghua-Yu/SUPIR.git
+</span></span><span style="display:flex;"><span>cd SUPIR
+</span></span></code></pre></div><ol start="2">
+<li>종속성 패키지 설치
+conda 로 python 3.8의 워크스페이스를 만든 다음, 해당 워크스페이스에서 종속성 패키지 설치 진행</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>conda create -n SUPIR python<span style="color:#f92672">=</span>3.8 -y
+</span></span><span style="display:flex;"><span>conda activate SUPIR
+</span></span><span style="display:flex;"><span>pip install --upgrade pip
+</span></span><span style="display:flex;"><span>pip install -r requirements.txt
+</span></span></code></pre></div><ol start="3">
+<li>
+<p>필요 체크포인트 모델 설치</p>
+<ul>
+<li>
+<p>필요 모델 링크는 Github에서 직접 확인하여 설치를 권장한다.<br>
+SUPIR: <a class="link" href="https://github.com/Fanghua-Yu/SUPIR?tab=readme-ov-file#dependent-models"  target="_blank" rel="noopener"
+    >https://github.com/Fanghua-Yu/SUPIR?tab=readme-ov-file#dependent-models</a></p>
+</li>
+<li>
+<p>소개된 각 모델을 클론 및 다운로드해야 한다.</p>
+<ul>
+<li>모델 소개 페이지인 경우, 우측 상단 케밥(점 세 개) 버튼 클릭 → Clone repository → 깃 클론과 동일한 과정으로 클론</li>
+<li>특정 파일 페이지(예, SDXL base 1.0_0.9vae)인 경우, 좌측 의 download 버튼 클릭</li>
+<li>SUPIR-v0Q, SUPIR-v0Q의 경우, 원하는 드라이브에서 다운로드</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>설치 위치로 경로 수정</p>
+<ul>
+<li>필요한 파일을 전부 설치했다면, 해당 파일 주소를 매치시켜 줘야 한다.</li>
+<li><code>CKPT_PTH.py</code> : LLAVA_CLIP_PATH, LLAVA_MODEL_PATH, SDXL_CLIP1_PATH, SDXL_CLIP2_CACHE_DIR</li>
+<li><code>options/SUPIR_v0.yaml</code> : SDXL_CKPT, SUPIR_CKPT_Q, SUPIR_CKPT_F</li>
+</ul>
+</li>
+</ol>
+<h3 id="실행">실행</h3>
+<p>컴퓨터 사양에 따라 옵션을 추가하여 실행할 수 있습니다. 옵션의 경우 깃허브에 자세히 안내되어 있으니 참고 바랍니다. <br>
+옵션 링크: <a class="link" href="https://github.com/Fanghua-Yu/SUPIR?tab=readme-ov-file#usage-of-supir"  target="_blank" rel="noopener"
+    >https://github.com/Fanghua-Yu/SUPIR?tab=readme-ov-file#usage-of-supir</a> <br>
+실행은 두 가지 방식으로 나뉩니다.</p>
+<ul>
+<li>스크립트 방식</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>python test.py --img_dir <span style="color:#e6db74">&#39;/이미지_디렉토리/&#39;</span> --save_dir <span style="color:#e6db74">&#39;/저장_디렉토리/&#39;</span> --옵션들
+</span></span></code></pre></div><ul>
+<li>Gradio 방식</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>python gradio_demo.py --옵션들
+</span></span></code></pre></div><p>저는 Gradio 방식을 사용하여 실행해봤고, 아래는 제가 사용한 명령어 입니다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>python gradio_demo.py --port <span style="color:#ae81ff">6688</span> --use_tile_vae --no_llava --use_image_slider --loading_half_params
+</span></span></code></pre></div><p>이 명령어를 실행하면 하드 디스크에 설치한 제 환경 기준으로 대략 15분 이상의 시간이 걸려 실행되었습니다.<br>
+실행에 성공하면 지정한 port로 로컬 서버 하나가 실행되어 주소가 cmd 창에 출력 됩니다.<br>
+실행된 서버에 접속하면 화질이 안좋은 이미지를 업스케일링 할 준비가 완료됩니다.</p>
+<ul>
+<li>명령어로 실행된 로컬 서버: <a class="link" href="http://localhost:6688/"  target="_blank" rel="noopener"
+    >http://localhost:6688</a></li>
+</ul>
+<p>각 항목의 설명은 깃허브에서 소개된 이미지로 대체합니다.</p>
+<p><a class="link" href="https://github.com/Fanghua-Yu/SUPIR/blob/master/assets/DemoGuide.png"  target="_blank" rel="noopener"
+    ><img src="https://raw.githubusercontent.com/Fanghua-Yu/SUPIR/master/assets/DemoGuide.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="깃허브 가이드 이미지"
+	
+	
+></a></p>
+<h3 id="업스케일링">업스케일링</h3>
+<p>제가 가진 사진 중 화질이 조금 떨어지는 사진으로 업스케일링을 진행해봤습니다. 다른 설정은 건들이지 않고 가이드 이미지 대로만 진행해보았습니다.</p>
+<p>아래는 해당 업스케일링 과정을 모두 거친 후 캡처 이미지와 비포 에프터 사진입니다.</p>
+<p><img src="/post/supir-%EA%B5%AC%EC%84%B1%ED%95%B4%EC%84%9C-%EC%97%85%EC%8A%A4%EC%BC%80%EC%9D%BC%EB%A7%81-%ED%95%B4%EB%B3%B4%EA%B8%B0/%EC%97%85%EC%8A%A4%EC%BC%80%EC%9D%BC%EB%A7%81_%EC%99%84%EB%A3%8C_%EC%BA%A1%EC%B3%90.png"
+	width="1930"
+	height="1622"
+	srcset="/post/supir-%EA%B5%AC%EC%84%B1%ED%95%B4%EC%84%9C-%EC%97%85%EC%8A%A4%EC%BC%80%EC%9D%BC%EB%A7%81-%ED%95%B4%EB%B3%B4%EA%B8%B0/%EC%97%85%EC%8A%A4%EC%BC%80%EC%9D%BC%EB%A7%81_%EC%99%84%EB%A3%8C_%EC%BA%A1%EC%B3%90_hu932d3b8c91e1525368decb8279964b2c_2122276_480x0_resize_box_3.png 480w, /post/supir-%EA%B5%AC%EC%84%B1%ED%95%B4%EC%84%9C-%EC%97%85%EC%8A%A4%EC%BC%80%EC%9D%BC%EB%A7%81-%ED%95%B4%EB%B3%B4%EA%B8%B0/%EC%97%85%EC%8A%A4%EC%BC%80%EC%9D%BC%EB%A7%81_%EC%99%84%EB%A3%8C_%EC%BA%A1%EC%B3%90_hu932d3b8c91e1525368decb8279964b2c_2122276_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="업스케일링 완료 시 캡쳐 이미지"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="118"
+		data-flex-basis="285px"
+	
+></p>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>Before</th>
+<th>After</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="/post/supir-%EA%B5%AC%EC%84%B1%ED%95%B4%EC%84%9C-%EC%97%85%EC%8A%A4%EC%BC%80%EC%9D%BC%EB%A7%81-%ED%95%B4%EB%B3%B4%EA%B8%B0/%EA%B3%A0%EC%96%91%EC%9D%B4_%EB%B9%84%ED%8F%AC.png"
+	width="1200"
+	height="1800"
+	srcset="/post/supir-%EA%B5%AC%EC%84%B1%ED%95%B4%EC%84%9C-%EC%97%85%EC%8A%A4%EC%BC%80%EC%9D%BC%EB%A7%81-%ED%95%B4%EB%B3%B4%EA%B8%B0/%EA%B3%A0%EC%96%91%EC%9D%B4_%EB%B9%84%ED%8F%AC_hu55b38c7028ae17216cacc8784fa5dbbb_2152275_480x0_resize_box_3.png 480w, /post/supir-%EA%B5%AC%EC%84%B1%ED%95%B4%EC%84%9C-%EC%97%85%EC%8A%A4%EC%BC%80%EC%9D%BC%EB%A7%81-%ED%95%B4%EB%B3%B4%EA%B8%B0/%EA%B3%A0%EC%96%91%EC%9D%B4_%EB%B9%84%ED%8F%AC_hu55b38c7028ae17216cacc8784fa5dbbb_2152275_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="고양이 비포 이미지"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="66"
+		data-flex-basis="160px"
+	
+></td>
+<td><img src="/post/supir-%EA%B5%AC%EC%84%B1%ED%95%B4%EC%84%9C-%EC%97%85%EC%8A%A4%EC%BC%80%EC%9D%BC%EB%A7%81-%ED%95%B4%EB%B3%B4%EA%B8%B0/%EA%B3%A0%EC%96%91%EC%9D%B4_%EC%97%90%ED%94%84%ED%84%B0.png"
+	width="1216"
+	height="1792"
+	srcset="/post/supir-%EA%B5%AC%EC%84%B1%ED%95%B4%EC%84%9C-%EC%97%85%EC%8A%A4%EC%BC%80%EC%9D%BC%EB%A7%81-%ED%95%B4%EB%B3%B4%EA%B8%B0/%EA%B3%A0%EC%96%91%EC%9D%B4_%EC%97%90%ED%94%84%ED%84%B0_hu20a584bbeca0458b59417c31dc11aab3_2581353_480x0_resize_box_3.png 480w, /post/supir-%EA%B5%AC%EC%84%B1%ED%95%B4%EC%84%9C-%EC%97%85%EC%8A%A4%EC%BC%80%EC%9D%BC%EB%A7%81-%ED%95%B4%EB%B3%B4%EA%B8%B0/%EA%B3%A0%EC%96%91%EC%9D%B4_%EC%97%90%ED%94%84%ED%84%B0_hu20a584bbeca0458b59417c31dc11aab3_2581353_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="고양이 에프터 이미지"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="67"
+		data-flex-basis="162px"
+	
+></td>
+</tr>
+</tbody>
+</table></div>
+<p>비슷한 해상도로 결과물이 나왔는데도 꽤 개선된 이미지를 얻을 수 있었습니다.<br>
+업스케일링 정도를 2로 조절해서 추가로 진행해보고 있는데 글 쓰는 중에도 계속 돌아가는 중입니다.<br>
+아무래도 그래픽 카드로 업스케일링을 진행하는 만큼 12GB로는 성능이 따라주지는 않는 모양입니다.<br>
+그래도 이미지 화질 개선 효과는 확실하고, 오픈소스로 제공되고 있는 만큼 화질이 좋지 못한 사진이 있다면 한 번쯤 시도해보는 것도 좋을 것 같습니다.</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+     
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2024 Plutslet0316
+    </section>
+    
+    <section class="powerby">
+        <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a>로 만듦 <br />
+        <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>의 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.20.0">Stack</a></b> 테마 사용 중
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

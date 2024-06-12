@@ -6,7 +6,200 @@
         <description>Recent content in Posts on Plutslet0316</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>ko</language>
-        <lastBuildDate>Wed, 17 Apr 2024 21:32:23 +0900</lastBuildDate><atom:link href="https://blog.plutslet.pe.kr/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 13 Jun 2024 00:30:18 +0900</lastBuildDate><atom:link href="https://blog.plutslet.pe.kr/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>SUPIR 구성해서 업스케일링 해보기</title>
+        <link>https://blog.plutslet.pe.kr/post/supir-%EA%B5%AC%EC%84%B1%ED%95%B4%EC%84%9C-%EC%97%85%EC%8A%A4%EC%BC%80%EC%9D%BC%EB%A7%81-%ED%95%B4%EB%B3%B4%EA%B8%B0/</link>
+        <pubDate>Thu, 13 Jun 2024 00:30:18 +0900</pubDate>
+        
+        <guid>https://blog.plutslet.pe.kr/post/supir-%EA%B5%AC%EC%84%B1%ED%95%B4%EC%84%9C-%EC%97%85%EC%8A%A4%EC%BC%80%EC%9D%BC%EB%A7%81-%ED%95%B4%EB%B3%B4%EA%B8%B0/</guid>
+        <description>&lt;p&gt;오늘은 오픈 소스로 공개되어 있는 ‘SUPIR’ 라는 업스케일링 툴을 설치 및 구성하고 실행하기 까지의 과정을 기록하고자 합니다.&lt;br&gt;
+일단 SUPIR은 우분투 환경에서 구성해야 하며, 저 같은 윈도우 환경일 경우에는 wsl을 활용하면 윈도우에서도 우분투 환경을 쉽게 구성할 수 있습니다.&lt;br&gt;
+wsl 관련 설치법 등은 구글에 검색하면 많이 나오니 윈도우 환경에서 구성하고자 하면 해당 부분을 참고하여 우선 설치를 진행해주세요.&lt;/p&gt;
+&lt;h2 id=&#34;요구-사양&#34;&gt;요구 사양&lt;/h2&gt;
+&lt;p&gt;업스케일링 툴에서 사양을 많이 요구하는 것으로 보입니다. 깃허브의 가이드를 따라 대략 설치를 진행하게 되면 업스케일링 모델을 포함하여 대략 160GB 가량의 저장 용량을 차지하게 됩니다. 모델을 불러올 RAM 용량과 그래픽 카드의 메모리도 충분해야 원할하게 실행 및 업스케일링을 진행할 수 있습니다.&lt;/p&gt;
+&lt;p&gt;저는 위에서 설명 드린 것처럼 wsl 환경에서 진행하였고, wsl의 프로필을 활용하여 메모리 용량을 지정하여 구성하였습니다. 스왑 메모리도 지정하였는데, 일단 테스트 목적으로 진행하다 보니 일단 RAM 과 동일하게 지정하고 설치를 진행했습니다.&lt;/p&gt;
+&lt;p&gt;모델 불러오는 과정이 있다보니 SSD에 설치하는 것이 좋겠으나 용량 문제로 HDD에 설치를 진행했습니다. SSD의 여유가 있다면 로딩 속도를 위해 SSD에 설치하는 것도 고려해보시면 좋겠습니다.&lt;/p&gt;
+&lt;h4 id=&#34;구성-사양&#34;&gt;구성 사양&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;GPU: RTX 4070 SUPER 12GB&lt;/li&gt;
+&lt;li&gt;RAM: 20GM&lt;/li&gt;
+&lt;li&gt;SWAP: 20GM&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;설치-및-구성&#34;&gt;설치 및 구성&lt;/h2&gt;
+&lt;h3 id=&#34;아나콘다conda-설치&#34;&gt;아나콘다(conda) 설치&lt;/h3&gt;
+&lt;p&gt;SUPIR는 다양한 패키지, 종속성및 환경 관리를 제공해주는 아나콘다(conda)를 사용하고 있습니다.&lt;br&gt;
+이미 아나콘다가 설치되어 있으면 넘어가도 좋습니다.&lt;br&gt;
+설치되어 있지 않다면 우선 아나콘다를 설치해야 합니다.&lt;/p&gt;
+&lt;p&gt;설치:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;버전 확인 &lt;a class=&#34;link&#34; href=&#34;https://repo.anaconda.com/archive/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://repo.anaconda.com/archive/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;wget으로 최신 설치 파일 받아오기&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;wget https://repo.anaconda.com/archive/Anaconda3-2024.02-1-Linux-x86_64.sh
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;sh 파일 실행하여 안내에 따라 설치 진행하기&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;./Anaconda3-2024.02-1-Linux-x86_64.sh
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;초기화 과정 진행
+&lt;ul&gt;
+&lt;li&gt;설치 경로는 다를 수 있으니 확인하여 입력&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;source /설치경로/anaconda3/bin/activate
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;conda init
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;source ~/.bashrc
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;참고 링크&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://velog.io/@boom109/Anaconda-%EC%84%A4%EC%B9%98-on-Ubuntu-20.04-LTS&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://velog.io/@boom109/Anaconda-설치-on-Ubuntu-20.04-LTS&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;supir-설치-및-구성&#34;&gt;SUPIR 설치 및 구성&lt;/h4&gt;
+&lt;p&gt;SUPIR: &lt;a class=&#34;link&#34; href=&#34;https://github.com/Fanghua-Yu/SUPIR?tab=readme-ov-file&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/Fanghua-Yu/SUPIR?tab=readme-ov-file&lt;/a&gt;&lt;br&gt;
+위의 링크로 이동하여 설치 가이드를 보고 진행해도 됩니다.&lt;br&gt;
+아래의 내용은 정리의 느낌으로 크게 다르지 않습니다.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Git 복제&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git clone https://github.com/Fanghua-Yu/SUPIR.git
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cd SUPIR
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;종속성 패키지 설치
+conda 로 python 3.8의 워크스페이스를 만든 다음, 해당 워크스페이스에서 종속성 패키지 설치 진행&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;conda create -n SUPIR python&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;3.8 -y
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;conda activate SUPIR
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;pip install --upgrade pip
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;pip install -r requirements.txt
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;
+&lt;p&gt;필요 체크포인트 모델 설치&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;필요 모델 링크는 Github에서 직접 확인하여 설치를 권장한다.&lt;br&gt;
+SUPIR: &lt;a class=&#34;link&#34; href=&#34;https://github.com/Fanghua-Yu/SUPIR?tab=readme-ov-file#dependent-models&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/Fanghua-Yu/SUPIR?tab=readme-ov-file#dependent-models&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;소개된 각 모델을 클론 및 다운로드해야 한다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;모델 소개 페이지인 경우, 우측 상단 케밥(점 세 개) 버튼 클릭 → Clone repository → 깃 클론과 동일한 과정으로 클론&lt;/li&gt;
+&lt;li&gt;특정 파일 페이지(예, SDXL base 1.0_0.9vae)인 경우, 좌측 의 download 버튼 클릭&lt;/li&gt;
+&lt;li&gt;SUPIR-v0Q, SUPIR-v0Q의 경우, 원하는 드라이브에서 다운로드&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;설치 위치로 경로 수정&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;필요한 파일을 전부 설치했다면, 해당 파일 주소를 매치시켜 줘야 한다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;CKPT_PTH.py&lt;/code&gt; : LLAVA_CLIP_PATH, LLAVA_MODEL_PATH, SDXL_CLIP1_PATH, SDXL_CLIP2_CACHE_DIR&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;options/SUPIR_v0.yaml&lt;/code&gt; : SDXL_CKPT, SUPIR_CKPT_Q, SUPIR_CKPT_F&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;실행&#34;&gt;실행&lt;/h3&gt;
+&lt;p&gt;컴퓨터 사양에 따라 옵션을 추가하여 실행할 수 있습니다. 옵션의 경우 깃허브에 자세히 안내되어 있으니 참고 바랍니다. &lt;br&gt;
+옵션 링크: &lt;a class=&#34;link&#34; href=&#34;https://github.com/Fanghua-Yu/SUPIR?tab=readme-ov-file#usage-of-supir&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/Fanghua-Yu/SUPIR?tab=readme-ov-file#usage-of-supir&lt;/a&gt; &lt;br&gt;
+실행은 두 가지 방식으로 나뉩니다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;스크립트 방식&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;python test.py --img_dir &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;/이미지_디렉토리/&amp;#39;&lt;/span&gt; --save_dir &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;/저장_디렉토리/&amp;#39;&lt;/span&gt; --옵션들
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Gradio 방식&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;python gradio_demo.py --옵션들
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;저는 Gradio 방식을 사용하여 실행해봤고, 아래는 제가 사용한 명령어 입니다.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;python gradio_demo.py --port &lt;span style=&#34;color:#ae81ff&#34;&gt;6688&lt;/span&gt; --use_tile_vae --no_llava --use_image_slider --loading_half_params
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;이 명령어를 실행하면 하드 디스크에 설치한 제 환경 기준으로 대략 15분 이상의 시간이 걸려 실행되었습니다.&lt;br&gt;
+실행에 성공하면 지정한 port로 로컬 서버 하나가 실행되어 주소가 cmd 창에 출력 됩니다.&lt;br&gt;
+실행된 서버에 접속하면 화질이 안좋은 이미지를 업스케일링 할 준비가 완료됩니다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;명령어로 실행된 로컬 서버: &lt;a class=&#34;link&#34; href=&#34;http://localhost:6688/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://localhost:6688&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;각 항목의 설명은 깃허브에서 소개된 이미지로 대체합니다.&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/Fanghua-Yu/SUPIR/blob/master/assets/DemoGuide.png&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://raw.githubusercontent.com/Fanghua-Yu/SUPIR/master/assets/DemoGuide.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;깃허브 가이드 이미지&#34;
+	
+	
+&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;업스케일링&#34;&gt;업스케일링&lt;/h3&gt;
+&lt;p&gt;제가 가진 사진 중 화질이 조금 떨어지는 사진으로 업스케일링을 진행해봤습니다. 다른 설정은 건들이지 않고 가이드 이미지 대로만 진행해보았습니다.&lt;/p&gt;
+&lt;p&gt;아래는 해당 업스케일링 과정을 모두 거친 후 캡처 이미지와 비포 에프터 사진입니다.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.plutslet.pe.kr/post/supir-%EA%B5%AC%EC%84%B1%ED%95%B4%EC%84%9C-%EC%97%85%EC%8A%A4%EC%BC%80%EC%9D%BC%EB%A7%81-%ED%95%B4%EB%B3%B4%EA%B8%B0/%EC%97%85%EC%8A%A4%EC%BC%80%EC%9D%BC%EB%A7%81_%EC%99%84%EB%A3%8C_%EC%BA%A1%EC%B3%90.png&#34;
+	width=&#34;1930&#34;
+	height=&#34;1622&#34;
+	srcset=&#34;https://blog.plutslet.pe.kr/post/supir-%EA%B5%AC%EC%84%B1%ED%95%B4%EC%84%9C-%EC%97%85%EC%8A%A4%EC%BC%80%EC%9D%BC%EB%A7%81-%ED%95%B4%EB%B3%B4%EA%B8%B0/%EC%97%85%EC%8A%A4%EC%BC%80%EC%9D%BC%EB%A7%81_%EC%99%84%EB%A3%8C_%EC%BA%A1%EC%B3%90_hu932d3b8c91e1525368decb8279964b2c_2122276_480x0_resize_box_3.png 480w, https://blog.plutslet.pe.kr/post/supir-%EA%B5%AC%EC%84%B1%ED%95%B4%EC%84%9C-%EC%97%85%EC%8A%A4%EC%BC%80%EC%9D%BC%EB%A7%81-%ED%95%B4%EB%B3%B4%EA%B8%B0/%EC%97%85%EC%8A%A4%EC%BC%80%EC%9D%BC%EB%A7%81_%EC%99%84%EB%A3%8C_%EC%BA%A1%EC%B3%90_hu932d3b8c91e1525368decb8279964b2c_2122276_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;업스케일링 완료 시 캡쳐 이미지&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;118&#34;
+		data-flex-basis=&#34;285px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Before&lt;/th&gt;
+&lt;th&gt;After&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;img src=&#34;https://blog.plutslet.pe.kr/post/supir-%EA%B5%AC%EC%84%B1%ED%95%B4%EC%84%9C-%EC%97%85%EC%8A%A4%EC%BC%80%EC%9D%BC%EB%A7%81-%ED%95%B4%EB%B3%B4%EA%B8%B0/%EA%B3%A0%EC%96%91%EC%9D%B4_%EB%B9%84%ED%8F%AC.png&#34;
+	width=&#34;1200&#34;
+	height=&#34;1800&#34;
+	srcset=&#34;https://blog.plutslet.pe.kr/post/supir-%EA%B5%AC%EC%84%B1%ED%95%B4%EC%84%9C-%EC%97%85%EC%8A%A4%EC%BC%80%EC%9D%BC%EB%A7%81-%ED%95%B4%EB%B3%B4%EA%B8%B0/%EA%B3%A0%EC%96%91%EC%9D%B4_%EB%B9%84%ED%8F%AC_hu55b38c7028ae17216cacc8784fa5dbbb_2152275_480x0_resize_box_3.png 480w, https://blog.plutslet.pe.kr/post/supir-%EA%B5%AC%EC%84%B1%ED%95%B4%EC%84%9C-%EC%97%85%EC%8A%A4%EC%BC%80%EC%9D%BC%EB%A7%81-%ED%95%B4%EB%B3%B4%EA%B8%B0/%EA%B3%A0%EC%96%91%EC%9D%B4_%EB%B9%84%ED%8F%AC_hu55b38c7028ae17216cacc8784fa5dbbb_2152275_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;고양이 비포 이미지&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;66&#34;
+		data-flex-basis=&#34;160px&#34;
+	
+&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://blog.plutslet.pe.kr/post/supir-%EA%B5%AC%EC%84%B1%ED%95%B4%EC%84%9C-%EC%97%85%EC%8A%A4%EC%BC%80%EC%9D%BC%EB%A7%81-%ED%95%B4%EB%B3%B4%EA%B8%B0/%EA%B3%A0%EC%96%91%EC%9D%B4_%EC%97%90%ED%94%84%ED%84%B0.png&#34;
+	width=&#34;1216&#34;
+	height=&#34;1792&#34;
+	srcset=&#34;https://blog.plutslet.pe.kr/post/supir-%EA%B5%AC%EC%84%B1%ED%95%B4%EC%84%9C-%EC%97%85%EC%8A%A4%EC%BC%80%EC%9D%BC%EB%A7%81-%ED%95%B4%EB%B3%B4%EA%B8%B0/%EA%B3%A0%EC%96%91%EC%9D%B4_%EC%97%90%ED%94%84%ED%84%B0_hu20a584bbeca0458b59417c31dc11aab3_2581353_480x0_resize_box_3.png 480w, https://blog.plutslet.pe.kr/post/supir-%EA%B5%AC%EC%84%B1%ED%95%B4%EC%84%9C-%EC%97%85%EC%8A%A4%EC%BC%80%EC%9D%BC%EB%A7%81-%ED%95%B4%EB%B3%B4%EA%B8%B0/%EA%B3%A0%EC%96%91%EC%9D%B4_%EC%97%90%ED%94%84%ED%84%B0_hu20a584bbeca0458b59417c31dc11aab3_2581353_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;고양이 에프터 이미지&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;67&#34;
+		data-flex-basis=&#34;162px&#34;
+	
+&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;비슷한 해상도로 결과물이 나왔는데도 꽤 개선된 이미지를 얻을 수 있었습니다.&lt;br&gt;
+업스케일링 정도를 2로 조절해서 추가로 진행해보고 있는데 글 쓰는 중에도 계속 돌아가는 중입니다.&lt;br&gt;
+아무래도 그래픽 카드로 업스케일링을 진행하는 만큼 12GB로는 성능이 따라주지는 않는 모양입니다.&lt;br&gt;
+그래도 이미지 화질 개선 효과는 확실하고, 오픈소스로 제공되고 있는 만큼 화질이 좋지 못한 사진이 있다면 한 번쯤 시도해보는 것도 좋을 것 같습니다.&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>Uno Platform 마우스 커서 버튼 위에 올렸을 때 모양 바꾸기</title>
         <link>https://blog.plutslet.pe.kr/post/uno-platform-%EB%A7%88%EC%9A%B0%EC%8A%A4-%EC%BB%A4%EC%84%9C-%EB%B2%84%ED%8A%BC-%EC%9C%84%EC%97%90-%EC%98%AC%EB%A0%B8%EC%9D%84-%EB%95%8C-%EB%AA%A8%EC%96%91-%EB%B0%94%EA%BE%B8%EA%B8%B0/</link>
         <pubDate>Mon, 08 Apr 2024 23:01:27 +0900</pubDate>
