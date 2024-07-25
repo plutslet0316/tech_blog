@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>확대 on Plutslet0316</title>
-        <link>https://blog.plutslet.pe.kr/tags/%ED%99%95%EB%8C%80/</link>
+        <link>https://tech.plutslet.pe.kr/tags/%ED%99%95%EB%8C%80/</link>
         <description>Recent content in 확대 on Plutslet0316</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>ko</language>
-        <lastBuildDate>Wed, 14 Feb 2024 23:19:25 +0900</lastBuildDate><atom:link href="https://blog.plutslet.pe.kr/tags/%ED%99%95%EB%8C%80/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 14 Feb 2024 23:19:25 +0900</lastBuildDate><atom:link href="https://tech.plutslet.pe.kr/tags/%ED%99%95%EB%8C%80/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>html 모바일에서 input 태그 클릭시 확대 방지</title>
-        <link>https://blog.plutslet.pe.kr/post/html-%EB%AA%A8%EB%B0%94%EC%9D%BC%EC%97%90%EC%84%9C-input-%ED%83%9C%EA%B7%B8-%ED%81%B4%EB%A6%AD%EC%8B%9C-%ED%99%95%EB%8C%80-%EB%B0%A9%EC%A7%80/</link>
+        <link>https://tech.plutslet.pe.kr/post/html-%EB%AA%A8%EB%B0%94%EC%9D%BC%EC%97%90%EC%84%9C-input-%ED%83%9C%EA%B7%B8-%ED%81%B4%EB%A6%AD%EC%8B%9C-%ED%99%95%EB%8C%80-%EB%B0%A9%EC%A7%80/</link>
         <pubDate>Wed, 14 Feb 2024 23:19:25 +0900</pubDate>
         
-        <guid>https://blog.plutslet.pe.kr/post/html-%EB%AA%A8%EB%B0%94%EC%9D%BC%EC%97%90%EC%84%9C-input-%ED%83%9C%EA%B7%B8-%ED%81%B4%EB%A6%AD%EC%8B%9C-%ED%99%95%EB%8C%80-%EB%B0%A9%EC%A7%80/</guid>
+        <guid>https://tech.plutslet.pe.kr/post/html-%EB%AA%A8%EB%B0%94%EC%9D%BC%EC%97%90%EC%84%9C-input-%ED%83%9C%EA%B7%B8-%ED%81%B4%EB%A6%AD%EC%8B%9C-%ED%99%95%EB%8C%80-%EB%B0%A9%EC%A7%80/</guid>
         <description>&lt;p&gt;가끔 모바일 브라우저에서 &lt;code&gt;input&lt;/code&gt; 태그를 사용한 입력란을 터치해 입력을 시작할 때 해당 입력란을 확대 시켜서 보여주는 경우가 있습니다.&lt;br&gt;
 확대하지 않는 동작이 프로세스 상 올바른 동작일 때 이를 방지하는 방법이 있습니다.&lt;/p&gt;
 &lt;p&gt;방법은 간단한데, &lt;code&gt;index.html&lt;/code&gt;의 &lt;code&gt;header&lt;/code&gt; 태그 안에서 &lt;code&gt;meta&lt;/code&gt; 태그로 viewport 관련해서 설정하는 부분이 있습니다.&lt;br&gt;

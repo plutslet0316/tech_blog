@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Uno Platform on Plutslet0316</title>
-        <link>https://blog.plutslet.pe.kr/categories/uno-platform/</link>
+        <link>https://tech.plutslet.pe.kr/categories/uno-platform/</link>
         <description>Recent content in Uno Platform on Plutslet0316</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>ko</language>
-        <lastBuildDate>Sun, 03 Mar 2024 23:34:50 +0900</lastBuildDate><atom:link href="https://blog.plutslet.pe.kr/categories/uno-platform/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 03 Mar 2024 23:34:50 +0900</lastBuildDate><atom:link href="https://tech.plutslet.pe.kr/categories/uno-platform/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Uno Platform 시작하기</title>
-        <link>https://blog.plutslet.pe.kr/post/uno-platform-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0/</link>
+        <link>https://tech.plutslet.pe.kr/post/uno-platform-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0/</link>
         <pubDate>Sun, 03 Mar 2024 23:34:50 +0900</pubDate>
         
-        <guid>https://blog.plutslet.pe.kr/post/uno-platform-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0/</guid>
+        <guid>https://tech.plutslet.pe.kr/post/uno-platform-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0/</guid>
         <description>&lt;p&gt;Uno Platform은 다중 플랫폼을 지원하는 .NET 개발 도구다.&lt;/p&gt;
 &lt;h3 id=&#34;특징&#34;&gt;특징&lt;/h3&gt;
 &lt;ul&gt;

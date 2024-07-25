@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Vue on Plutslet0316</title>
-        <link>https://blog.plutslet.pe.kr/tags/vue/</link>
+        <link>https://tech.plutslet.pe.kr/tags/vue/</link>
         <description>Recent content in Vue on Plutslet0316</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>ko</language>
-        <lastBuildDate>Wed, 14 Feb 2024 00:34:14 +0900</lastBuildDate><atom:link href="https://blog.plutslet.pe.kr/tags/vue/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 14 Feb 2024 00:34:14 +0900</lastBuildDate><atom:link href="https://tech.plutslet.pe.kr/tags/vue/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Vue에서 이미지 src 동적으로 할당하기</title>
-        <link>https://blog.plutslet.pe.kr/post/vue%EC%97%90%EC%84%9C-%EC%9D%B4%EB%AF%B8%EC%A7%80-src-%EB%8F%99%EC%A0%81%EC%9C%BC%EB%A1%9C-%ED%95%A0%EB%8B%B9%ED%95%98%EA%B8%B0/</link>
+        <link>https://tech.plutslet.pe.kr/post/vue%EC%97%90%EC%84%9C-%EC%9D%B4%EB%AF%B8%EC%A7%80-src-%EB%8F%99%EC%A0%81%EC%9C%BC%EB%A1%9C-%ED%95%A0%EB%8B%B9%ED%95%98%EA%B8%B0/</link>
         <pubDate>Wed, 14 Feb 2024 00:34:14 +0900</pubDate>
         
-        <guid>https://blog.plutslet.pe.kr/post/vue%EC%97%90%EC%84%9C-%EC%9D%B4%EB%AF%B8%EC%A7%80-src-%EB%8F%99%EC%A0%81%EC%9C%BC%EB%A1%9C-%ED%95%A0%EB%8B%B9%ED%95%98%EA%B8%B0/</guid>
+        <guid>https://tech.plutslet.pe.kr/post/vue%EC%97%90%EC%84%9C-%EC%9D%B4%EB%AF%B8%EC%A7%80-src-%EB%8F%99%EC%A0%81%EC%9C%BC%EB%A1%9C-%ED%95%A0%EB%8B%B9%ED%95%98%EA%B8%B0/</guid>
         <description>&lt;p&gt;Vue에서 이미지를 동적으로 할당해야하는 부분이 있었습니다.&lt;br&gt;
 대략 &lt;code&gt;/src/assets/images/img.png&lt;/code&gt; 이런 느낌의 string 타입을 반환하는 함수를 만들었고, 대략 &lt;code&gt;&amp;lt;img :src=&amp;quot;imgSrc()&amp;quot;&amp;gt;&lt;/code&gt; 이런 느낌으로 할당해봤죠.&lt;br&gt;
 &lt;code&gt;npm run dev&lt;/code&gt; 통해 실행한 프로젝트에서는 위의 코드로도 잘 작동해서 문제가 없을 줄 알았습니다.&lt;br&gt;

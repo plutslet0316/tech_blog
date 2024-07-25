@@ -2,23 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Pages on Plutslet0316</title>
-        <link>https://blog.plutslet.pe.kr/page/</link>
+        <link>https://tech.plutslet.pe.kr/page/</link>
         <description>Recent content in Pages on Plutslet0316</description>
         <generator>Hugo -- gohugo.io</generator>
-        <language>ko</language><atom:link href="https://blog.plutslet.pe.kr/page/index.xml" rel="self" type="application/rss+xml" /><item>
+        <language>ko</language><atom:link href="https://tech.plutslet.pe.kr/page/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>검색</title>
-        <link>https://blog.plutslet.pe.kr/page/search/</link>
+        <link>https://tech.plutslet.pe.kr/page/search/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://blog.plutslet.pe.kr/page/search/</guid>
+        <guid>https://tech.plutslet.pe.kr/page/search/</guid>
         <description></description>
         </item>
         <item>
         <title>아카이브</title>
-        <link>https://blog.plutslet.pe.kr/page/archives/</link>
+        <link>https://tech.plutslet.pe.kr/page/archives/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://blog.plutslet.pe.kr/page/archives/</guid>
+        <guid>https://tech.plutslet.pe.kr/page/archives/</guid>
         <description></description>
         </item>
         

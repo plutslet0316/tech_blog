@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Hugo on Plutslet0316</title>
-        <link>https://blog.plutslet.pe.kr/tags/hugo/</link>
+        <link>https://tech.plutslet.pe.kr/tags/hugo/</link>
         <description>Recent content in Hugo on Plutslet0316</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>ko</language>
-        <lastBuildDate>Wed, 24 Jan 2024 23:06:58 +0900</lastBuildDate><atom:link href="https://blog.plutslet.pe.kr/tags/hugo/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 24 Jan 2024 23:06:58 +0900</lastBuildDate><atom:link href="https://tech.plutslet.pe.kr/tags/hugo/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Hugo와 GitHub로 블로그 만들기</title>
-        <link>https://blog.plutslet.pe.kr/post/hugo%EC%99%80-github%EB%A1%9C-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0/</link>
+        <link>https://tech.plutslet.pe.kr/post/hugo%EC%99%80-github%EB%A1%9C-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0/</link>
         <pubDate>Wed, 24 Jan 2024 23:06:58 +0900</pubDate>
         
-        <guid>https://blog.plutslet.pe.kr/post/hugo%EC%99%80-github%EB%A1%9C-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0/</guid>
+        <guid>https://tech.plutslet.pe.kr/post/hugo%EC%99%80-github%EB%A1%9C-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0/</guid>
         <description>&lt;h3 id=&#34;hugo&#34;&gt;Hugo&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;빌드 속도가 빠릅니다.&lt;/li&gt;

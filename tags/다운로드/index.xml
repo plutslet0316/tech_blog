@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>다운로드 on Plutslet0316</title>
-        <link>https://blog.plutslet.pe.kr/tags/%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C/</link>
+        <link>https://tech.plutslet.pe.kr/tags/%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C/</link>
         <description>Recent content in 다운로드 on Plutslet0316</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>ko</language>
-        <lastBuildDate>Fri, 02 Feb 2024 22:41:19 +0900</lastBuildDate><atom:link href="https://blog.plutslet.pe.kr/tags/%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 02 Feb 2024 22:41:19 +0900</lastBuildDate><atom:link href="https://tech.plutslet.pe.kr/tags/%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>S3 이미지 다운로드 CORS 문제 해결</title>
-        <link>https://blog.plutslet.pe.kr/post/s3-%EC%9D%B4%EB%AF%B8%EC%A7%80-%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C-cors-%EB%AC%B8%EC%A0%9C-%ED%95%B4%EA%B2%B0/</link>
+        <link>https://tech.plutslet.pe.kr/post/s3-%EC%9D%B4%EB%AF%B8%EC%A7%80-%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C-cors-%EB%AC%B8%EC%A0%9C-%ED%95%B4%EA%B2%B0/</link>
         <pubDate>Fri, 02 Feb 2024 22:41:19 +0900</pubDate>
         
-        <guid>https://blog.plutslet.pe.kr/post/s3-%EC%9D%B4%EB%AF%B8%EC%A7%80-%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C-cors-%EB%AC%B8%EC%A0%9C-%ED%95%B4%EA%B2%B0/</guid>
+        <guid>https://tech.plutslet.pe.kr/post/s3-%EC%9D%B4%EB%AF%B8%EC%A7%80-%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C-cors-%EB%AC%B8%EC%A0%9C-%ED%95%B4%EA%B2%B0/</guid>
         <description>&lt;p&gt;최근 Vue 프로젝트에서 S3 URL을 다운로드되는 기능을 구현해야 하는 일이 있었습니다. fetch를 이용해서 파일을 blob 형태로 받아와 다운로드 시키도록 하도록 처리했죠. 다른 파일들은 다운로드가 잘 이뤄졌는데, 어떤 페이지에서는 이미지가 CORS 오류로 다운로드되지 않는 문제가 발생했습니다. 이 글은 해당 문제를 정리한 내용입니다.&lt;/p&gt;
 &lt;h3 id=&#34;문제&#34;&gt;문제&lt;/h3&gt;
 &lt;p&gt;위에서 언급했듯이 S3 URL을 가지고 있었고, 해당 링크를 이용해 다운로드 되도록 기능을 구현한 상태였습니다.&lt;br&gt;

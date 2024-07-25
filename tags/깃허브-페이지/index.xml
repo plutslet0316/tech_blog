@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>깃허브 페이지 on Plutslet0316</title>
-        <link>https://blog.plutslet.pe.kr/tags/%EA%B9%83%ED%97%88%EB%B8%8C-%ED%8E%98%EC%9D%B4%EC%A7%80/</link>
+        <link>https://tech.plutslet.pe.kr/tags/%EA%B9%83%ED%97%88%EB%B8%8C-%ED%8E%98%EC%9D%B4%EC%A7%80/</link>
         <description>Recent content in 깃허브 페이지 on Plutslet0316</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>ko</language>
-        <lastBuildDate>Tue, 30 Jan 2024 22:36:50 +0900</lastBuildDate><atom:link href="https://blog.plutslet.pe.kr/tags/%EA%B9%83%ED%97%88%EB%B8%8C-%ED%8E%98%EC%9D%B4%EC%A7%80/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 30 Jan 2024 22:36:50 +0900</lastBuildDate><atom:link href="https://tech.plutslet.pe.kr/tags/%EA%B9%83%ED%97%88%EB%B8%8C-%ED%8E%98%EC%9D%B4%EC%A7%80/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>GitHub 페이지 커스텀 도메인 설정하기</title>
-        <link>https://blog.plutslet.pe.kr/post/github-%ED%8E%98%EC%9D%B4%EC%A7%80-%EC%BB%A4%EC%8A%A4%ED%85%80-%EB%8F%84%EB%A9%94%EC%9D%B8-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0/</link>
+        <link>https://tech.plutslet.pe.kr/post/github-%ED%8E%98%EC%9D%B4%EC%A7%80-%EC%BB%A4%EC%8A%A4%ED%85%80-%EB%8F%84%EB%A9%94%EC%9D%B8-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0/</link>
         <pubDate>Tue, 30 Jan 2024 22:36:50 +0900</pubDate>
         
-        <guid>https://blog.plutslet.pe.kr/post/github-%ED%8E%98%EC%9D%B4%EC%A7%80-%EC%BB%A4%EC%8A%A4%ED%85%80-%EB%8F%84%EB%A9%94%EC%9D%B8-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0/</guid>
+        <guid>https://tech.plutslet.pe.kr/post/github-%ED%8E%98%EC%9D%B4%EC%A7%80-%EC%BB%A4%EC%8A%A4%ED%85%80-%EB%8F%84%EB%A9%94%EC%9D%B8-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0/</guid>
         <description>&lt;p&gt;깃허브 페이지로 블로그를 만들 때부터 개인 도메인으로 연결하고 싶다는 생각이 있었습니다. 이 글은 깃허브 페이지에서 커스텀 도메인 설정하며 정리한 내용입니다.&lt;/p&gt;
 &lt;h3 id=&#34;시작&#34;&gt;시작&lt;/h3&gt;
 &lt;p&gt;기본적으로 깃허브 페이지를 만들면 아래의 URL 형태로 만들어 집니다.&lt;/p&gt;
@@ -28,10 +28,10 @@
 &lt;li&gt;대상 주소: 깃허브아이디.github.io&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;저는 클라우드플레어를 이용중이고 설정한 예시 이미지는 아래와 같습니다.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.plutslet.pe.kr/post/github-%ED%8E%98%EC%9D%B4%EC%A7%80-%EC%BB%A4%EC%8A%A4%ED%85%80-%EB%8F%84%EB%A9%94%EC%9D%B8-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0/DNS_%EC%84%A4%EC%A0%95.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://tech.plutslet.pe.kr/post/github-%ED%8E%98%EC%9D%B4%EC%A7%80-%EC%BB%A4%EC%8A%A4%ED%85%80-%EB%8F%84%EB%A9%94%EC%9D%B8-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0/DNS_%EC%84%A4%EC%A0%95.png&#34;
 	width=&#34;1515&#34;
 	height=&#34;370&#34;
-	srcset=&#34;https://blog.plutslet.pe.kr/post/github-%ED%8E%98%EC%9D%B4%EC%A7%80-%EC%BB%A4%EC%8A%A4%ED%85%80-%EB%8F%84%EB%A9%94%EC%9D%B8-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0/DNS_%EC%84%A4%EC%A0%95_hub793ff0d4dab954f8da665cd88b8c675_40166_480x0_resize_box_3.png 480w, https://blog.plutslet.pe.kr/post/github-%ED%8E%98%EC%9D%B4%EC%A7%80-%EC%BB%A4%EC%8A%A4%ED%85%80-%EB%8F%84%EB%A9%94%EC%9D%B8-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0/DNS_%EC%84%A4%EC%A0%95_hub793ff0d4dab954f8da665cd88b8c675_40166_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://tech.plutslet.pe.kr/post/github-%ED%8E%98%EC%9D%B4%EC%A7%80-%EC%BB%A4%EC%8A%A4%ED%85%80-%EB%8F%84%EB%A9%94%EC%9D%B8-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0/DNS_%EC%84%A4%EC%A0%95_hub793ff0d4dab954f8da665cd88b8c675_40166_480x0_resize_box_3.png 480w, https://tech.plutslet.pe.kr/post/github-%ED%8E%98%EC%9D%B4%EC%A7%80-%EC%BB%A4%EC%8A%A4%ED%85%80-%EB%8F%84%EB%A9%94%EC%9D%B8-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0/DNS_%EC%84%A4%EC%A0%95_hub793ff0d4dab954f8da665cd88b8c675_40166_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;DNS 설정&#34;
@@ -49,10 +49,10 @@
 &lt;li&gt;깃허브에서 DNS 확인을 진행하고, 이후 완료가 되면 해당 도메인으로 접근할 수 있게 됩니다.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;아래의 사진은 DNS 설정 후 확인까지 마친 예시 이미지 입니다.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.plutslet.pe.kr/post/github-%ED%8E%98%EC%9D%B4%EC%A7%80-%EC%BB%A4%EC%8A%A4%ED%85%80-%EB%8F%84%EB%A9%94%EC%9D%B8-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0/%EC%BB%A4%EC%8A%A4%ED%85%80_%EB%8F%84%EB%A9%94%EC%9D%B8_%EC%84%A4%EC%A0%95.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://tech.plutslet.pe.kr/post/github-%ED%8E%98%EC%9D%B4%EC%A7%80-%EC%BB%A4%EC%8A%A4%ED%85%80-%EB%8F%84%EB%A9%94%EC%9D%B8-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0/%EC%BB%A4%EC%8A%A4%ED%85%80_%EB%8F%84%EB%A9%94%EC%9D%B8_%EC%84%A4%EC%A0%95.png&#34;
 	width=&#34;1373&#34;
 	height=&#34;199&#34;
-	srcset=&#34;https://blog.plutslet.pe.kr/post/github-%ED%8E%98%EC%9D%B4%EC%A7%80-%EC%BB%A4%EC%8A%A4%ED%85%80-%EB%8F%84%EB%A9%94%EC%9D%B8-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0/%EC%BB%A4%EC%8A%A4%ED%85%80_%EB%8F%84%EB%A9%94%EC%9D%B8_%EC%84%A4%EC%A0%95_hufbc0e08b86941e92a378c1a2e1541f24_21749_480x0_resize_box_3.png 480w, https://blog.plutslet.pe.kr/post/github-%ED%8E%98%EC%9D%B4%EC%A7%80-%EC%BB%A4%EC%8A%A4%ED%85%80-%EB%8F%84%EB%A9%94%EC%9D%B8-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0/%EC%BB%A4%EC%8A%A4%ED%85%80_%EB%8F%84%EB%A9%94%EC%9D%B8_%EC%84%A4%EC%A0%95_hufbc0e08b86941e92a378c1a2e1541f24_21749_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://tech.plutslet.pe.kr/post/github-%ED%8E%98%EC%9D%B4%EC%A7%80-%EC%BB%A4%EC%8A%A4%ED%85%80-%EB%8F%84%EB%A9%94%EC%9D%B8-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0/%EC%BB%A4%EC%8A%A4%ED%85%80_%EB%8F%84%EB%A9%94%EC%9D%B8_%EC%84%A4%EC%A0%95_hufbc0e08b86941e92a378c1a2e1541f24_21749_480x0_resize_box_3.png 480w, https://tech.plutslet.pe.kr/post/github-%ED%8E%98%EC%9D%B4%EC%A7%80-%EC%BB%A4%EC%8A%A4%ED%85%80-%EB%8F%84%EB%A9%94%EC%9D%B8-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0/%EC%BB%A4%EC%8A%A4%ED%85%80_%EB%8F%84%EB%A9%94%EC%9D%B8_%EC%84%A4%EC%A0%95_hufbc0e08b86941e92a378c1a2e1541f24_21749_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;커스텀 도메인 설정&#34;

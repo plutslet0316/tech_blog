@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>MariaDB on Plutslet0316</title>
-        <link>https://blog.plutslet.pe.kr/categories/mariadb/</link>
+        <link>https://tech.plutslet.pe.kr/categories/mariadb/</link>
         <description>Recent content in MariaDB on Plutslet0316</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>ko</language>
-        <lastBuildDate>Mon, 11 Mar 2024 22:32:41 +0900</lastBuildDate><atom:link href="https://blog.plutslet.pe.kr/categories/mariadb/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 11 Mar 2024 22:32:41 +0900</lastBuildDate><atom:link href="https://tech.plutslet.pe.kr/categories/mariadb/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Ubuntu에서 MariaDB 자동 백업하기</title>
-        <link>https://blog.plutslet.pe.kr/post/ubuntu%EC%97%90%EC%84%9C-mariadb-%EC%9E%90%EB%8F%99-%EB%B0%B1%EC%97%85%ED%95%98%EA%B8%B0/</link>
+        <link>https://tech.plutslet.pe.kr/post/ubuntu%EC%97%90%EC%84%9C-mariadb-%EC%9E%90%EB%8F%99-%EB%B0%B1%EC%97%85%ED%95%98%EA%B8%B0/</link>
         <pubDate>Mon, 11 Mar 2024 22:32:41 +0900</pubDate>
         
-        <guid>https://blog.plutslet.pe.kr/post/ubuntu%EC%97%90%EC%84%9C-mariadb-%EC%9E%90%EB%8F%99-%EB%B0%B1%EC%97%85%ED%95%98%EA%B8%B0/</guid>
+        <guid>https://tech.plutslet.pe.kr/post/ubuntu%EC%97%90%EC%84%9C-mariadb-%EC%9E%90%EB%8F%99-%EB%B0%B1%EC%97%85%ED%95%98%EA%B8%B0/</guid>
         <description>&lt;p&gt;우분투에서 MariaDB의 백업본을 자동으로 생성하는 방법을 정리했습니다.&lt;/p&gt;
 &lt;p&gt;우선 스크립트 파일을 작성합니다.&lt;br&gt;
 아래는 예시로 원하는 데로 수정해서 작성하시면 됩니다.&lt;/p&gt;

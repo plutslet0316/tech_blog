@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>file on Plutslet0316</title>
-        <link>https://blog.plutslet.pe.kr/tags/file/</link>
+        <link>https://tech.plutslet.pe.kr/tags/file/</link>
         <description>Recent content in file on Plutslet0316</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>ko</language>
-        <lastBuildDate>Fri, 23 Feb 2024 22:01:31 +0900</lastBuildDate><atom:link href="https://blog.plutslet.pe.kr/tags/file/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 23 Feb 2024 22:01:31 +0900</lastBuildDate><atom:link href="https://tech.plutslet.pe.kr/tags/file/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>input 태그 file 확장자 제한하기</title>
-        <link>https://blog.plutslet.pe.kr/post/input-%ED%83%9C%EA%B7%B8-file-%ED%99%95%EC%9E%A5%EC%9E%90-%EC%A0%9C%ED%95%9C%ED%95%98%EA%B8%B0/</link>
+        <link>https://tech.plutslet.pe.kr/post/input-%ED%83%9C%EA%B7%B8-file-%ED%99%95%EC%9E%A5%EC%9E%90-%EC%A0%9C%ED%95%9C%ED%95%98%EA%B8%B0/</link>
         <pubDate>Fri, 23 Feb 2024 22:01:31 +0900</pubDate>
         
-        <guid>https://blog.plutslet.pe.kr/post/input-%ED%83%9C%EA%B7%B8-file-%ED%99%95%EC%9E%A5%EC%9E%90-%EC%A0%9C%ED%95%9C%ED%95%98%EA%B8%B0/</guid>
+        <guid>https://tech.plutslet.pe.kr/post/input-%ED%83%9C%EA%B7%B8-file-%ED%99%95%EC%9E%A5%EC%9E%90-%EC%A0%9C%ED%95%9C%ED%95%98%EA%B8%B0/</guid>
         <description>&lt;p&gt;input 태그를 사용할 떄 특정 타입만 허용하고 싶을 때가 있습니다.&lt;br&gt;
 input의 accept를 지정하기만 하면 간단하게 제한할 수 있죠.&lt;br&gt;
 예를 들어 image만 허용하려고 한다면 대략 아래와 같습니다.&lt;/p&gt;

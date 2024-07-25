@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Plutslet0316</title>
-        <link>https://blog.plutslet.pe.kr/</link>
+        <link>https://tech.plutslet.pe.kr/</link>
         <description>Recent content on Plutslet0316</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>ko</language>
-        <lastBuildDate>Thu, 13 Jun 2024 00:30:18 +0900</lastBuildDate><atom:link href="https://blog.plutslet.pe.kr/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 05 Jul 2024 01:58:09 +0900</lastBuildDate><atom:link href="https://tech.plutslet.pe.kr/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>SUPIR 구성해서 업스케일링 해보기</title>
-        <link>https://blog.plutslet.pe.kr/post/supir-%EA%B5%AC%EC%84%B1%ED%95%B4%EC%84%9C-%EC%97%85%EC%8A%A4%EC%BC%80%EC%9D%BC%EB%A7%81-%ED%95%B4%EB%B3%B4%EA%B8%B0/</link>
+        <link>https://tech.plutslet.pe.kr/post/supir-%EA%B5%AC%EC%84%B1%ED%95%B4%EC%84%9C-%EC%97%85%EC%8A%A4%EC%BC%80%EC%9D%BC%EB%A7%81-%ED%95%B4%EB%B3%B4%EA%B8%B0/</link>
         <pubDate>Thu, 13 Jun 2024 00:30:18 +0900</pubDate>
         
-        <guid>https://blog.plutslet.pe.kr/post/supir-%EA%B5%AC%EC%84%B1%ED%95%B4%EC%84%9C-%EC%97%85%EC%8A%A4%EC%BC%80%EC%9D%BC%EB%A7%81-%ED%95%B4%EB%B3%B4%EA%B8%B0/</guid>
+        <guid>https://tech.plutslet.pe.kr/post/supir-%EA%B5%AC%EC%84%B1%ED%95%B4%EC%84%9C-%EC%97%85%EC%8A%A4%EC%BC%80%EC%9D%BC%EB%A7%81-%ED%95%B4%EB%B3%B4%EA%B8%B0/</guid>
         <description>&lt;p&gt;오늘은 오픈 소스로 공개되어 있는 ‘SUPIR’ 라는 업스케일링 툴을 설치 및 구성하고 실행하기 까지의 과정을 기록하고자 합니다.&lt;br&gt;
 일단 SUPIR은 우분투 환경에서 구성해야 하며, 저 같은 윈도우 환경일 경우에는 wsl을 활용하면 윈도우에서도 우분투 환경을 쉽게 구성할 수 있습니다.&lt;br&gt;
 wsl 관련 설치법 등은 구글에 검색하면 많이 나오니 윈도우 환경에서 구성하고자 하면 해당 부분을 참고하여 우선 설치를 진행해주세요.&lt;/p&gt;
@@ -139,10 +139,10 @@ SUPIR: &lt;a class=&#34;link&#34; href=&#34;https://github.com/Fanghua-Yu/SUPIR?
 &lt;h3 id=&#34;업스케일링&#34;&gt;업스케일링&lt;/h3&gt;
 &lt;p&gt;제가 가진 사진 중 화질이 조금 떨어지는 사진으로 업스케일링을 진행해봤습니다. 다른 설정은 건들이지 않고 가이드 이미지 대로만 진행해보았습니다.&lt;/p&gt;
 &lt;p&gt;아래는 해당 업스케일링 과정을 모두 거친 후 캡처 이미지와 비포 에프터 사진입니다.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.plutslet.pe.kr/post/supir-%EA%B5%AC%EC%84%B1%ED%95%B4%EC%84%9C-%EC%97%85%EC%8A%A4%EC%BC%80%EC%9D%BC%EB%A7%81-%ED%95%B4%EB%B3%B4%EA%B8%B0/%EC%97%85%EC%8A%A4%EC%BC%80%EC%9D%BC%EB%A7%81_%EC%99%84%EB%A3%8C_%EC%BA%A1%EC%B3%90.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://tech.plutslet.pe.kr/post/supir-%EA%B5%AC%EC%84%B1%ED%95%B4%EC%84%9C-%EC%97%85%EC%8A%A4%EC%BC%80%EC%9D%BC%EB%A7%81-%ED%95%B4%EB%B3%B4%EA%B8%B0/%EC%97%85%EC%8A%A4%EC%BC%80%EC%9D%BC%EB%A7%81_%EC%99%84%EB%A3%8C_%EC%BA%A1%EC%B3%90.png&#34;
 	width=&#34;1930&#34;
 	height=&#34;1622&#34;
-	srcset=&#34;https://blog.plutslet.pe.kr/post/supir-%EA%B5%AC%EC%84%B1%ED%95%B4%EC%84%9C-%EC%97%85%EC%8A%A4%EC%BC%80%EC%9D%BC%EB%A7%81-%ED%95%B4%EB%B3%B4%EA%B8%B0/%EC%97%85%EC%8A%A4%EC%BC%80%EC%9D%BC%EB%A7%81_%EC%99%84%EB%A3%8C_%EC%BA%A1%EC%B3%90_hu932d3b8c91e1525368decb8279964b2c_2122276_480x0_resize_box_3.png 480w, https://blog.plutslet.pe.kr/post/supir-%EA%B5%AC%EC%84%B1%ED%95%B4%EC%84%9C-%EC%97%85%EC%8A%A4%EC%BC%80%EC%9D%BC%EB%A7%81-%ED%95%B4%EB%B3%B4%EA%B8%B0/%EC%97%85%EC%8A%A4%EC%BC%80%EC%9D%BC%EB%A7%81_%EC%99%84%EB%A3%8C_%EC%BA%A1%EC%B3%90_hu932d3b8c91e1525368decb8279964b2c_2122276_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://tech.plutslet.pe.kr/post/supir-%EA%B5%AC%EC%84%B1%ED%95%B4%EC%84%9C-%EC%97%85%EC%8A%A4%EC%BC%80%EC%9D%BC%EB%A7%81-%ED%95%B4%EB%B3%B4%EA%B8%B0/%EC%97%85%EC%8A%A4%EC%BC%80%EC%9D%BC%EB%A7%81_%EC%99%84%EB%A3%8C_%EC%BA%A1%EC%B3%90_hu932d3b8c91e1525368decb8279964b2c_2122276_480x0_resize_box_3.png 480w, https://tech.plutslet.pe.kr/post/supir-%EA%B5%AC%EC%84%B1%ED%95%B4%EC%84%9C-%EC%97%85%EC%8A%A4%EC%BC%80%EC%9D%BC%EB%A7%81-%ED%95%B4%EB%B3%B4%EA%B8%B0/%EC%97%85%EC%8A%A4%EC%BC%80%EC%9D%BC%EB%A7%81_%EC%99%84%EB%A3%8C_%EC%BA%A1%EC%B3%90_hu932d3b8c91e1525368decb8279964b2c_2122276_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;업스케일링 완료 시 캡쳐 이미지&#34;
@@ -162,10 +162,10 @@ SUPIR: &lt;a class=&#34;link&#34; href=&#34;https://github.com/Fanghua-Yu/SUPIR?
 &lt;/thead&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
-&lt;td&gt;&lt;img src=&#34;https://blog.plutslet.pe.kr/post/supir-%EA%B5%AC%EC%84%B1%ED%95%B4%EC%84%9C-%EC%97%85%EC%8A%A4%EC%BC%80%EC%9D%BC%EB%A7%81-%ED%95%B4%EB%B3%B4%EA%B8%B0/%EA%B3%A0%EC%96%91%EC%9D%B4_%EB%B9%84%ED%8F%AC.png&#34;
+&lt;td&gt;&lt;img src=&#34;https://tech.plutslet.pe.kr/post/supir-%EA%B5%AC%EC%84%B1%ED%95%B4%EC%84%9C-%EC%97%85%EC%8A%A4%EC%BC%80%EC%9D%BC%EB%A7%81-%ED%95%B4%EB%B3%B4%EA%B8%B0/%EA%B3%A0%EC%96%91%EC%9D%B4_%EB%B9%84%ED%8F%AC.png&#34;
 	width=&#34;1200&#34;
 	height=&#34;1800&#34;
-	srcset=&#34;https://blog.plutslet.pe.kr/post/supir-%EA%B5%AC%EC%84%B1%ED%95%B4%EC%84%9C-%EC%97%85%EC%8A%A4%EC%BC%80%EC%9D%BC%EB%A7%81-%ED%95%B4%EB%B3%B4%EA%B8%B0/%EA%B3%A0%EC%96%91%EC%9D%B4_%EB%B9%84%ED%8F%AC_hu55b38c7028ae17216cacc8784fa5dbbb_2152275_480x0_resize_box_3.png 480w, https://blog.plutslet.pe.kr/post/supir-%EA%B5%AC%EC%84%B1%ED%95%B4%EC%84%9C-%EC%97%85%EC%8A%A4%EC%BC%80%EC%9D%BC%EB%A7%81-%ED%95%B4%EB%B3%B4%EA%B8%B0/%EA%B3%A0%EC%96%91%EC%9D%B4_%EB%B9%84%ED%8F%AC_hu55b38c7028ae17216cacc8784fa5dbbb_2152275_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://tech.plutslet.pe.kr/post/supir-%EA%B5%AC%EC%84%B1%ED%95%B4%EC%84%9C-%EC%97%85%EC%8A%A4%EC%BC%80%EC%9D%BC%EB%A7%81-%ED%95%B4%EB%B3%B4%EA%B8%B0/%EA%B3%A0%EC%96%91%EC%9D%B4_%EB%B9%84%ED%8F%AC_hu55b38c7028ae17216cacc8784fa5dbbb_2152275_480x0_resize_box_3.png 480w, https://tech.plutslet.pe.kr/post/supir-%EA%B5%AC%EC%84%B1%ED%95%B4%EC%84%9C-%EC%97%85%EC%8A%A4%EC%BC%80%EC%9D%BC%EB%A7%81-%ED%95%B4%EB%B3%B4%EA%B8%B0/%EA%B3%A0%EC%96%91%EC%9D%B4_%EB%B9%84%ED%8F%AC_hu55b38c7028ae17216cacc8784fa5dbbb_2152275_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;고양이 비포 이미지&#34;
@@ -176,10 +176,10 @@ SUPIR: &lt;a class=&#34;link&#34; href=&#34;https://github.com/Fanghua-Yu/SUPIR?
 		data-flex-basis=&#34;160px&#34;
 	
 &gt;&lt;/td&gt;
-&lt;td&gt;&lt;img src=&#34;https://blog.plutslet.pe.kr/post/supir-%EA%B5%AC%EC%84%B1%ED%95%B4%EC%84%9C-%EC%97%85%EC%8A%A4%EC%BC%80%EC%9D%BC%EB%A7%81-%ED%95%B4%EB%B3%B4%EA%B8%B0/%EA%B3%A0%EC%96%91%EC%9D%B4_%EC%97%90%ED%94%84%ED%84%B0.png&#34;
+&lt;td&gt;&lt;img src=&#34;https://tech.plutslet.pe.kr/post/supir-%EA%B5%AC%EC%84%B1%ED%95%B4%EC%84%9C-%EC%97%85%EC%8A%A4%EC%BC%80%EC%9D%BC%EB%A7%81-%ED%95%B4%EB%B3%B4%EA%B8%B0/%EA%B3%A0%EC%96%91%EC%9D%B4_%EC%97%90%ED%94%84%ED%84%B0.png&#34;
 	width=&#34;1216&#34;
 	height=&#34;1792&#34;
-	srcset=&#34;https://blog.plutslet.pe.kr/post/supir-%EA%B5%AC%EC%84%B1%ED%95%B4%EC%84%9C-%EC%97%85%EC%8A%A4%EC%BC%80%EC%9D%BC%EB%A7%81-%ED%95%B4%EB%B3%B4%EA%B8%B0/%EA%B3%A0%EC%96%91%EC%9D%B4_%EC%97%90%ED%94%84%ED%84%B0_hu20a584bbeca0458b59417c31dc11aab3_2581353_480x0_resize_box_3.png 480w, https://blog.plutslet.pe.kr/post/supir-%EA%B5%AC%EC%84%B1%ED%95%B4%EC%84%9C-%EC%97%85%EC%8A%A4%EC%BC%80%EC%9D%BC%EB%A7%81-%ED%95%B4%EB%B3%B4%EA%B8%B0/%EA%B3%A0%EC%96%91%EC%9D%B4_%EC%97%90%ED%94%84%ED%84%B0_hu20a584bbeca0458b59417c31dc11aab3_2581353_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://tech.plutslet.pe.kr/post/supir-%EA%B5%AC%EC%84%B1%ED%95%B4%EC%84%9C-%EC%97%85%EC%8A%A4%EC%BC%80%EC%9D%BC%EB%A7%81-%ED%95%B4%EB%B3%B4%EA%B8%B0/%EA%B3%A0%EC%96%91%EC%9D%B4_%EC%97%90%ED%94%84%ED%84%B0_hu20a584bbeca0458b59417c31dc11aab3_2581353_480x0_resize_box_3.png 480w, https://tech.plutslet.pe.kr/post/supir-%EA%B5%AC%EC%84%B1%ED%95%B4%EC%84%9C-%EC%97%85%EC%8A%A4%EC%BC%80%EC%9D%BC%EB%A7%81-%ED%95%B4%EB%B3%B4%EA%B8%B0/%EA%B3%A0%EC%96%91%EC%9D%B4_%EC%97%90%ED%94%84%ED%84%B0_hu20a584bbeca0458b59417c31dc11aab3_2581353_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;고양이 에프터 이미지&#34;
@@ -197,14 +197,18 @@ SUPIR: &lt;a class=&#34;link&#34; href=&#34;https://github.com/Fanghua-Yu/SUPIR?
 업스케일링 정도를 2로 조절해서 추가로 진행해보고 있는데 글 쓰는 중에도 계속 돌아가는 중입니다.&lt;br&gt;
 아무래도 그래픽 카드로 업스케일링을 진행하는 만큼 12GB로는 성능이 따라주지는 않는 모양입니다.&lt;br&gt;
 그래도 이미지 화질 개선 효과는 확실하고, 오픈소스로 제공되고 있는 만큼 화질이 좋지 못한 사진이 있다면 한 번쯤 시도해보는 것도 좋을 것 같습니다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;추가&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;메모리 부족으로 실패하고 말았습니다. 아무래도 제대로 된 업스케일링을 진행하기 위해서는 더 좋은 컴퓨터가 필요할 것 같네요.&lt;/p&gt;
 </description>
         </item>
         <item>
         <title>Uno Platform 마우스 커서 버튼 위에 올렸을 때 모양 바꾸기</title>
-        <link>https://blog.plutslet.pe.kr/post/uno-platform-%EB%A7%88%EC%9A%B0%EC%8A%A4-%EC%BB%A4%EC%84%9C-%EB%B2%84%ED%8A%BC-%EC%9C%84%EC%97%90-%EC%98%AC%EB%A0%B8%EC%9D%84-%EB%95%8C-%EB%AA%A8%EC%96%91-%EB%B0%94%EA%BE%B8%EA%B8%B0/</link>
+        <link>https://tech.plutslet.pe.kr/post/uno-platform-%EB%A7%88%EC%9A%B0%EC%8A%A4-%EC%BB%A4%EC%84%9C-%EB%B2%84%ED%8A%BC-%EC%9C%84%EC%97%90-%EC%98%AC%EB%A0%B8%EC%9D%84-%EB%95%8C-%EB%AA%A8%EC%96%91-%EB%B0%94%EA%BE%B8%EA%B8%B0/</link>
         <pubDate>Mon, 08 Apr 2024 23:01:27 +0900</pubDate>
         
-        <guid>https://blog.plutslet.pe.kr/post/uno-platform-%EB%A7%88%EC%9A%B0%EC%8A%A4-%EC%BB%A4%EC%84%9C-%EB%B2%84%ED%8A%BC-%EC%9C%84%EC%97%90-%EC%98%AC%EB%A0%B8%EC%9D%84-%EB%95%8C-%EB%AA%A8%EC%96%91-%EB%B0%94%EA%BE%B8%EA%B8%B0/</guid>
+        <guid>https://tech.plutslet.pe.kr/post/uno-platform-%EB%A7%88%EC%9A%B0%EC%8A%A4-%EC%BB%A4%EC%84%9C-%EB%B2%84%ED%8A%BC-%EC%9C%84%EC%97%90-%EC%98%AC%EB%A0%B8%EC%9D%84-%EB%95%8C-%EB%AA%A8%EC%96%91-%EB%B0%94%EA%BE%B8%EA%B8%B0/</guid>
         <description>&lt;p&gt;WinUI3에서 마우스 커서를 변경하는 방법 중에는 UIElement 내부에 있는 ProtectedCursor를 변경하는 방법이 있습니다. 하지만 이름 그대로 Protected, 외부에서 접근이 되지 않기 때문에 해당 변수를 변경할 수 있는 내부 메서드가 필요합니다. 이는 상속으로 해결할 수 있는데, 버튼으로 예를 들면 아래와 같은 형태로 작성할 수 있습니다.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-csharp&#34; data-lang=&#34;csharp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Button2&lt;/span&gt; : Button
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
@@ -220,10 +224,10 @@ SUPIR: &lt;a class=&#34;link&#34; href=&#34;https://github.com/Fanghua-Yu/SUPIR?
         </item>
         <item>
         <title>Ubuntu에서 MariaDB 자동 백업하기</title>
-        <link>https://blog.plutslet.pe.kr/post/ubuntu%EC%97%90%EC%84%9C-mariadb-%EC%9E%90%EB%8F%99-%EB%B0%B1%EC%97%85%ED%95%98%EA%B8%B0/</link>
+        <link>https://tech.plutslet.pe.kr/post/ubuntu%EC%97%90%EC%84%9C-mariadb-%EC%9E%90%EB%8F%99-%EB%B0%B1%EC%97%85%ED%95%98%EA%B8%B0/</link>
         <pubDate>Mon, 11 Mar 2024 22:32:41 +0900</pubDate>
         
-        <guid>https://blog.plutslet.pe.kr/post/ubuntu%EC%97%90%EC%84%9C-mariadb-%EC%9E%90%EB%8F%99-%EB%B0%B1%EC%97%85%ED%95%98%EA%B8%B0/</guid>
+        <guid>https://tech.plutslet.pe.kr/post/ubuntu%EC%97%90%EC%84%9C-mariadb-%EC%9E%90%EB%8F%99-%EB%B0%B1%EC%97%85%ED%95%98%EA%B8%B0/</guid>
         <description>&lt;p&gt;우분투에서 MariaDB의 백업본을 자동으로 생성하는 방법을 정리했습니다.&lt;/p&gt;
 &lt;p&gt;우선 스크립트 파일을 작성합니다.&lt;br&gt;
 아래는 예시로 원하는 데로 수정해서 작성하시면 됩니다.&lt;/p&gt;
@@ -275,10 +279,10 @@ crontab에 작성하는 기본적인 형태는 아래와 같습니다.&lt;/p&gt;
         </item>
         <item>
         <title>Uno Platform 시작하기</title>
-        <link>https://blog.plutslet.pe.kr/post/uno-platform-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0/</link>
+        <link>https://tech.plutslet.pe.kr/post/uno-platform-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0/</link>
         <pubDate>Sun, 03 Mar 2024 23:34:50 +0900</pubDate>
         
-        <guid>https://blog.plutslet.pe.kr/post/uno-platform-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0/</guid>
+        <guid>https://tech.plutslet.pe.kr/post/uno-platform-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0/</guid>
         <description>&lt;p&gt;Uno Platform은 다중 플랫폼을 지원하는 .NET 개발 도구다.&lt;/p&gt;
 &lt;h3 id=&#34;특징&#34;&gt;특징&lt;/h3&gt;
 &lt;ul&gt;
@@ -352,10 +356,10 @@ crontab에 작성하는 기본적인 형태는 아래와 같습니다.&lt;/p&gt;
         </item>
         <item>
         <title>EF Core 시작하기</title>
-        <link>https://blog.plutslet.pe.kr/post/ef-core-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0/</link>
+        <link>https://tech.plutslet.pe.kr/post/ef-core-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0/</link>
         <pubDate>Tue, 27 Feb 2024 22:44:50 +0900</pubDate>
         
-        <guid>https://blog.plutslet.pe.kr/post/ef-core-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0/</guid>
+        <guid>https://tech.plutslet.pe.kr/post/ef-core-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0/</guid>
         <description>&lt;h3 id=&#34;ef-core&#34;&gt;EF Core&lt;/h3&gt;
 &lt;p&gt;데이터베이스와 객체 지향 언어 간에 호환되지 않는 데이터를 변환해 매핑해주는 기법을 객체 관계 매핑(ORM)이라고 합니다.&lt;br&gt;
 EF Core 는 .Net 기반 개체를 이용하여 데이터베이스를 작업할 수 있도록 해줍니다.&lt;/p&gt;
@@ -576,10 +580,10 @@ DB와의 연결은 여러가지 방식을 사용할 수 있습니다. 자세한 
         </item>
         <item>
         <title>input 태그 file 확장자 제한하기</title>
-        <link>https://blog.plutslet.pe.kr/post/input-%ED%83%9C%EA%B7%B8-file-%ED%99%95%EC%9E%A5%EC%9E%90-%EC%A0%9C%ED%95%9C%ED%95%98%EA%B8%B0/</link>
+        <link>https://tech.plutslet.pe.kr/post/input-%ED%83%9C%EA%B7%B8-file-%ED%99%95%EC%9E%A5%EC%9E%90-%EC%A0%9C%ED%95%9C%ED%95%98%EA%B8%B0/</link>
         <pubDate>Fri, 23 Feb 2024 22:01:31 +0900</pubDate>
         
-        <guid>https://blog.plutslet.pe.kr/post/input-%ED%83%9C%EA%B7%B8-file-%ED%99%95%EC%9E%A5%EC%9E%90-%EC%A0%9C%ED%95%9C%ED%95%98%EA%B8%B0/</guid>
+        <guid>https://tech.plutslet.pe.kr/post/input-%ED%83%9C%EA%B7%B8-file-%ED%99%95%EC%9E%A5%EC%9E%90-%EC%A0%9C%ED%95%9C%ED%95%98%EA%B8%B0/</guid>
         <description>&lt;p&gt;input 태그를 사용할 떄 특정 타입만 허용하고 싶을 때가 있습니다.&lt;br&gt;
 input의 accept를 지정하기만 하면 간단하게 제한할 수 있죠.&lt;br&gt;
 예를 들어 image만 허용하려고 한다면 대략 아래와 같습니다.&lt;/p&gt;
@@ -610,10 +614,10 @@ input의 accept를 지정하기만 하면 간단하게 제한할 수 있죠.&lt;
         </item>
         <item>
         <title>html 모바일에서 input 태그 클릭시 확대 방지</title>
-        <link>https://blog.plutslet.pe.kr/post/html-%EB%AA%A8%EB%B0%94%EC%9D%BC%EC%97%90%EC%84%9C-input-%ED%83%9C%EA%B7%B8-%ED%81%B4%EB%A6%AD%EC%8B%9C-%ED%99%95%EB%8C%80-%EB%B0%A9%EC%A7%80/</link>
+        <link>https://tech.plutslet.pe.kr/post/html-%EB%AA%A8%EB%B0%94%EC%9D%BC%EC%97%90%EC%84%9C-input-%ED%83%9C%EA%B7%B8-%ED%81%B4%EB%A6%AD%EC%8B%9C-%ED%99%95%EB%8C%80-%EB%B0%A9%EC%A7%80/</link>
         <pubDate>Wed, 14 Feb 2024 23:19:25 +0900</pubDate>
         
-        <guid>https://blog.plutslet.pe.kr/post/html-%EB%AA%A8%EB%B0%94%EC%9D%BC%EC%97%90%EC%84%9C-input-%ED%83%9C%EA%B7%B8-%ED%81%B4%EB%A6%AD%EC%8B%9C-%ED%99%95%EB%8C%80-%EB%B0%A9%EC%A7%80/</guid>
+        <guid>https://tech.plutslet.pe.kr/post/html-%EB%AA%A8%EB%B0%94%EC%9D%BC%EC%97%90%EC%84%9C-input-%ED%83%9C%EA%B7%B8-%ED%81%B4%EB%A6%AD%EC%8B%9C-%ED%99%95%EB%8C%80-%EB%B0%A9%EC%A7%80/</guid>
         <description>&lt;p&gt;가끔 모바일 브라우저에서 &lt;code&gt;input&lt;/code&gt; 태그를 사용한 입력란을 터치해 입력을 시작할 때 해당 입력란을 확대 시켜서 보여주는 경우가 있습니다.&lt;br&gt;
 확대하지 않는 동작이 프로세스 상 올바른 동작일 때 이를 방지하는 방법이 있습니다.&lt;/p&gt;
 &lt;p&gt;방법은 간단한데, &lt;code&gt;index.html&lt;/code&gt;의 &lt;code&gt;header&lt;/code&gt; 태그 안에서 &lt;code&gt;meta&lt;/code&gt; 태그로 viewport 관련해서 설정하는 부분이 있습니다.&lt;br&gt;
@@ -632,10 +636,10 @@ input의 accept를 지정하기만 하면 간단하게 제한할 수 있죠.&lt;
         </item>
         <item>
         <title>Vue에서 이미지 src 동적으로 할당하기</title>
-        <link>https://blog.plutslet.pe.kr/post/vue%EC%97%90%EC%84%9C-%EC%9D%B4%EB%AF%B8%EC%A7%80-src-%EB%8F%99%EC%A0%81%EC%9C%BC%EB%A1%9C-%ED%95%A0%EB%8B%B9%ED%95%98%EA%B8%B0/</link>
+        <link>https://tech.plutslet.pe.kr/post/vue%EC%97%90%EC%84%9C-%EC%9D%B4%EB%AF%B8%EC%A7%80-src-%EB%8F%99%EC%A0%81%EC%9C%BC%EB%A1%9C-%ED%95%A0%EB%8B%B9%ED%95%98%EA%B8%B0/</link>
         <pubDate>Wed, 14 Feb 2024 00:34:14 +0900</pubDate>
         
-        <guid>https://blog.plutslet.pe.kr/post/vue%EC%97%90%EC%84%9C-%EC%9D%B4%EB%AF%B8%EC%A7%80-src-%EB%8F%99%EC%A0%81%EC%9C%BC%EB%A1%9C-%ED%95%A0%EB%8B%B9%ED%95%98%EA%B8%B0/</guid>
+        <guid>https://tech.plutslet.pe.kr/post/vue%EC%97%90%EC%84%9C-%EC%9D%B4%EB%AF%B8%EC%A7%80-src-%EB%8F%99%EC%A0%81%EC%9C%BC%EB%A1%9C-%ED%95%A0%EB%8B%B9%ED%95%98%EA%B8%B0/</guid>
         <description>&lt;p&gt;Vue에서 이미지를 동적으로 할당해야하는 부분이 있었습니다.&lt;br&gt;
 대략 &lt;code&gt;/src/assets/images/img.png&lt;/code&gt; 이런 느낌의 string 타입을 반환하는 함수를 만들었고, 대략 &lt;code&gt;&amp;lt;img :src=&amp;quot;imgSrc()&amp;quot;&amp;gt;&lt;/code&gt; 이런 느낌으로 할당해봤죠.&lt;br&gt;
 &lt;code&gt;npm run dev&lt;/code&gt; 통해 실행한 프로젝트에서는 위의 코드로도 잘 작동해서 문제가 없을 줄 알았습니다.&lt;br&gt;
@@ -679,10 +683,10 @@ public 폴더에 넣어두면 상대 주소를 사용해도 정상적으로 불�
         </item>
         <item>
         <title>모바일 환경에서의 css 높이 단위</title>
-        <link>https://blog.plutslet.pe.kr/post/%EB%AA%A8%EB%B0%94%EC%9D%BC-%ED%99%98%EA%B2%BD%EC%97%90%EC%84%9C%EC%9D%98-css-%EB%86%92%EC%9D%B4-%EB%8B%A8%EC%9C%84/</link>
+        <link>https://tech.plutslet.pe.kr/post/%EB%AA%A8%EB%B0%94%EC%9D%BC-%ED%99%98%EA%B2%BD%EC%97%90%EC%84%9C%EC%9D%98-css-%EB%86%92%EC%9D%B4-%EB%8B%A8%EC%9C%84/</link>
         <pubDate>Thu, 08 Feb 2024 00:31:19 +0900</pubDate>
         
-        <guid>https://blog.plutslet.pe.kr/post/%EB%AA%A8%EB%B0%94%EC%9D%BC-%ED%99%98%EA%B2%BD%EC%97%90%EC%84%9C%EC%9D%98-css-%EB%86%92%EC%9D%B4-%EB%8B%A8%EC%9C%84/</guid>
+        <guid>https://tech.plutslet.pe.kr/post/%EB%AA%A8%EB%B0%94%EC%9D%BC-%ED%99%98%EA%B2%BD%EC%97%90%EC%84%9C%EC%9D%98-css-%EB%86%92%EC%9D%B4-%EB%8B%A8%EC%9C%84/</guid>
         <description>&lt;p&gt;css에서 hight를 조절하다가 알게된 점을 기록합니다.&lt;/p&gt;
 &lt;h3 id=&#34;문제&#34;&gt;문제&lt;/h3&gt;
 &lt;p&gt;대략 상황은 이랬습니다.&lt;br&gt;
@@ -714,10 +718,10 @@ main 태그의 높이를 vh 단위로 지정해서 사용하던 중 모바일 �
         </item>
         <item>
         <title>S3 이미지 다운로드 CORS 문제 해결</title>
-        <link>https://blog.plutslet.pe.kr/post/s3-%EC%9D%B4%EB%AF%B8%EC%A7%80-%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C-cors-%EB%AC%B8%EC%A0%9C-%ED%95%B4%EA%B2%B0/</link>
+        <link>https://tech.plutslet.pe.kr/post/s3-%EC%9D%B4%EB%AF%B8%EC%A7%80-%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C-cors-%EB%AC%B8%EC%A0%9C-%ED%95%B4%EA%B2%B0/</link>
         <pubDate>Fri, 02 Feb 2024 22:41:19 +0900</pubDate>
         
-        <guid>https://blog.plutslet.pe.kr/post/s3-%EC%9D%B4%EB%AF%B8%EC%A7%80-%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C-cors-%EB%AC%B8%EC%A0%9C-%ED%95%B4%EA%B2%B0/</guid>
+        <guid>https://tech.plutslet.pe.kr/post/s3-%EC%9D%B4%EB%AF%B8%EC%A7%80-%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C-cors-%EB%AC%B8%EC%A0%9C-%ED%95%B4%EA%B2%B0/</guid>
         <description>&lt;p&gt;최근 Vue 프로젝트에서 S3 URL을 다운로드되는 기능을 구현해야 하는 일이 있었습니다. fetch를 이용해서 파일을 blob 형태로 받아와 다운로드 시키도록 하도록 처리했죠. 다른 파일들은 다운로드가 잘 이뤄졌는데, 어떤 페이지에서는 이미지가 CORS 오류로 다운로드되지 않는 문제가 발생했습니다. 이 글은 해당 문제를 정리한 내용입니다.&lt;/p&gt;
 &lt;h3 id=&#34;문제&#34;&gt;문제&lt;/h3&gt;
 &lt;p&gt;위에서 언급했듯이 S3 URL을 가지고 있었고, 해당 링크를 이용해 다운로드 되도록 기능을 구현한 상태였습니다.&lt;br&gt;
@@ -753,10 +757,10 @@ S3의 이미지가 이미 다운로드되어 페이지에서 노출이 되는 �
         </item>
         <item>
         <title>GitHub 페이지 커스텀 도메인 설정하기</title>
-        <link>https://blog.plutslet.pe.kr/post/github-%ED%8E%98%EC%9D%B4%EC%A7%80-%EC%BB%A4%EC%8A%A4%ED%85%80-%EB%8F%84%EB%A9%94%EC%9D%B8-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0/</link>
+        <link>https://tech.plutslet.pe.kr/post/github-%ED%8E%98%EC%9D%B4%EC%A7%80-%EC%BB%A4%EC%8A%A4%ED%85%80-%EB%8F%84%EB%A9%94%EC%9D%B8-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0/</link>
         <pubDate>Tue, 30 Jan 2024 22:36:50 +0900</pubDate>
         
-        <guid>https://blog.plutslet.pe.kr/post/github-%ED%8E%98%EC%9D%B4%EC%A7%80-%EC%BB%A4%EC%8A%A4%ED%85%80-%EB%8F%84%EB%A9%94%EC%9D%B8-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0/</guid>
+        <guid>https://tech.plutslet.pe.kr/post/github-%ED%8E%98%EC%9D%B4%EC%A7%80-%EC%BB%A4%EC%8A%A4%ED%85%80-%EB%8F%84%EB%A9%94%EC%9D%B8-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0/</guid>
         <description>&lt;p&gt;깃허브 페이지로 블로그를 만들 때부터 개인 도메인으로 연결하고 싶다는 생각이 있었습니다. 이 글은 깃허브 페이지에서 커스텀 도메인 설정하며 정리한 내용입니다.&lt;/p&gt;
 &lt;h3 id=&#34;시작&#34;&gt;시작&lt;/h3&gt;
 &lt;p&gt;기본적으로 깃허브 페이지를 만들면 아래의 URL 형태로 만들어 집니다.&lt;/p&gt;
@@ -773,10 +777,10 @@ S3의 이미지가 이미 다운로드되어 페이지에서 노출이 되는 �
 &lt;li&gt;대상 주소: 깃허브아이디.github.io&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;저는 클라우드플레어를 이용중이고 설정한 예시 이미지는 아래와 같습니다.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.plutslet.pe.kr/post/github-%ED%8E%98%EC%9D%B4%EC%A7%80-%EC%BB%A4%EC%8A%A4%ED%85%80-%EB%8F%84%EB%A9%94%EC%9D%B8-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0/DNS_%EC%84%A4%EC%A0%95.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://tech.plutslet.pe.kr/post/github-%ED%8E%98%EC%9D%B4%EC%A7%80-%EC%BB%A4%EC%8A%A4%ED%85%80-%EB%8F%84%EB%A9%94%EC%9D%B8-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0/DNS_%EC%84%A4%EC%A0%95.png&#34;
 	width=&#34;1515&#34;
 	height=&#34;370&#34;
-	srcset=&#34;https://blog.plutslet.pe.kr/post/github-%ED%8E%98%EC%9D%B4%EC%A7%80-%EC%BB%A4%EC%8A%A4%ED%85%80-%EB%8F%84%EB%A9%94%EC%9D%B8-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0/DNS_%EC%84%A4%EC%A0%95_hub793ff0d4dab954f8da665cd88b8c675_40166_480x0_resize_box_3.png 480w, https://blog.plutslet.pe.kr/post/github-%ED%8E%98%EC%9D%B4%EC%A7%80-%EC%BB%A4%EC%8A%A4%ED%85%80-%EB%8F%84%EB%A9%94%EC%9D%B8-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0/DNS_%EC%84%A4%EC%A0%95_hub793ff0d4dab954f8da665cd88b8c675_40166_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://tech.plutslet.pe.kr/post/github-%ED%8E%98%EC%9D%B4%EC%A7%80-%EC%BB%A4%EC%8A%A4%ED%85%80-%EB%8F%84%EB%A9%94%EC%9D%B8-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0/DNS_%EC%84%A4%EC%A0%95_hub793ff0d4dab954f8da665cd88b8c675_40166_480x0_resize_box_3.png 480w, https://tech.plutslet.pe.kr/post/github-%ED%8E%98%EC%9D%B4%EC%A7%80-%EC%BB%A4%EC%8A%A4%ED%85%80-%EB%8F%84%EB%A9%94%EC%9D%B8-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0/DNS_%EC%84%A4%EC%A0%95_hub793ff0d4dab954f8da665cd88b8c675_40166_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;DNS 설정&#34;
@@ -794,10 +798,10 @@ S3의 이미지가 이미 다운로드되어 페이지에서 노출이 되는 �
 &lt;li&gt;깃허브에서 DNS 확인을 진행하고, 이후 완료가 되면 해당 도메인으로 접근할 수 있게 됩니다.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;아래의 사진은 DNS 설정 후 확인까지 마친 예시 이미지 입니다.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.plutslet.pe.kr/post/github-%ED%8E%98%EC%9D%B4%EC%A7%80-%EC%BB%A4%EC%8A%A4%ED%85%80-%EB%8F%84%EB%A9%94%EC%9D%B8-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0/%EC%BB%A4%EC%8A%A4%ED%85%80_%EB%8F%84%EB%A9%94%EC%9D%B8_%EC%84%A4%EC%A0%95.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://tech.plutslet.pe.kr/post/github-%ED%8E%98%EC%9D%B4%EC%A7%80-%EC%BB%A4%EC%8A%A4%ED%85%80-%EB%8F%84%EB%A9%94%EC%9D%B8-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0/%EC%BB%A4%EC%8A%A4%ED%85%80_%EB%8F%84%EB%A9%94%EC%9D%B8_%EC%84%A4%EC%A0%95.png&#34;
 	width=&#34;1373&#34;
 	height=&#34;199&#34;
-	srcset=&#34;https://blog.plutslet.pe.kr/post/github-%ED%8E%98%EC%9D%B4%EC%A7%80-%EC%BB%A4%EC%8A%A4%ED%85%80-%EB%8F%84%EB%A9%94%EC%9D%B8-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0/%EC%BB%A4%EC%8A%A4%ED%85%80_%EB%8F%84%EB%A9%94%EC%9D%B8_%EC%84%A4%EC%A0%95_hufbc0e08b86941e92a378c1a2e1541f24_21749_480x0_resize_box_3.png 480w, https://blog.plutslet.pe.kr/post/github-%ED%8E%98%EC%9D%B4%EC%A7%80-%EC%BB%A4%EC%8A%A4%ED%85%80-%EB%8F%84%EB%A9%94%EC%9D%B8-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0/%EC%BB%A4%EC%8A%A4%ED%85%80_%EB%8F%84%EB%A9%94%EC%9D%B8_%EC%84%A4%EC%A0%95_hufbc0e08b86941e92a378c1a2e1541f24_21749_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://tech.plutslet.pe.kr/post/github-%ED%8E%98%EC%9D%B4%EC%A7%80-%EC%BB%A4%EC%8A%A4%ED%85%80-%EB%8F%84%EB%A9%94%EC%9D%B8-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0/%EC%BB%A4%EC%8A%A4%ED%85%80_%EB%8F%84%EB%A9%94%EC%9D%B8_%EC%84%A4%EC%A0%95_hufbc0e08b86941e92a378c1a2e1541f24_21749_480x0_resize_box_3.png 480w, https://tech.plutslet.pe.kr/post/github-%ED%8E%98%EC%9D%B4%EC%A7%80-%EC%BB%A4%EC%8A%A4%ED%85%80-%EB%8F%84%EB%A9%94%EC%9D%B8-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0/%EC%BB%A4%EC%8A%A4%ED%85%80_%EB%8F%84%EB%A9%94%EC%9D%B8_%EC%84%A4%EC%A0%95_hufbc0e08b86941e92a378c1a2e1541f24_21749_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;커스텀 도메인 설정&#34;
@@ -823,10 +827,10 @@ S3의 이미지가 이미 다운로드되어 페이지에서 노출이 되는 �
         </item>
         <item>
         <title>Hugo와 GitHub로 블로그 만들기</title>
-        <link>https://blog.plutslet.pe.kr/post/hugo%EC%99%80-github%EB%A1%9C-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0/</link>
+        <link>https://tech.plutslet.pe.kr/post/hugo%EC%99%80-github%EB%A1%9C-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0/</link>
         <pubDate>Wed, 24 Jan 2024 23:06:58 +0900</pubDate>
         
-        <guid>https://blog.plutslet.pe.kr/post/hugo%EC%99%80-github%EB%A1%9C-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0/</guid>
+        <guid>https://tech.plutslet.pe.kr/post/hugo%EC%99%80-github%EB%A1%9C-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0/</guid>
         <description>&lt;h3 id=&#34;hugo&#34;&gt;Hugo&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;빌드 속도가 빠릅니다.&lt;/li&gt;
@@ -947,18 +951,18 @@ S3의 이미지가 이미 다운로드되어 페이지에서 노출이 되는 �
         </item>
         <item>
         <title>검색</title>
-        <link>https://blog.plutslet.pe.kr/page/search/</link>
+        <link>https://tech.plutslet.pe.kr/page/search/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://blog.plutslet.pe.kr/page/search/</guid>
+        <guid>https://tech.plutslet.pe.kr/page/search/</guid>
         <description></description>
         </item>
         <item>
         <title>아카이브</title>
-        <link>https://blog.plutslet.pe.kr/page/archives/</link>
+        <link>https://tech.plutslet.pe.kr/page/archives/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://blog.plutslet.pe.kr/page/archives/</guid>
+        <guid>https://tech.plutslet.pe.kr/page/archives/</guid>
         <description></description>
         </item>
         

@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>C# on Plutslet0316</title>
-        <link>https://blog.plutslet.pe.kr/categories/c-sharp/</link>
+        <link>https://tech.plutslet.pe.kr/categories/c-sharp/</link>
         <description>Recent content in C# on Plutslet0316</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>ko</language>
-        <lastBuildDate>Tue, 27 Feb 2024 22:44:50 +0900</lastBuildDate><atom:link href="https://blog.plutslet.pe.kr/categories/c-sharp/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 27 Feb 2024 22:44:50 +0900</lastBuildDate><atom:link href="https://tech.plutslet.pe.kr/categories/c-sharp/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>EF Core 시작하기</title>
-        <link>https://blog.plutslet.pe.kr/post/ef-core-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0/</link>
+        <link>https://tech.plutslet.pe.kr/post/ef-core-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0/</link>
         <pubDate>Tue, 27 Feb 2024 22:44:50 +0900</pubDate>
         
-        <guid>https://blog.plutslet.pe.kr/post/ef-core-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0/</guid>
+        <guid>https://tech.plutslet.pe.kr/post/ef-core-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0/</guid>
         <description>&lt;h3 id=&#34;ef-core&#34;&gt;EF Core&lt;/h3&gt;
 &lt;p&gt;데이터베이스와 객체 지향 언어 간에 호환되지 않는 데이터를 변환해 매핑해주는 기법을 객체 관계 매핑(ORM)이라고 합니다.&lt;br&gt;
 EF Core 는 .Net 기반 개체를 이용하여 데이터베이스를 작업할 수 있도록 해줍니다.&lt;/p&gt;
