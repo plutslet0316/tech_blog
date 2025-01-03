@@ -12,8 +12,9 @@
         <pubDate>Fri, 03 Jan 2025 20:03:17 +0900</pubDate>
         
         <guid>https://tech.plutslet.pe.kr/post/%ED%83%80%EC%9E%85%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%EC%97%90%EC%84%9C-%EC%A0%84%EA%B0%9C-%EA%B5%AC%EB%AC%B8spread-syntax-%EC%82%AC%EC%9A%A9-%ED%8C%81/</guid>
-        <description>&lt;p&gt;전개 구문(Spread syntax)이란, 타입스크립트에서 배열이나 객체를 말 그대로 펼치는 구문입니다.&lt;/p&gt;
-&lt;p&gt;대략적인 사용법은 아래와 같습니다.&lt;/p&gt;
+        <description>&lt;p&gt;전개 구문(Spread syntax)이란, 자바스크립트와 타입스크립트에서 배열이나 객체를 말 그대로 펼치는 구문입니다.&lt;/p&gt;
+&lt;h1 id=&#34;배열에서-전개-구문&#34;&gt;배열에서 전개 구문&lt;/h1&gt;
+&lt;p&gt;배열에서 전개 구문의 대략적인 사용법은 아래와 같습니다.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-tsx&#34; data-lang=&#34;tsx&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;const&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;args&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; [&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;]
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;console&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;log&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;args&lt;/span&gt;)     &lt;span style=&#34;color:#75715e&#34;&gt;// [0, 1, 2]
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;console&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;log&lt;/span&gt;(...&lt;span style=&#34;color:#a6e22e&#34;&gt;args&lt;/span&gt;)  &lt;span style=&#34;color:#75715e&#34;&gt;// 0, 1, 2
@@ -36,7 +37,29 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;const&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;arr&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; [&lt;span style=&#34;color:#66d9ef&#34;&gt;number&lt;/span&gt;, &lt;span style=&#34;color:#66d9ef&#34;&gt;number&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; [&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;]
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;sum&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;, ...&lt;span style=&#34;color:#a6e22e&#34;&gt;arr&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;객체에서의 사용도 배열과 비슷하지만, 조금 다른 점이 있습니다. 객체는 속성을 가지고 있기 때문이죠.&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;추가로 배열이 몇 개의 값을 가지고 있는지 모르는 경우에도 전개 구문을 활용할 수 있는 방법이 있습니다. 함수의 파라미터 값을 전개 구문으로 지정하기만 하면 배열의 개수를 지정하지 않은 상태에서도 전개 구문을 사용할 수 있습니다.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-tsx&#34; data-lang=&#34;tsx&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;function&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;sum&lt;/span&gt;(...&lt;span style=&#34;color:#a6e22e&#34;&gt;m&lt;/span&gt;:&lt;span style=&#34;color:#66d9ef&#34;&gt;number&lt;/span&gt;[])
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;m&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;reduce&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;function&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;add&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;sum&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;currValue&lt;/span&gt;) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;sum&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;currValue&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  }, &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;const&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;arr&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; [&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;sum&lt;/span&gt;(...&lt;span style=&#34;color:#a6e22e&#34;&gt;arr&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;이렇게 파라미터을 전개 구문으로 받기로 한 경우, 함수에서 정의 시 다른 파라미터는 무조건 전개 구문 앞에서 정의 해야 합니다. 전개 구문 뒤에 다른 파라미터를 정의할 수 없습니다.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;upload://9MIMTUOMVjWwB98wUfic9DvQE1G.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image|690x91&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h1 id=&#34;객체에서-전개-구문&#34;&gt;객체에서 전개 구문&lt;/h1&gt;
+&lt;p&gt;객체에서의 사용도 배열과 비슷하지만, 조금 다른 점이 있습니다. 객체는 속성을 가지고 있기 때문이죠.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-tsx&#34; data-lang=&#34;tsx&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;const&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;something1&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; { &lt;span style=&#34;color:#a6e22e&#34;&gt;x&lt;/span&gt;: &lt;span style=&#34;color:#66d9ef&#34;&gt;1&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;y&lt;/span&gt;: &lt;span style=&#34;color:#66d9ef&#34;&gt;2&lt;/span&gt; }
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;const&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;something2&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; { ...&lt;span style=&#34;color:#a6e22e&#34;&gt;something1&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;z&lt;/span&gt;: &lt;span style=&#34;color:#66d9ef&#34;&gt;3&lt;/span&gt; }
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;console&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;log&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;something2&lt;/span&gt;) &lt;span style=&#34;color:#75715e&#34;&gt;// { &amp;#34;x&amp;#34;: 1, &amp;#34;y&amp;#34;: 2, &amp;#34;z&amp;#34;: 3 }
@@ -65,9 +88,14 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;};
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;console&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;log&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;something&lt;/span&gt;) &lt;span style=&#34;color:#75715e&#34;&gt;// { &amp;#34;a&amp;#34;: 1, &amp;#34;b&amp;#34;: 2 } 
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;여기까지 간단하게 타입스크립트에서 전개 구문과 구문을 사용하는 팁을 소개해드렸습니다.&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;마무리&#34;&gt;마무리&lt;/h1&gt;
+&lt;p&gt;여기까지 간단하게 타입스크립트에서 전개 구문과 구문을 사용하는 팁을 소개해드렸습니다.&lt;/p&gt;
 &lt;p&gt;조금 더 자세한 설명과 내용을 알고싶다면 아래의 링크를 참고해보세요.&lt;/p&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;p&gt;&lt;strong&gt;타입스크립트 전개 구문 관련 문서&lt;/strong&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://www.typescriptlang.org/docs/handbook/2/functions.html#rest-parameters-and-arguments&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.typescriptlang.org/docs/handbook/2/functions.html#rest-parameters-and-arguments&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;자바스크립트 전개 구문 관련 문서&lt;/strong&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax&lt;/a&gt;&lt;/p&gt;
 </description>
         </item>
