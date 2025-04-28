@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>fetch on Plutslet0316</title>
+        <title>Fetch on Plutslet0316</title>
         <link>https://tech.plutslet.pe.kr/tags/fetch/</link>
-        <description>Recent content in fetch on Plutslet0316</description>
+        <description>Recent content in Fetch on Plutslet0316</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>ko</language>
         <lastBuildDate>Fri, 02 Feb 2024 22:41:19 +0900</lastBuildDate><atom:link href="https://tech.plutslet.pe.kr/tags/fetch/index.xml" rel="self" type="application/rss+xml" /><item>
@@ -25,8 +25,7 @@
 &lt;p&gt;다르게 말하면 이미지가 캐시된 상태라서 그런 건 아닐까.&lt;/p&gt;
 &lt;p&gt;정답부터 말하자면,&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;캐시가 문제였습니다.&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;캐시가 문제였습니다.&lt;/strong&gt;&lt;/p&gt;&lt;/blockquote&gt;
 &lt;h3 id=&#34;해결&#34;&gt;해결&lt;/h3&gt;
 &lt;p&gt;문제의 원인은 생각보다 간단했습니다.&lt;br&gt;
 S3의 이미지가 이미 다운로드되어 페이지에서 노출이 되는 상태였고, 해당 이미지는 그렇게 캐시된 상태가 되었습니다.&lt;br&gt;

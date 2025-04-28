@@ -4,7 +4,8 @@
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='전개 구문(Spread syntax)이란, 자바스크립트와 타입스크립트에서 배열이나 객체를 말 그대로 펼치는 구문입니다.
 배열에서 전개 구문 배열에서 전개 구문의 대략적인 사용법은 아래와 같습니다.
 const args = [0, 1, 2] console.log(args) // [0, 1, 2] console.log(...args) // 0, 1, 2 여기서 전개 구문은 … 입니다. 해당 구문을 사용하지 않았을 때는 배열로 묶여서 출력 되었지만, 사용했을 때는 값이 하나하나 분리되어 대입 된 것을 볼 수 있습니다.
-배열의 값을 함수가 요구하는 각각에 파라미터에 전달 하려고 할 때, 일일이 변수로 분리할 필요 없이 전개 구문으로 풀어서 전달할 수 있습니다.'>
+배열의 값을 함수가 요구하는 각각에 파라미터에 전달 하려고 할 때, 일일이 변수로 분리할 필요 없이 전개 구문으로 풀어서 전달할 수 있습니다. 배열로 묶인 값이 기본 입력일 때 유용하겠죠.
+'>
 <title>타입스크립트에서 전개 구문(Spread Syntax) 사용 팁</title>
 
 <link rel='canonical' href='https://tech.plutslet.pe.kr/post/%ED%83%80%EC%9E%85%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%EC%97%90%EC%84%9C-%EC%A0%84%EA%B0%9C-%EA%B5%AC%EB%AC%B8spread-syntax-%EC%82%AC%EC%9A%A9-%ED%8C%81/'>
@@ -13,7 +14,8 @@ const args = [0, 1, 2] console.log(args) // [0, 1, 2] console.log(...args) // 0,
 <meta property='og:description' content='전개 구문(Spread syntax)이란, 자바스크립트와 타입스크립트에서 배열이나 객체를 말 그대로 펼치는 구문입니다.
 배열에서 전개 구문 배열에서 전개 구문의 대략적인 사용법은 아래와 같습니다.
 const args = [0, 1, 2] console.log(args) // [0, 1, 2] console.log(...args) // 0, 1, 2 여기서 전개 구문은 … 입니다. 해당 구문을 사용하지 않았을 때는 배열로 묶여서 출력 되었지만, 사용했을 때는 값이 하나하나 분리되어 대입 된 것을 볼 수 있습니다.
-배열의 값을 함수가 요구하는 각각에 파라미터에 전달 하려고 할 때, 일일이 변수로 분리할 필요 없이 전개 구문으로 풀어서 전달할 수 있습니다.'>
+배열의 값을 함수가 요구하는 각각에 파라미터에 전달 하려고 할 때, 일일이 변수로 분리할 필요 없이 전개 구문으로 풀어서 전달할 수 있습니다. 배열로 묶인 값이 기본 입력일 때 유용하겠죠.
+'>
 <meta property='og:url' content='https://tech.plutslet.pe.kr/post/%ED%83%80%EC%9E%85%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%EC%97%90%EC%84%9C-%EC%A0%84%EA%B0%9C-%EA%B5%AC%EB%AC%B8spread-syntax-%EC%82%AC%EC%9A%A9-%ED%8C%81/'>
 <meta property='og:site_name' content='Plutslet0316'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2025-01-03T20:03:17&#43;09:00'/><meta property='article:modified_time' content='2025-01-03T20:03:17&#43;09:00'/>
@@ -21,7 +23,8 @@ const args = [0, 1, 2] console.log(args) // [0, 1, 2] console.log(...args) // 0,
 <meta name="twitter:description" content="전개 구문(Spread syntax)이란, 자바스크립트와 타입스크립트에서 배열이나 객체를 말 그대로 펼치는 구문입니다.
 배열에서 전개 구문 배열에서 전개 구문의 대략적인 사용법은 아래와 같습니다.
 const args = [0, 1, 2] console.log(args) // [0, 1, 2] console.log(...args) // 0, 1, 2 여기서 전개 구문은 … 입니다. 해당 구문을 사용하지 않았을 때는 배열로 묶여서 출력 되었지만, 사용했을 때는 값이 하나하나 분리되어 대입 된 것을 볼 수 있습니다.
-배열의 값을 함수가 요구하는 각각에 파라미터에 전달 하려고 할 때, 일일이 변수로 분리할 필요 없이 전개 구문으로 풀어서 전달할 수 있습니다."><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+배열의 값을 함수가 요구하는 각각에 파라미터에 전달 하려고 할 때, 일일이 변수로 분리할 필요 없이 전개 구문으로 풀어서 전달할 수 있습니다. 배열로 묶인 값이 기본 입력일 때 유용하겠죠.
+"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 <link rel="manifest" href="/site.webmanifest">
@@ -71,7 +74,7 @@ const args = [0, 1, 2] console.log(args) // [0, 1, 2] console.log(...args) // 0,
                     
                     
                         
-                        <img src="/img/avatar_hu52bd33c688b76e0fb8c0eafc869aa6ce_721785_300x0_resize_box_3.png" width="300"
+                        <img src="/img/avatar_hu_887a6ce1db30e82b.png" width="300"
                             height="300" class="site-logo" loading="lazy" alt="Avatar">
                     
                 
@@ -171,6 +174,25 @@ const args = [0, 1, 2] console.log(args) // [0, 1, 2] console.log(...args) // 0,
         
 
         <div class="menu-bottom-section">
+                <li id="i18n-switch">  
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 5h7" />
+  <path d="M9 3v2c0 4.418 -2.239 8 -5 8" />
+  <path d="M5 9c-.003 2.144 2.952 3.908 6.7 4" />
+  <path d="M12 20l4 -9l4 9" />
+  <path d="M19.1 18h-6.2" />
+</svg>
+
+
+
+                    <select name="language" onchange="window.location.href = this.selectedOptions[0].value">
+                        
+                            <option value="https://tech.plutslet.pe.kr/" selected></option>
+                        
+                    </select>
+                </li>
+            
             
             
                 <li id="dark-mode-toggle">

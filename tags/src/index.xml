@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>src on Plutslet0316</title>
+        <title>Src on Plutslet0316</title>
         <link>https://tech.plutslet.pe.kr/tags/src/</link>
-        <description>Recent content in src on Plutslet0316</description>
+        <description>Recent content in Src on Plutslet0316</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>ko</language>
         <lastBuildDate>Wed, 14 Feb 2024 00:34:14 +0900</lastBuildDate><atom:link href="https://tech.plutslet.pe.kr/tags/src/index.xml" rel="self" type="application/rss+xml" /><item>
@@ -27,20 +27,17 @@
 &lt;h3 id=&#34;해결&#34;&gt;해결&lt;/h3&gt;
 &lt;p&gt;아래의 방법을 사용하면 문자열로 된 상대주소를 동적으로 할당할 수 있게 됩니다.&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;require 사용해 이미지 불러오기&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;require 사용해 이미지 불러오기&lt;/p&gt;&lt;/blockquote&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;require&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;`@/assets/images/img.png`&lt;/span&gt;)
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;이미지를 &lt;code&gt;import&lt;/code&gt;한다는 의미로 &lt;code&gt;require&lt;/code&gt; 구문을 사용할 수 있습니다.
 config에 사용하도록 설정된 module에 따라 사용할 수 없는 경우가 있습니다.&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;동적으로 URL 만들기&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;동적으로 URL 만들기&lt;/p&gt;&lt;/blockquote&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;URL&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;`/src/assets/images/img.png`&lt;/span&gt;, &lt;span style=&#34;color:#66d9ef&#34;&gt;import&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;meta&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;url&lt;/span&gt;).&lt;span style=&#34;color:#a6e22e&#34;&gt;href&lt;/span&gt;;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;SSR에서는 동작하지 않는다고 합니다.&lt;br&gt;
 브라우저와 Node.js 에서 &lt;code&gt;import.meta.url&lt;/code&gt;의 값이 달라지거나 서버 입장에서도 클라이언트의 호스트 url을 미리 결정할 수 없기 때문이라고 합니다.&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;public 폴더에 이미지 넣기&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;public 폴더에 이미지 넣기&lt;/p&gt;&lt;/blockquote&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;img&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;src&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;/images/img.png&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;/&amp;gt;&lt;/span&gt;;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;말 그대로 이미지를 프로젝트 내부에서 &lt;code&gt;assets&lt;/code&gt; 폴더가 아닌 &lt;code&gt;public&lt;/code&gt;에 넣어두는 방법입니다.&lt;br&gt;
 public 폴더에 넣어두면 상대 주소를 사용해도 정상적으로 불러옵니다.&lt;/p&gt;

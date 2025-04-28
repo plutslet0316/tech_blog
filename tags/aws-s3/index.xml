@@ -25,8 +25,7 @@
 &lt;p&gt;다르게 말하면 이미지가 캐시된 상태라서 그런 건 아닐까.&lt;/p&gt;
 &lt;p&gt;정답부터 말하자면,&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;캐시가 문제였습니다.&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;캐시가 문제였습니다.&lt;/strong&gt;&lt;/p&gt;&lt;/blockquote&gt;
 &lt;h3 id=&#34;해결&#34;&gt;해결&lt;/h3&gt;
 &lt;p&gt;문제의 원인은 생각보다 간단했습니다.&lt;br&gt;
 S3의 이미지가 이미 다운로드되어 페이지에서 노출이 되는 상태였고, 해당 이미지는 그렇게 캐시된 상태가 되었습니다.&lt;br&gt;

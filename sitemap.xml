@@ -3,12 +3,15 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://tech.plutslet.pe.kr/</loc>
-    <lastmod>2025-01-03T20:03:17+09:00</lastmod>
+    <lastmod>2025-04-28T23:41:26+09:00</lastmod>
   </url><url>
-    <loc>https://tech.plutslet.pe.kr/categories/</loc>
-    <lastmod>2025-01-03T20:03:17+09:00</lastmod>
+    <loc>https://tech.plutslet.pe.kr/post/obsidian%EA%B3%BC-syncthing%EC%9D%84-%EC%9D%B4%EC%9A%A9%ED%95%B4%EC%84%9C-%EA%B8%B0%EA%B8%B0-%EC%A0%9C%ED%95%9C-%EC%97%86%EC%9D%B4-%EB%8F%99%EA%B8%B0%ED%99%94-%ED%95%98%EA%B8%B0/</loc>
+    <lastmod>2025-04-28T23:41:26+09:00</lastmod>
   </url><url>
     <loc>https://tech.plutslet.pe.kr/post/</loc>
+    <lastmod>2025-04-28T23:41:26+09:00</lastmod>
+  </url><url>
+    <loc>https://tech.plutslet.pe.kr/categories/</loc>
     <lastmod>2025-01-03T20:03:17+09:00</lastmod>
   </url><url>
     <loc>https://tech.plutslet.pe.kr/categories/typescript/</loc>
@@ -95,10 +98,10 @@
     <loc>https://tech.plutslet.pe.kr/tags/src/</loc>
     <lastmod>2024-02-14T00:34:14+09:00</lastmod>
   </url><url>
-    <loc>https://tech.plutslet.pe.kr/tags/vue/</loc>
+    <loc>https://tech.plutslet.pe.kr/categories/vue/</loc>
     <lastmod>2024-02-14T00:34:14+09:00</lastmod>
   </url><url>
-    <loc>https://tech.plutslet.pe.kr/categories/vue/</loc>
+    <loc>https://tech.plutslet.pe.kr/tags/vue/</loc>
     <lastmod>2024-02-14T00:34:14+09:00</lastmod>
   </url><url>
     <loc>https://tech.plutslet.pe.kr/post/vue%EC%97%90%EC%84%9C-%EC%9D%B4%EB%AF%B8%EC%A7%80-src-%EB%8F%99%EC%A0%81%EC%9C%BC%EB%A1%9C-%ED%95%A0%EB%8B%B9%ED%95%98%EA%B8%B0/</loc>
@@ -107,10 +110,10 @@
     <loc>https://tech.plutslet.pe.kr/tags/%EB%8F%99%EC%A0%81-%ED%95%A0%EB%8B%B9/</loc>
     <lastmod>2024-02-14T00:34:14+09:00</lastmod>
   </url><url>
-    <loc>https://tech.plutslet.pe.kr/tags/css/</loc>
+    <loc>https://tech.plutslet.pe.kr/categories/css/</loc>
     <lastmod>2024-02-08T00:31:19+09:00</lastmod>
   </url><url>
-    <loc>https://tech.plutslet.pe.kr/categories/css/</loc>
+    <loc>https://tech.plutslet.pe.kr/tags/css/</loc>
     <lastmod>2024-02-08T00:31:19+09:00</lastmod>
   </url><url>
     <loc>https://tech.plutslet.pe.kr/tags/vh/</loc>
@@ -149,10 +152,10 @@
     <loc>https://tech.plutslet.pe.kr/tags/%EC%BA%90%EC%8B%9C/</loc>
     <lastmod>2024-02-02T22:41:19+09:00</lastmod>
   </url><url>
-    <loc>https://tech.plutslet.pe.kr/tags/github/</loc>
+    <loc>https://tech.plutslet.pe.kr/categories/github/</loc>
     <lastmod>2024-01-30T22:36:50+09:00</lastmod>
   </url><url>
-    <loc>https://tech.plutslet.pe.kr/categories/github/</loc>
+    <loc>https://tech.plutslet.pe.kr/tags/github/</loc>
     <lastmod>2024-01-30T22:36:50+09:00</lastmod>
   </url><url>
     <loc>https://tech.plutslet.pe.kr/tags/github-page/</loc>
@@ -170,10 +173,10 @@
     <loc>https://tech.plutslet.pe.kr/tags/github-%ED%8E%98%EC%9D%B4%EC%A7%80/</loc>
     <lastmod>2024-01-24T23:06:58+09:00</lastmod>
   </url><url>
-    <loc>https://tech.plutslet.pe.kr/tags/hugo/</loc>
+    <loc>https://tech.plutslet.pe.kr/categories/hugo/</loc>
     <lastmod>2024-01-24T23:06:58+09:00</lastmod>
   </url><url>
-    <loc>https://tech.plutslet.pe.kr/categories/hugo/</loc>
+    <loc>https://tech.plutslet.pe.kr/tags/hugo/</loc>
     <lastmod>2024-01-24T23:06:58+09:00</lastmod>
   </url><url>
     <loc>https://tech.plutslet.pe.kr/post/hugo%EC%99%80-github%EB%A1%9C-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0/</loc>

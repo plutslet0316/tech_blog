@@ -4,7 +4,8 @@
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='오늘은 오픈 소스로 공개되어 있는 ‘SUPIR’ 라는 업스케일링 툴을 설치 및 구성하고 실행하기 까지의 과정을 기록하고자 합니다.
 일단 SUPIR은 우분투 환경에서 구성해야 하며, 저 같은 윈도우 환경일 경우에는 wsl을 활용하면 윈도우에서도 우분투 환경을 쉽게 구성할 수 있습니다.
 wsl 관련 설치법 등은 구글에 검색하면 많이 나오니 윈도우 환경에서 구성하고자 하면 해당 부분을 참고하여 우선 설치를 진행해주세요.
-요구 사양 업스케일링 툴에서 사양을 많이 요구하는 것으로 보입니다. 깃허브의 가이드를 따라 대략 설치를 진행하게 되면 업스케일링 모델을 포함하여 대략 160GB 가량의 저장 용량을 차지하게 됩니다.'>
+요구 사양 업스케일링 툴에서 사양을 많이 요구하는 것으로 보입니다. 깃허브의 가이드를 따라 대략 설치를 진행하게 되면 업스케일링 모델을 포함하여 대략 160GB 가량의 저장 용량을 차지하게 됩니다. 모델을 불러올 RAM 용량과 그래픽 카드의 메모리도 충분해야 원할하게 실행 및 업스케일링을 진행할 수 있습니다.
+'>
 <title>SUPIR 구성해서 업스케일링 해보기</title>
 
 <link rel='canonical' href='https://tech.plutslet.pe.kr/post/supir-%EA%B5%AC%EC%84%B1%ED%95%B4%EC%84%9C-%EC%97%85%EC%8A%A4%EC%BC%80%EC%9D%BC%EB%A7%81-%ED%95%B4%EB%B3%B4%EA%B8%B0/'>
@@ -13,7 +14,8 @@ wsl 관련 설치법 등은 구글에 검색하면 많이 나오니 윈도우 �
 <meta property='og:description' content='오늘은 오픈 소스로 공개되어 있는 ‘SUPIR’ 라는 업스케일링 툴을 설치 및 구성하고 실행하기 까지의 과정을 기록하고자 합니다.
 일단 SUPIR은 우분투 환경에서 구성해야 하며, 저 같은 윈도우 환경일 경우에는 wsl을 활용하면 윈도우에서도 우분투 환경을 쉽게 구성할 수 있습니다.
 wsl 관련 설치법 등은 구글에 검색하면 많이 나오니 윈도우 환경에서 구성하고자 하면 해당 부분을 참고하여 우선 설치를 진행해주세요.
-요구 사양 업스케일링 툴에서 사양을 많이 요구하는 것으로 보입니다. 깃허브의 가이드를 따라 대략 설치를 진행하게 되면 업스케일링 모델을 포함하여 대략 160GB 가량의 저장 용량을 차지하게 됩니다.'>
+요구 사양 업스케일링 툴에서 사양을 많이 요구하는 것으로 보입니다. 깃허브의 가이드를 따라 대략 설치를 진행하게 되면 업스케일링 모델을 포함하여 대략 160GB 가량의 저장 용량을 차지하게 됩니다. 모델을 불러올 RAM 용량과 그래픽 카드의 메모리도 충분해야 원할하게 실행 및 업스케일링을 진행할 수 있습니다.
+'>
 <meta property='og:url' content='https://tech.plutslet.pe.kr/post/supir-%EA%B5%AC%EC%84%B1%ED%95%B4%EC%84%9C-%EC%97%85%EC%8A%A4%EC%BC%80%EC%9D%BC%EB%A7%81-%ED%95%B4%EB%B3%B4%EA%B8%B0/'>
 <meta property='og:site_name' content='Plutslet0316'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2024-06-13T00:30:18&#43;09:00'/><meta property='article:modified_time' content='2024-06-13T00:30:18&#43;09:00'/>
@@ -21,7 +23,8 @@ wsl 관련 설치법 등은 구글에 검색하면 많이 나오니 윈도우 �
 <meta name="twitter:description" content="오늘은 오픈 소스로 공개되어 있는 ‘SUPIR’ 라는 업스케일링 툴을 설치 및 구성하고 실행하기 까지의 과정을 기록하고자 합니다.
 일단 SUPIR은 우분투 환경에서 구성해야 하며, 저 같은 윈도우 환경일 경우에는 wsl을 활용하면 윈도우에서도 우분투 환경을 쉽게 구성할 수 있습니다.
 wsl 관련 설치법 등은 구글에 검색하면 많이 나오니 윈도우 환경에서 구성하고자 하면 해당 부분을 참고하여 우선 설치를 진행해주세요.
-요구 사양 업스케일링 툴에서 사양을 많이 요구하는 것으로 보입니다. 깃허브의 가이드를 따라 대략 설치를 진행하게 되면 업스케일링 모델을 포함하여 대략 160GB 가량의 저장 용량을 차지하게 됩니다."><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+요구 사양 업스케일링 툴에서 사양을 많이 요구하는 것으로 보입니다. 깃허브의 가이드를 따라 대략 설치를 진행하게 되면 업스케일링 모델을 포함하여 대략 160GB 가량의 저장 용량을 차지하게 됩니다. 모델을 불러올 RAM 용량과 그래픽 카드의 메모리도 충분해야 원할하게 실행 및 업스케일링을 진행할 수 있습니다.
+"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 <link rel="manifest" href="/site.webmanifest">
@@ -71,7 +74,7 @@ wsl 관련 설치법 등은 구글에 검색하면 많이 나오니 윈도우 �
                     
                     
                         
-                        <img src="/img/avatar_hu52bd33c688b76e0fb8c0eafc869aa6ce_721785_300x0_resize_box_3.png" width="300"
+                        <img src="/img/avatar_hu_887a6ce1db30e82b.png" width="300"
                             height="300" class="site-logo" loading="lazy" alt="Avatar">
                     
                 
@@ -171,6 +174,25 @@ wsl 관련 설치법 등은 구글에 검색하면 많이 나오니 윈도우 �
         
 
         <div class="menu-bottom-section">
+                <li id="i18n-switch">  
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 5h7" />
+  <path d="M9 3v2c0 4.418 -2.239 8 -5 8" />
+  <path d="M5 9c-.003 2.144 2.952 3.908 6.7 4" />
+  <path d="M12 20l4 -9l4 9" />
+  <path d="M19.1 18h-6.2" />
+</svg>
+
+
+
+                    <select name="language" onchange="window.location.href = this.selectedOptions[0].value">
+                        
+                            <option value="https://tech.plutslet.pe.kr/" selected></option>
+                        
+                    </select>
+                </li>
+            
             
             
                 <li id="dark-mode-toggle">
@@ -390,7 +412,7 @@ SUPIR: <a class="link" href="https://github.com/Fanghua-Yu/SUPIR?tab=readme-ov-f
 <p><img src="/post/supir-%EA%B5%AC%EC%84%B1%ED%95%B4%EC%84%9C-%EC%97%85%EC%8A%A4%EC%BC%80%EC%9D%BC%EB%A7%81-%ED%95%B4%EB%B3%B4%EA%B8%B0/%EC%97%85%EC%8A%A4%EC%BC%80%EC%9D%BC%EB%A7%81_%EC%99%84%EB%A3%8C_%EC%BA%A1%EC%B3%90.png"
 	width="1930"
 	height="1622"
-	srcset="/post/supir-%EA%B5%AC%EC%84%B1%ED%95%B4%EC%84%9C-%EC%97%85%EC%8A%A4%EC%BC%80%EC%9D%BC%EB%A7%81-%ED%95%B4%EB%B3%B4%EA%B8%B0/%EC%97%85%EC%8A%A4%EC%BC%80%EC%9D%BC%EB%A7%81_%EC%99%84%EB%A3%8C_%EC%BA%A1%EC%B3%90_hu932d3b8c91e1525368decb8279964b2c_2122276_480x0_resize_box_3.png 480w, /post/supir-%EA%B5%AC%EC%84%B1%ED%95%B4%EC%84%9C-%EC%97%85%EC%8A%A4%EC%BC%80%EC%9D%BC%EB%A7%81-%ED%95%B4%EB%B3%B4%EA%B8%B0/%EC%97%85%EC%8A%A4%EC%BC%80%EC%9D%BC%EB%A7%81_%EC%99%84%EB%A3%8C_%EC%BA%A1%EC%B3%90_hu932d3b8c91e1525368decb8279964b2c_2122276_1024x0_resize_box_3.png 1024w"
+	srcset="/post/supir-%EA%B5%AC%EC%84%B1%ED%95%B4%EC%84%9C-%EC%97%85%EC%8A%A4%EC%BC%80%EC%9D%BC%EB%A7%81-%ED%95%B4%EB%B3%B4%EA%B8%B0/%EC%97%85%EC%8A%A4%EC%BC%80%EC%9D%BC%EB%A7%81_%EC%99%84%EB%A3%8C_%EC%BA%A1%EC%B3%90_hu_707e7350b837bd0c.png 480w, /post/supir-%EA%B5%AC%EC%84%B1%ED%95%B4%EC%84%9C-%EC%97%85%EC%8A%A4%EC%BC%80%EC%9D%BC%EB%A7%81-%ED%95%B4%EB%B3%B4%EA%B8%B0/%EC%97%85%EC%8A%A4%EC%BC%80%EC%9D%BC%EB%A7%81_%EC%99%84%EB%A3%8C_%EC%BA%A1%EC%B3%90_hu_f6c906758d01b8ae.png 1024w"
 	loading="lazy"
 	
 		alt="업스케일링 완료 시 캡쳐 이미지"
@@ -402,18 +424,18 @@ SUPIR: <a class="link" href="https://github.com/Fanghua-Yu/SUPIR?tab=readme-ov-f
 	
 ></p>
 <div class="table-wrapper"><table>
-<thead>
-<tr>
-<th>Before</th>
-<th>After</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><img src="/post/supir-%EA%B5%AC%EC%84%B1%ED%95%B4%EC%84%9C-%EC%97%85%EC%8A%A4%EC%BC%80%EC%9D%BC%EB%A7%81-%ED%95%B4%EB%B3%B4%EA%B8%B0/%EA%B3%A0%EC%96%91%EC%9D%B4_%EB%B9%84%ED%8F%AC.png"
+  <thead>
+      <tr>
+          <th>Before</th>
+          <th>After</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><img src="/post/supir-%EA%B5%AC%EC%84%B1%ED%95%B4%EC%84%9C-%EC%97%85%EC%8A%A4%EC%BC%80%EC%9D%BC%EB%A7%81-%ED%95%B4%EB%B3%B4%EA%B8%B0/%EA%B3%A0%EC%96%91%EC%9D%B4_%EB%B9%84%ED%8F%AC.png"
 	width="1200"
 	height="1800"
-	srcset="/post/supir-%EA%B5%AC%EC%84%B1%ED%95%B4%EC%84%9C-%EC%97%85%EC%8A%A4%EC%BC%80%EC%9D%BC%EB%A7%81-%ED%95%B4%EB%B3%B4%EA%B8%B0/%EA%B3%A0%EC%96%91%EC%9D%B4_%EB%B9%84%ED%8F%AC_hu55b38c7028ae17216cacc8784fa5dbbb_2152275_480x0_resize_box_3.png 480w, /post/supir-%EA%B5%AC%EC%84%B1%ED%95%B4%EC%84%9C-%EC%97%85%EC%8A%A4%EC%BC%80%EC%9D%BC%EB%A7%81-%ED%95%B4%EB%B3%B4%EA%B8%B0/%EA%B3%A0%EC%96%91%EC%9D%B4_%EB%B9%84%ED%8F%AC_hu55b38c7028ae17216cacc8784fa5dbbb_2152275_1024x0_resize_box_3.png 1024w"
+	srcset="/post/supir-%EA%B5%AC%EC%84%B1%ED%95%B4%EC%84%9C-%EC%97%85%EC%8A%A4%EC%BC%80%EC%9D%BC%EB%A7%81-%ED%95%B4%EB%B3%B4%EA%B8%B0/%EA%B3%A0%EC%96%91%EC%9D%B4_%EB%B9%84%ED%8F%AC_hu_8c9d5a29d2d66be9.png 480w, /post/supir-%EA%B5%AC%EC%84%B1%ED%95%B4%EC%84%9C-%EC%97%85%EC%8A%A4%EC%BC%80%EC%9D%BC%EB%A7%81-%ED%95%B4%EB%B3%B4%EA%B8%B0/%EA%B3%A0%EC%96%91%EC%9D%B4_%EB%B9%84%ED%8F%AC_hu_a92fc8c2e1d73c6a.png 1024w"
 	loading="lazy"
 	
 		alt="고양이 비포 이미지"
@@ -424,10 +446,10 @@ SUPIR: <a class="link" href="https://github.com/Fanghua-Yu/SUPIR?tab=readme-ov-f
 		data-flex-basis="160px"
 	
 ></td>
-<td><img src="/post/supir-%EA%B5%AC%EC%84%B1%ED%95%B4%EC%84%9C-%EC%97%85%EC%8A%A4%EC%BC%80%EC%9D%BC%EB%A7%81-%ED%95%B4%EB%B3%B4%EA%B8%B0/%EA%B3%A0%EC%96%91%EC%9D%B4_%EC%97%90%ED%94%84%ED%84%B0.png"
+          <td><img src="/post/supir-%EA%B5%AC%EC%84%B1%ED%95%B4%EC%84%9C-%EC%97%85%EC%8A%A4%EC%BC%80%EC%9D%BC%EB%A7%81-%ED%95%B4%EB%B3%B4%EA%B8%B0/%EA%B3%A0%EC%96%91%EC%9D%B4_%EC%97%90%ED%94%84%ED%84%B0.png"
 	width="1216"
 	height="1792"
-	srcset="/post/supir-%EA%B5%AC%EC%84%B1%ED%95%B4%EC%84%9C-%EC%97%85%EC%8A%A4%EC%BC%80%EC%9D%BC%EB%A7%81-%ED%95%B4%EB%B3%B4%EA%B8%B0/%EA%B3%A0%EC%96%91%EC%9D%B4_%EC%97%90%ED%94%84%ED%84%B0_hu20a584bbeca0458b59417c31dc11aab3_2581353_480x0_resize_box_3.png 480w, /post/supir-%EA%B5%AC%EC%84%B1%ED%95%B4%EC%84%9C-%EC%97%85%EC%8A%A4%EC%BC%80%EC%9D%BC%EB%A7%81-%ED%95%B4%EB%B3%B4%EA%B8%B0/%EA%B3%A0%EC%96%91%EC%9D%B4_%EC%97%90%ED%94%84%ED%84%B0_hu20a584bbeca0458b59417c31dc11aab3_2581353_1024x0_resize_box_3.png 1024w"
+	srcset="/post/supir-%EA%B5%AC%EC%84%B1%ED%95%B4%EC%84%9C-%EC%97%85%EC%8A%A4%EC%BC%80%EC%9D%BC%EB%A7%81-%ED%95%B4%EB%B3%B4%EA%B8%B0/%EA%B3%A0%EC%96%91%EC%9D%B4_%EC%97%90%ED%94%84%ED%84%B0_hu_10b846d7ef160123.png 480w, /post/supir-%EA%B5%AC%EC%84%B1%ED%95%B4%EC%84%9C-%EC%97%85%EC%8A%A4%EC%BC%80%EC%9D%BC%EB%A7%81-%ED%95%B4%EB%B3%B4%EA%B8%B0/%EA%B3%A0%EC%96%91%EC%9D%B4_%EC%97%90%ED%94%84%ED%84%B0_hu_3186dd7e260fcec6.png 1024w"
 	loading="lazy"
 	
 		alt="고양이 에프터 이미지"
@@ -438,8 +460,8 @@ SUPIR: <a class="link" href="https://github.com/Fanghua-Yu/SUPIR?tab=readme-ov-f
 		data-flex-basis="162px"
 	
 ></td>
-</tr>
-</tbody>
+      </tr>
+  </tbody>
 </table></div>
 <p>비슷한 해상도로 결과물이 나왔는데도 꽤 개선된 이미지를 얻을 수 있었습니다.<br>
 업스케일링 정도를 2로 조절해서 추가로 진행해보고 있는데 글 쓰는 중에도 계속 돌아가는 중입니다.<br>
