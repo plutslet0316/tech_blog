@@ -12,18 +12,18 @@
         <pubDate>Tue, 27 Feb 2024 22:44:50 +0900</pubDate>
         
         <guid>https://tech.plutslet.pe.kr/post/ef-core-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0/</guid>
-        <description>&lt;h3 id=&#34;ef-core&#34;&gt;EF Core&lt;/h3&gt;
-&lt;p&gt;데이터베이스와 객체 지향 언어 간에 호환되지 않는 데이터를 변환해 매핑해주는 기법을 객체 관계 매핑(ORM)이라고 합니다.&lt;br&gt;
+        <description>&lt;h3 id=&#34;ef-core&#34;&gt;EF Core
+&lt;/h3&gt;&lt;p&gt;데이터베이스와 객체 지향 언어 간에 호환되지 않는 데이터를 변환해 매핑해주는 기법을 객체 관계 매핑(ORM)이라고 합니다.&lt;br&gt;
 EF Core 는 .Net 기반 개체를 이용하여 데이터베이스를 작업할 수 있도록 해줍니다.&lt;/p&gt;
-&lt;h3 id=&#34;요구사항&#34;&gt;요구사항&lt;/h3&gt;
-&lt;ul&gt;
+&lt;h3 id=&#34;요구사항&#34;&gt;요구사항
+&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;.NET SDK&lt;/strong&gt; : &lt;a class=&#34;link&#34; href=&#34;https://dotnet.microsoft.com/en-us/download&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://dotnet.microsoft.com/en-us/download&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Visual Studio&lt;/strong&gt; : &lt;a class=&#34;link&#34; href=&#34;https://visualstudio.microsoft.com/ko/vs/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://visualstudio.microsoft.com/ko/vs/&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;설치&#34;&gt;설치&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;EntityFrameworkCore 패키지 설치&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;설치&#34;&gt;설치
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;EntityFrameworkCore 패키지 설치&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;검색을 통해 설치
 &lt;ul&gt;
@@ -88,15 +88,15 @@ EF Core 는 .Net 기반 개체를 이용하여 데이터베이스를 작업할 �
 &lt;ul&gt;
 &lt;li&gt;설치: &lt;code&gt;Install-Package Microsoft.EntityFrameworkCore.Tools&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;ef-core-시작하기&#34;&gt;EF Core 시작하기&lt;/h3&gt;
-&lt;ol&gt;
+&lt;h3 id=&#34;ef-core-시작하기&#34;&gt;EF Core 시작하기
+&lt;/h3&gt;&lt;ol&gt;
 &lt;li&gt;Visual Studio 실행 후 새 프로젝트 만들기&lt;/li&gt;
 &lt;li&gt;C# 태그가 있는 콘솔 앱을 선택해 다음 클릭&lt;/li&gt;
 &lt;li&gt;이름(예, EFCoreTest)을 입력하고 만들기 클릭&lt;/li&gt;
 &lt;li&gt;위의 설치 방법을 참고해 원하는 방법으로 패키지 설치&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h3 id=&#34;dbcontext-구성&#34;&gt;&lt;strong&gt;DBContext 구성&lt;/strong&gt;&lt;/h3&gt;
-&lt;ul&gt;
+&lt;h3 id=&#34;dbcontext-구성&#34;&gt;&lt;strong&gt;DBContext 구성&lt;/strong&gt;
+&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;데이터베이스와 연결하고 쿼리 및 저장하는 데 필수적인 요소&lt;/li&gt;
 &lt;li&gt;아래와 같이 &lt;code&gt;DbContext&lt;/code&gt; 를 상속한 클래스 내부에 &lt;code&gt;Entity&lt;/code&gt; 와 DB 연결 정보 등을 추가할 수 있습니다.&lt;/li&gt;
 &lt;/ul&gt;
@@ -131,8 +131,8 @@ DB와의 연결은 여러가지 방식을 사용할 수 있습니다. 자세한 
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; TestDbContext(optionsBuilder.Options);
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;모델-만들기&#34;&gt;모델 만들기&lt;/h3&gt;
-&lt;ul&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;모델-만들기&#34;&gt;모델 만들기
+&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;클래스 형태로 구성한 &lt;code&gt;Entity&lt;/code&gt; 를 위에서 만든 &lt;code&gt;DbContext&lt;/code&gt; 에 속성으로 정의하는 것만으로도 DB의 테이블과 연결시킬 수 있습니다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;ol&gt;
@@ -164,8 +164,8 @@ DB와의 연결은 여러가지 방식을 사용할 수 있습니다. 자세한 
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    ...
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;데이터베이스-만들기&#34;&gt;데이터베이스 만들기&lt;/h3&gt;
-&lt;ul&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;데이터베이스-만들기&#34;&gt;데이터베이스 만들기
+&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;위에서 구성한 데이터베이스를 서버에서 만들기 위해서는 마이그레이션이라는 과정이 필요합니다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;ol&gt;
@@ -180,8 +180,8 @@ DB와의 연결은 여러가지 방식을 사용할 수 있습니다. 자세한 
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;h3 id=&#34;기본적인-사용-방법&#34;&gt;기본적인 사용 방법&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;데이터베이스 연결&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;기본적인-사용-방법&#34;&gt;기본적인 사용 방법
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;데이터베이스 연결&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;위에서 만든 &lt;code&gt;DBContext&lt;/code&gt; 를 가져옵니다.&lt;/li&gt;
 &lt;/ul&gt;
@@ -221,8 +221,8 @@ DB와의 연결은 여러가지 방식을 사용할 수 있습니다. 자세한 
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;dc.SaveChanges();
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;이번엔 설치와 간단한 사용법까지 알아봤습니다.&lt;br&gt;
 다음에 기회가 되면 더 많은 내용을 다뤄보겠습니다.&lt;/p&gt;
-&lt;h3 id=&#34;참고링크&#34;&gt;참고링크&lt;/h3&gt;
-&lt;ul&gt;
+&lt;h3 id=&#34;참고링크&#34;&gt;참고링크
+&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;공식:  &lt;a class=&#34;link&#34; href=&#34;https://learn.microsoft.com/ko-kr/ef/core/get-started/overview/first-app?tabs=visual-studio&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://learn.microsoft.com/ko-kr/ef/core/get-started/overview/first-app?tabs=visual-studio&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.entityframeworktutorial.net/efcore/entity-framework-core.aspx&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;

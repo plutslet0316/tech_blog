@@ -1,36 +1,18 @@
 <!DOCTYPE html>
 <html lang="ko" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='깃허브 페이지로 블로그를 만들 때부터 개인 도메인으로 연결하고 싶다는 생각이 있었습니다. 이 글은 깃허브 페이지에서 커스텀 도메인 설정하며 정리한 내용입니다.
-시작 기본적으로 깃허브 페이지를 만들면 아래의 URL 형태로 만들어 집니다.
-https://깃허브아이디.github.io/ 저의 경우는 https://plutslet0316.github.io/ 입니다.
-위의 URL을 아래처럼 제 개인 도메인으로 변경할 생각입니다.
-https://blog.plutslet.pe.kr/ 도메인 DNS 설정 현재 사용 중인 DNS 관리 사이트에서 아래의 설정을 진행합니다.
-레코드 타입: CNAME 서브 도메인(Name): 원하는 도메인 - blog 대상 주소: 깃허브아이디.github.io 저는 클라우드플레어를 이용중이고 설정한 예시 이미지는 아래와 같습니다.
-'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="깃허브 페이지로 블로그를 만들 때부터 개인 도메인으로 연결하고 싶다는 생각이 있었습니다. 이 글은 깃허브 페이지에서 커스텀 도메인 설정하며 정리한 내용입니다.\n시작\r기본적으로 깃허브 페이지를 만들면 아래의 URL 형태로 만들어 집니다.\nhttps://깃허브아이디.github.io/ 저의 경우는 https://plutslet0316.github.io/ 입니다.\n위의 URL을 아래처럼 제 개인 도메인으로 변경할 생각입니다.\nhttps://blog.plutslet.pe.kr/ 도메인 DNS 설정\r현재 사용 중인 DNS 관리 사이트에서 아래의 설정을 진행합니다.\n레코드 타입: CNAME 서브 도메인(Name): 원하는 도메인 - blog 대상 주소: 깃허브아이디.github.io 저는 클라우드플레어를 이용중이고 설정한 예시 이미지는 아래와 같습니다.\n">
 <title>GitHub 페이지 커스텀 도메인 설정하기</title>
 
 <link rel='canonical' href='https://tech.plutslet.pe.kr/post/github-%ED%8E%98%EC%9D%B4%EC%A7%80-%EC%BB%A4%EC%8A%A4%ED%85%80-%EB%8F%84%EB%A9%94%EC%9D%B8-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0/'>
 
-<link rel="stylesheet" href="/scss/style.min.24ef1cc321916467896e8c70c10c0ad7b98c2a8df14298032fb637216e397f50.css"><meta property='og:title' content='GitHub 페이지 커스텀 도메인 설정하기'>
-<meta property='og:description' content='깃허브 페이지로 블로그를 만들 때부터 개인 도메인으로 연결하고 싶다는 생각이 있었습니다. 이 글은 깃허브 페이지에서 커스텀 도메인 설정하며 정리한 내용입니다.
-시작 기본적으로 깃허브 페이지를 만들면 아래의 URL 형태로 만들어 집니다.
-https://깃허브아이디.github.io/ 저의 경우는 https://plutslet0316.github.io/ 입니다.
-위의 URL을 아래처럼 제 개인 도메인으로 변경할 생각입니다.
-https://blog.plutslet.pe.kr/ 도메인 DNS 설정 현재 사용 중인 DNS 관리 사이트에서 아래의 설정을 진행합니다.
-레코드 타입: CNAME 서브 도메인(Name): 원하는 도메인 - blog 대상 주소: 깃허브아이디.github.io 저는 클라우드플레어를 이용중이고 설정한 예시 이미지는 아래와 같습니다.
-'>
+<link rel="stylesheet" href="/scss/style.min.b9c8156d464c343bdacaf14a871581fb94cbbdb9dd5cbce4ba017361187cc930.css"><meta property='og:title' content="GitHub 페이지 커스텀 도메인 설정하기">
+<meta property='og:description' content="깃허브 페이지로 블로그를 만들 때부터 개인 도메인으로 연결하고 싶다는 생각이 있었습니다. 이 글은 깃허브 페이지에서 커스텀 도메인 설정하며 정리한 내용입니다.\n시작\r기본적으로 깃허브 페이지를 만들면 아래의 URL 형태로 만들어 집니다.\nhttps://깃허브아이디.github.io/ 저의 경우는 https://plutslet0316.github.io/ 입니다.\n위의 URL을 아래처럼 제 개인 도메인으로 변경할 생각입니다.\nhttps://blog.plutslet.pe.kr/ 도메인 DNS 설정\r현재 사용 중인 DNS 관리 사이트에서 아래의 설정을 진행합니다.\n레코드 타입: CNAME 서브 도메인(Name): 원하는 도메인 - blog 대상 주소: 깃허브아이디.github.io 저는 클라우드플레어를 이용중이고 설정한 예시 이미지는 아래와 같습니다.\n">
 <meta property='og:url' content='https://tech.plutslet.pe.kr/post/github-%ED%8E%98%EC%9D%B4%EC%A7%80-%EC%BB%A4%EC%8A%A4%ED%85%80-%EB%8F%84%EB%A9%94%EC%9D%B8-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0/'>
 <meta property='og:site_name' content='Plutslet0316'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='GitHub' /><meta property='article:tag' content='GitHub Page' /><meta property='article:tag' content='깃허브 페이지' /><meta property='article:tag' content='커스텀 도메인' /><meta property='article:published_time' content='2024-01-30T22:36:50&#43;09:00'/><meta property='article:modified_time' content='2024-01-30T22:36:50&#43;09:00'/>
 <meta name="twitter:title" content="GitHub 페이지 커스텀 도메인 설정하기">
-<meta name="twitter:description" content="깃허브 페이지로 블로그를 만들 때부터 개인 도메인으로 연결하고 싶다는 생각이 있었습니다. 이 글은 깃허브 페이지에서 커스텀 도메인 설정하며 정리한 내용입니다.
-시작 기본적으로 깃허브 페이지를 만들면 아래의 URL 형태로 만들어 집니다.
-https://깃허브아이디.github.io/ 저의 경우는 https://plutslet0316.github.io/ 입니다.
-위의 URL을 아래처럼 제 개인 도메인으로 변경할 생각입니다.
-https://blog.plutslet.pe.kr/ 도메인 DNS 설정 현재 사용 중인 DNS 관리 사이트에서 아래의 설정을 진행합니다.
-레코드 타입: CNAME 서브 도메인(Name): 원하는 도메인 - blog 대상 주소: 깃허브아이디.github.io 저는 클라우드플레어를 이용중이고 설정한 예시 이미지는 아래와 같습니다.
-"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<meta name="twitter:description" content="깃허브 페이지로 블로그를 만들 때부터 개인 도메인으로 연결하고 싶다는 생각이 있었습니다. 이 글은 깃허브 페이지에서 커스텀 도메인 설정하며 정리한 내용입니다.\n시작\r기본적으로 깃허브 페이지를 만들면 아래의 URL 형태로 만들어 집니다.\nhttps://깃허브아이디.github.io/ 저의 경우는 https://plutslet0316.github.io/ 입니다.\n위의 URL을 아래처럼 제 개인 도메인으로 변경할 생각입니다.\nhttps://blog.plutslet.pe.kr/ 도메인 DNS 설정\r현재 사용 중인 DNS 관리 사이트에서 아래의 설정을 진행합니다.\n레코드 타입: CNAME 서브 도메인(Name): 원하는 도메인 - blog 대상 주소: 깃허브아이디.github.io 저는 클라우드플레어를 이용중이고 설정한 예시 이미지는 아래와 같습니다.\n"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 <link rel="manifest" href="/site.webmanifest">
@@ -94,7 +76,7 @@ https://blog.plutslet.pe.kr/ 도메인 DNS 설정 현재 사용 중인 DNS 관�
             <h1 class="site-name"><a href="/">Plutslet0316</a></h1>
             <h2 class="site-description"></h2>
         </div>
-    </header><ol class="social-menu">
+    </header><ol class="menu-social">
             
                 <li>
                     <a 
@@ -178,31 +160,12 @@ https://blog.plutslet.pe.kr/ 도메인 DNS 설정 현재 사용 중인 DNS 관�
             </a>
         </li>
         
+        <li class="menu-bottom-section">
+            <ol class="menu">
 
-        <div class="menu-bottom-section">
-                <li id="i18n-switch">  
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-  <path d="M4 5h7" />
-  <path d="M9 3v2c0 4.418 -2.239 8 -5 8" />
-  <path d="M5 9c-.003 2.144 2.952 3.908 6.7 4" />
-  <path d="M12 20l4 -9l4 9" />
-  <path d="M19.1 18h-6.2" />
-</svg>
-
-
-
-                    <select name="language" onchange="window.location.href = this.selectedOptions[0].value">
-                        
-                            <option value="https://tech.plutslet.pe.kr/" selected></option>
-                        
-                    </select>
-                </li>
-            
-            
-            
-                <li id="dark-mode-toggle">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
   <circle cx="8" cy="12" r="2" />
   <rect x="2" y="6" width="20" height="12" rx="6" />
@@ -210,7 +173,7 @@ https://blog.plutslet.pe.kr/ 도메인 DNS 설정 현재 사용 중인 DNS 관�
 
 
 
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
   <circle cx="16" cy="12" r="2" />
   <rect x="2" y="6" width="20" height="12" rx="6" />
@@ -218,10 +181,11 @@ https://blog.plutslet.pe.kr/ 도메인 DNS 설정 현재 사용 중인 DNS 관�
 
 
 
-                    <span>다크 모드</span>
-                </li>
-            
-        </div>
+                        <span>다크 모드</span>
+                    </li>
+                
+            </ol>
+        </li>
     </ol>
 </aside>
 
@@ -271,20 +235,6 @@ https://blog.plutslet.pe.kr/ 도메인 DNS 설정 현재 사용 중인 DNS 관�
         
 
         
-            <div>
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="12" cy="12" r="9" />
-  <polyline points="12 7 12 12 15 15" />
-</svg>
-
-
-
-                <time class="article-time--reading">
-                    1 분 정도
-                </time>
-            </div>
-        
     </footer>
     
 
@@ -297,15 +247,15 @@ https://blog.plutslet.pe.kr/ 도메인 DNS 설정 현재 사용 중인 DNS 관�
     
     
     <p>깃허브 페이지로 블로그를 만들 때부터 개인 도메인으로 연결하고 싶다는 생각이 있었습니다. 이 글은 깃허브 페이지에서 커스텀 도메인 설정하며 정리한 내용입니다.</p>
-<h3 id="시작">시작</h3>
-<p>기본적으로 깃허브 페이지를 만들면 아래의 URL 형태로 만들어 집니다.</p>
+<h3 id="시작">시작
+</h3><p>기본적으로 깃허브 페이지를 만들면 아래의 URL 형태로 만들어 집니다.</p>
 <pre tabindex="0"><code>https://깃허브아이디.github.io/
 </code></pre><p>저의 경우는 <a class="link" href="https://plutslet0316.github.io/"  target="_blank" rel="noopener"
     >https://plutslet0316.github.io/</a> 입니다.<br>
 위의 URL을 아래처럼 제 개인 도메인으로 변경할 생각입니다.</p>
 <pre tabindex="0"><code>https://blog.plutslet.pe.kr/
-</code></pre><h3 id="도메인-dns-설정">도메인 DNS 설정</h3>
-<p>현재 사용 중인 DNS 관리 사이트에서 아래의 설정을 진행합니다.</p>
+</code></pre><h3 id="도메인-dns-설정">도메인 DNS 설정
+</h3><p>현재 사용 중인 DNS 관리 사이트에서 아래의 설정을 진행합니다.</p>
 <ul>
 <li>레코드 타입: CNAME</li>
 <li>서브 도메인(Name): 원하는 도메인 - blog</li>
@@ -326,8 +276,8 @@ https://blog.plutslet.pe.kr/ 도메인 DNS 설정 현재 사용 중인 DNS 관�
 		data-flex-basis="982px"
 	
 ></p>
-<h3 id="깃허브에서-커스텀-도메인-설정">깃허브에서 커스텀 도메인 설정</h3>
-<ol>
+<h3 id="깃허브에서-커스텀-도메인-설정">깃허브에서 커스텀 도메인 설정
+</h3><ol>
 <li>원하는 저장소에서 Setting → Pages 을 차례로 클릭해 깃허브 페이지 설정창으로 이동합니다.</li>
 <li>Custom domain 항목을 찾아 입력란에 원하는 도메인을 입력 후 Save 버튼을 클릭합니다.</li>
 <li>깃허브에서 DNS 확인을 진행하고, 이후 완료가 되면 해당 도메인으로 접근할 수 있게 됩니다.</li>
@@ -347,8 +297,8 @@ https://blog.plutslet.pe.kr/ 도메인 DNS 설정 현재 사용 중인 DNS 관�
 		data-flex-basis="1655px"
 	
 ></p>
-<h3 id="참고자료">참고자료</h3>
-<ul>
+<h3 id="참고자료">참고자료
+</h3><ul>
 <li>깃허브 공식: <a class="link" href="https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site"  target="_blank" rel="noopener"
     >https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site</a></li>
 <li>Github 블로그에 Custom도메인 연결하기: <a class="link" href="https://mishka.kr/12"  target="_blank" rel="noopener"
@@ -421,7 +371,7 @@ https://blog.plutslet.pe.kr/ 도메인 DNS 설정 현재 사용 중인 DNS 관�
     
     <section class="powerby">
         <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a>로 만듦 <br />
-        <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>의 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.20.0">Stack</a></b> 테마 사용 중
+        <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>의 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.30.0">Stack</a></b> 테마 사용 중
     </section>
 </footer>
 
@@ -510,7 +460,7 @@ https://blog.plutslet.pe.kr/ 도메인 DNS 설정 현재 사용 중인 DNS 관�
                 src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
                 
                 >
-            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
 <script>
     (function () {
         const customFont = document.createElement('link');

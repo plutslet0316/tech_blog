@@ -12,14 +12,14 @@
         <pubDate>Wed, 24 Jan 2024 23:06:58 +0900</pubDate>
         
         <guid>https://tech.plutslet.pe.kr/post/hugo%EC%99%80-github%EB%A1%9C-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0/</guid>
-        <description>&lt;h3 id=&#34;hugo&#34;&gt;Hugo&lt;/h3&gt;
-&lt;ul&gt;
+        <description>&lt;h3 id=&#34;hugo&#34;&gt;Hugo
+&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;빌드 속도가 빠릅니다.&lt;/li&gt;
 &lt;li&gt;핫리로드 기능을 지원합니다.&lt;/li&gt;
 &lt;li&gt;한글로 작성해도 문제없이 출력됩니다.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;요구사항&#34;&gt;요구사항&lt;/h3&gt;
-&lt;ul&gt;
+&lt;h3 id=&#34;요구사항&#34;&gt;요구사항
+&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Git&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://git-scm.com/book/en/v2/Getting-Started-Installing-Git&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://git-scm.com/book/en/v2/Getting-Started-Installing-Git&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Go&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://go.dev/doc/install&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -51,13 +51,13 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;hugo-확장판-설치&#34;&gt;Hugo 확장판 설치&lt;/h3&gt;
-&lt;ul&gt;
+&lt;h3 id=&#34;hugo-확장판-설치&#34;&gt;Hugo 확장판 설치
+&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;위에서 설치한 패키지 툴을 이용해서 확장판설치&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;choco install hugo-extended&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;hugo로-블로그-구축하기&#34;&gt;Hugo로 블로그 구축하기&lt;/h3&gt;
-&lt;ol&gt;
+&lt;h3 id=&#34;hugo로-블로그-구축하기&#34;&gt;Hugo로 블로그 구축하기
+&lt;/h3&gt;&lt;ol&gt;
 &lt;li&gt;원하는 위치에서 &lt;code&gt;hugo new site 폴더이름&lt;/code&gt;
 &lt;ul&gt;
 &lt;li&gt;해당 위치에 폴더이름으로 hugo 사이트가 만들어 진다.&lt;/li&gt;
@@ -92,8 +92,8 @@
 &lt;/li&gt;
 &lt;li&gt;로컬 테스트: &lt;code&gt;hugo server&lt;/code&gt;&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h3 id=&#34;깃허브에-업로드&#34;&gt;깃허브에 업로드&lt;/h3&gt;
-&lt;ul&gt;
+&lt;h3 id=&#34;깃허브에-업로드&#34;&gt;깃허브에 업로드
+&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;깃허브에 업로드하기 위해서 레파지토리가 두개 필요합니다.
 &lt;ol&gt;
 &lt;li&gt;Hugo로 만들어진 블로그 생성기 (private)&lt;/li&gt;
@@ -115,10 +115,10 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git add .
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git commit -m &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;test&amp;#34;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git push origin master
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;깃허브-페이지-활성화&#34;&gt;깃허브 페이지 활성화&lt;/h3&gt;
-&lt;p&gt;위에서 만든 2번 레파지토리의 깃허브 페이지를 활성화하면 깃블로그 구축이 완료됩니다.&lt;/p&gt;
-&lt;h3 id=&#34;참고자료&#34;&gt;참고자료&lt;/h3&gt;
-&lt;ul&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;깃허브-페이지-활성화&#34;&gt;깃허브 페이지 활성화
+&lt;/h3&gt;&lt;p&gt;위에서 만든 2번 레파지토리의 깃허브 페이지를 활성화하면 깃블로그 구축이 완료됩니다.&lt;/p&gt;
+&lt;h3 id=&#34;참고자료&#34;&gt;참고자료
+&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;공식 설치 지침: &lt;a class=&#34;link&#34; href=&#34;https://gohugo.io/installation/windows/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://gohugo.io/installation/windows/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;한글 자료Hugo로 개인 블로그 만드는 법: &lt;a class=&#34;link&#34; href=&#34;https://selfinvestfriends.tistory.com/78&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;

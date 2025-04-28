@@ -1,30 +1,18 @@
 <!DOCTYPE html>
 <html lang="ko" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='오늘은 오픈 소스로 공개되어 있는 ‘SUPIR’ 라는 업스케일링 툴을 설치 및 구성하고 실행하기 까지의 과정을 기록하고자 합니다.
-일단 SUPIR은 우분투 환경에서 구성해야 하며, 저 같은 윈도우 환경일 경우에는 wsl을 활용하면 윈도우에서도 우분투 환경을 쉽게 구성할 수 있습니다.
-wsl 관련 설치법 등은 구글에 검색하면 많이 나오니 윈도우 환경에서 구성하고자 하면 해당 부분을 참고하여 우선 설치를 진행해주세요.
-요구 사양 업스케일링 툴에서 사양을 많이 요구하는 것으로 보입니다. 깃허브의 가이드를 따라 대략 설치를 진행하게 되면 업스케일링 모델을 포함하여 대략 160GB 가량의 저장 용량을 차지하게 됩니다. 모델을 불러올 RAM 용량과 그래픽 카드의 메모리도 충분해야 원할하게 실행 및 업스케일링을 진행할 수 있습니다.
-'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="오늘은 오픈 소스로 공개되어 있는 ‘SUPIR’ 라는 업스케일링 툴을 설치 및 구성하고 실행하기 까지의 과정을 기록하고자 합니다.\n일단 SUPIR은 우분투 환경에서 구성해야 하며, 저 같은 윈도우 환경일 경우에는 wsl을 활용하면 윈도우에서도 우분투 환경을 쉽게 구성할 수 있습니다.\nwsl 관련 설치법 등은 구글에 검색하면 많이 나오니 윈도우 환경에서 구성하고자 하면 해당 부분을 참고하여 우선 설치를 진행해주세요.\n요구 사양\r업스케일링 툴에서 사양을 많이 요구하는 것으로 보입니다. 깃허브의 가이드를 따라 대략 설치를 진행하게 되면 업스케일링 모델을 포함하여 대략 160GB 가량의 저장 용량을 차지하게 됩니다. 모델을 불러올 RAM 용량과 그래픽 카드의 메모리도 충분해야 원할하게 실행 및 업스케일링을 진행할 수 있습니다.\n">
 <title>SUPIR 구성해서 업스케일링 해보기</title>
 
 <link rel='canonical' href='https://tech.plutslet.pe.kr/post/supir-%EA%B5%AC%EC%84%B1%ED%95%B4%EC%84%9C-%EC%97%85%EC%8A%A4%EC%BC%80%EC%9D%BC%EB%A7%81-%ED%95%B4%EB%B3%B4%EA%B8%B0/'>
 
-<link rel="stylesheet" href="/scss/style.min.24ef1cc321916467896e8c70c10c0ad7b98c2a8df14298032fb637216e397f50.css"><meta property='og:title' content='SUPIR 구성해서 업스케일링 해보기'>
-<meta property='og:description' content='오늘은 오픈 소스로 공개되어 있는 ‘SUPIR’ 라는 업스케일링 툴을 설치 및 구성하고 실행하기 까지의 과정을 기록하고자 합니다.
-일단 SUPIR은 우분투 환경에서 구성해야 하며, 저 같은 윈도우 환경일 경우에는 wsl을 활용하면 윈도우에서도 우분투 환경을 쉽게 구성할 수 있습니다.
-wsl 관련 설치법 등은 구글에 검색하면 많이 나오니 윈도우 환경에서 구성하고자 하면 해당 부분을 참고하여 우선 설치를 진행해주세요.
-요구 사양 업스케일링 툴에서 사양을 많이 요구하는 것으로 보입니다. 깃허브의 가이드를 따라 대략 설치를 진행하게 되면 업스케일링 모델을 포함하여 대략 160GB 가량의 저장 용량을 차지하게 됩니다. 모델을 불러올 RAM 용량과 그래픽 카드의 메모리도 충분해야 원할하게 실행 및 업스케일링을 진행할 수 있습니다.
-'>
+<link rel="stylesheet" href="/scss/style.min.b9c8156d464c343bdacaf14a871581fb94cbbdb9dd5cbce4ba017361187cc930.css"><meta property='og:title' content="SUPIR 구성해서 업스케일링 해보기">
+<meta property='og:description' content="오늘은 오픈 소스로 공개되어 있는 ‘SUPIR’ 라는 업스케일링 툴을 설치 및 구성하고 실행하기 까지의 과정을 기록하고자 합니다.\n일단 SUPIR은 우분투 환경에서 구성해야 하며, 저 같은 윈도우 환경일 경우에는 wsl을 활용하면 윈도우에서도 우분투 환경을 쉽게 구성할 수 있습니다.\nwsl 관련 설치법 등은 구글에 검색하면 많이 나오니 윈도우 환경에서 구성하고자 하면 해당 부분을 참고하여 우선 설치를 진행해주세요.\n요구 사양\r업스케일링 툴에서 사양을 많이 요구하는 것으로 보입니다. 깃허브의 가이드를 따라 대략 설치를 진행하게 되면 업스케일링 모델을 포함하여 대략 160GB 가량의 저장 용량을 차지하게 됩니다. 모델을 불러올 RAM 용량과 그래픽 카드의 메모리도 충분해야 원할하게 실행 및 업스케일링을 진행할 수 있습니다.\n">
 <meta property='og:url' content='https://tech.plutslet.pe.kr/post/supir-%EA%B5%AC%EC%84%B1%ED%95%B4%EC%84%9C-%EC%97%85%EC%8A%A4%EC%BC%80%EC%9D%BC%EB%A7%81-%ED%95%B4%EB%B3%B4%EA%B8%B0/'>
 <meta property='og:site_name' content='Plutslet0316'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2024-06-13T00:30:18&#43;09:00'/><meta property='article:modified_time' content='2024-06-13T00:30:18&#43;09:00'/>
 <meta name="twitter:title" content="SUPIR 구성해서 업스케일링 해보기">
-<meta name="twitter:description" content="오늘은 오픈 소스로 공개되어 있는 ‘SUPIR’ 라는 업스케일링 툴을 설치 및 구성하고 실행하기 까지의 과정을 기록하고자 합니다.
-일단 SUPIR은 우분투 환경에서 구성해야 하며, 저 같은 윈도우 환경일 경우에는 wsl을 활용하면 윈도우에서도 우분투 환경을 쉽게 구성할 수 있습니다.
-wsl 관련 설치법 등은 구글에 검색하면 많이 나오니 윈도우 환경에서 구성하고자 하면 해당 부분을 참고하여 우선 설치를 진행해주세요.
-요구 사양 업스케일링 툴에서 사양을 많이 요구하는 것으로 보입니다. 깃허브의 가이드를 따라 대략 설치를 진행하게 되면 업스케일링 모델을 포함하여 대략 160GB 가량의 저장 용량을 차지하게 됩니다. 모델을 불러올 RAM 용량과 그래픽 카드의 메모리도 충분해야 원할하게 실행 및 업스케일링을 진행할 수 있습니다.
-"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<meta name="twitter:description" content="오늘은 오픈 소스로 공개되어 있는 ‘SUPIR’ 라는 업스케일링 툴을 설치 및 구성하고 실행하기 까지의 과정을 기록하고자 합니다.\n일단 SUPIR은 우분투 환경에서 구성해야 하며, 저 같은 윈도우 환경일 경우에는 wsl을 활용하면 윈도우에서도 우분투 환경을 쉽게 구성할 수 있습니다.\nwsl 관련 설치법 등은 구글에 검색하면 많이 나오니 윈도우 환경에서 구성하고자 하면 해당 부분을 참고하여 우선 설치를 진행해주세요.\n요구 사양\r업스케일링 툴에서 사양을 많이 요구하는 것으로 보입니다. 깃허브의 가이드를 따라 대략 설치를 진행하게 되면 업스케일링 모델을 포함하여 대략 160GB 가량의 저장 용량을 차지하게 됩니다. 모델을 불러올 RAM 용량과 그래픽 카드의 메모리도 충분해야 원할하게 실행 및 업스케일링을 진행할 수 있습니다.\n"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 <link rel="manifest" href="/site.webmanifest">
@@ -88,7 +76,7 @@ wsl 관련 설치법 등은 구글에 검색하면 많이 나오니 윈도우 �
             <h1 class="site-name"><a href="/">Plutslet0316</a></h1>
             <h2 class="site-description"></h2>
         </div>
-    </header><ol class="social-menu">
+    </header><ol class="menu-social">
             
                 <li>
                     <a 
@@ -172,31 +160,12 @@ wsl 관련 설치법 등은 구글에 검색하면 많이 나오니 윈도우 �
             </a>
         </li>
         
+        <li class="menu-bottom-section">
+            <ol class="menu">
 
-        <div class="menu-bottom-section">
-                <li id="i18n-switch">  
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-  <path d="M4 5h7" />
-  <path d="M9 3v2c0 4.418 -2.239 8 -5 8" />
-  <path d="M5 9c-.003 2.144 2.952 3.908 6.7 4" />
-  <path d="M12 20l4 -9l4 9" />
-  <path d="M19.1 18h-6.2" />
-</svg>
-
-
-
-                    <select name="language" onchange="window.location.href = this.selectedOptions[0].value">
-                        
-                            <option value="https://tech.plutslet.pe.kr/" selected></option>
-                        
-                    </select>
-                </li>
-            
-            
-            
-                <li id="dark-mode-toggle">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
   <circle cx="8" cy="12" r="2" />
   <rect x="2" y="6" width="20" height="12" rx="6" />
@@ -204,7 +173,7 @@ wsl 관련 설치법 등은 구글에 검색하면 많이 나오니 윈도우 �
 
 
 
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
   <circle cx="16" cy="12" r="2" />
   <rect x="2" y="6" width="20" height="12" rx="6" />
@@ -212,10 +181,11 @@ wsl 관련 설치법 등은 구글에 검색하면 많이 나오니 윈도우 �
 
 
 
-                    <span>다크 모드</span>
-                </li>
-            
-        </div>
+                        <span>다크 모드</span>
+                    </li>
+                
+            </ol>
+        </li>
     </ol>
 </aside>
 
@@ -257,20 +227,6 @@ wsl 관련 설치법 등은 구글에 검색하면 많이 나오니 윈도우 �
         
 
         
-            <div>
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="12" cy="12" r="9" />
-  <polyline points="12 7 12 12 15 15" />
-</svg>
-
-
-
-                <time class="article-time--reading">
-                    3 분 정도
-                </time>
-            </div>
-        
     </footer>
     
 
@@ -285,19 +241,19 @@ wsl 관련 설치법 등은 구글에 검색하면 많이 나오니 윈도우 �
     <p>오늘은 오픈 소스로 공개되어 있는 ‘SUPIR’ 라는 업스케일링 툴을 설치 및 구성하고 실행하기 까지의 과정을 기록하고자 합니다.<br>
 일단 SUPIR은 우분투 환경에서 구성해야 하며, 저 같은 윈도우 환경일 경우에는 wsl을 활용하면 윈도우에서도 우분투 환경을 쉽게 구성할 수 있습니다.<br>
 wsl 관련 설치법 등은 구글에 검색하면 많이 나오니 윈도우 환경에서 구성하고자 하면 해당 부분을 참고하여 우선 설치를 진행해주세요.</p>
-<h2 id="요구-사양">요구 사양</h2>
-<p>업스케일링 툴에서 사양을 많이 요구하는 것으로 보입니다. 깃허브의 가이드를 따라 대략 설치를 진행하게 되면 업스케일링 모델을 포함하여 대략 160GB 가량의 저장 용량을 차지하게 됩니다. 모델을 불러올 RAM 용량과 그래픽 카드의 메모리도 충분해야 원할하게 실행 및 업스케일링을 진행할 수 있습니다.</p>
+<h2 id="요구-사양">요구 사양
+</h2><p>업스케일링 툴에서 사양을 많이 요구하는 것으로 보입니다. 깃허브의 가이드를 따라 대략 설치를 진행하게 되면 업스케일링 모델을 포함하여 대략 160GB 가량의 저장 용량을 차지하게 됩니다. 모델을 불러올 RAM 용량과 그래픽 카드의 메모리도 충분해야 원할하게 실행 및 업스케일링을 진행할 수 있습니다.</p>
 <p>저는 위에서 설명 드린 것처럼 wsl 환경에서 진행하였고, wsl의 프로필을 활용하여 메모리 용량을 지정하여 구성하였습니다. 스왑 메모리도 지정하였는데, 일단 테스트 목적으로 진행하다 보니 일단 RAM 과 동일하게 지정하고 설치를 진행했습니다.</p>
 <p>모델 불러오는 과정이 있다보니 SSD에 설치하는 것이 좋겠으나 용량 문제로 HDD에 설치를 진행했습니다. SSD의 여유가 있다면 로딩 속도를 위해 SSD에 설치하는 것도 고려해보시면 좋겠습니다.</p>
-<h4 id="구성-사양">구성 사양</h4>
-<ul>
+<h4 id="구성-사양">구성 사양
+</h4><ul>
 <li>GPU: RTX 4070 SUPER 12GB</li>
 <li>RAM: 20GM</li>
 <li>SWAP: 20GM</li>
 </ul>
-<h2 id="설치-및-구성">설치 및 구성</h2>
-<h3 id="아나콘다conda-설치">아나콘다(conda) 설치</h3>
-<p>SUPIR는 다양한 패키지, 종속성및 환경 관리를 제공해주는 아나콘다(conda)를 사용하고 있습니다.<br>
+<h2 id="설치-및-구성">설치 및 구성
+</h2><h3 id="아나콘다conda-설치">아나콘다(conda) 설치
+</h3><p>SUPIR는 다양한 패키지, 종속성및 환경 관리를 제공해주는 아나콘다(conda)를 사용하고 있습니다.<br>
 이미 아나콘다가 설치되어 있으면 넘어가도 좋습니다.<br>
 설치되어 있지 않다면 우선 아나콘다를 설치해야 합니다.</p>
 <p>설치:</p>
@@ -326,8 +282,8 @@ wsl 관련 설치법 등은 구글에 검색하면 많이 나오니 윈도우 �
 <li><a class="link" href="https://velog.io/@boom109/Anaconda-%EC%84%A4%EC%B9%98-on-Ubuntu-20.04-LTS"  target="_blank" rel="noopener"
     >https://velog.io/@boom109/Anaconda-설치-on-Ubuntu-20.04-LTS</a></li>
 </ul>
-<h4 id="supir-설치-및-구성">SUPIR 설치 및 구성</h4>
-<p>SUPIR: <a class="link" href="https://github.com/Fanghua-Yu/SUPIR?tab=readme-ov-file"  target="_blank" rel="noopener"
+<h4 id="supir-설치-및-구성">SUPIR 설치 및 구성
+</h4><p>SUPIR: <a class="link" href="https://github.com/Fanghua-Yu/SUPIR?tab=readme-ov-file"  target="_blank" rel="noopener"
     >https://github.com/Fanghua-Yu/SUPIR?tab=readme-ov-file</a><br>
 위의 링크로 이동하여 설치 가이드를 보고 진행해도 됩니다.<br>
 아래의 내용은 정리의 느낌으로 크게 다르지 않습니다.</p>
@@ -372,8 +328,8 @@ SUPIR: <a class="link" href="https://github.com/Fanghua-Yu/SUPIR?tab=readme-ov-f
 </ul>
 </li>
 </ol>
-<h3 id="실행">실행</h3>
-<p>컴퓨터 사양에 따라 옵션을 추가하여 실행할 수 있습니다. 옵션의 경우 깃허브에 자세히 안내되어 있으니 참고 바랍니다. <br>
+<h3 id="실행">실행
+</h3><p>컴퓨터 사양에 따라 옵션을 추가하여 실행할 수 있습니다. 옵션의 경우 깃허브에 자세히 안내되어 있으니 참고 바랍니다. <br>
 옵션 링크: <a class="link" href="https://github.com/Fanghua-Yu/SUPIR?tab=readme-ov-file#usage-of-supir"  target="_blank" rel="noopener"
     >https://github.com/Fanghua-Yu/SUPIR?tab=readme-ov-file#usage-of-supir</a> <br>
 실행은 두 가지 방식으로 나뉩니다.</p>
@@ -406,8 +362,8 @@ SUPIR: <a class="link" href="https://github.com/Fanghua-Yu/SUPIR?tab=readme-ov-f
 	
 	
 ></a></p>
-<h3 id="업스케일링">업스케일링</h3>
-<p>제가 가진 사진 중 화질이 조금 떨어지는 사진으로 업스케일링을 진행해봤습니다. 다른 설정은 건들이지 않고 가이드 이미지 대로만 진행해보았습니다.</p>
+<h3 id="업스케일링">업스케일링
+</h3><p>제가 가진 사진 중 화질이 조금 떨어지는 사진으로 업스케일링을 진행해봤습니다. 다른 설정은 건들이지 않고 가이드 이미지 대로만 진행해보았습니다.</p>
 <p>아래는 해당 업스케일링 과정을 모두 거친 후 캡처 이미지와 비포 에프터 사진입니다.</p>
 <p><img src="/post/supir-%EA%B5%AC%EC%84%B1%ED%95%B4%EC%84%9C-%EC%97%85%EC%8A%A4%EC%BC%80%EC%9D%BC%EB%A7%81-%ED%95%B4%EB%B3%B4%EA%B8%B0/%EC%97%85%EC%8A%A4%EC%BC%80%EC%9D%BC%EB%A7%81_%EC%99%84%EB%A3%8C_%EC%BA%A1%EC%B3%90.png"
 	width="1930"
@@ -500,7 +456,7 @@ SUPIR: <a class="link" href="https://github.com/Fanghua-Yu/SUPIR?tab=readme-ov-f
     
     <section class="powerby">
         <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a>로 만듦 <br />
-        <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>의 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.20.0">Stack</a></b> 테마 사용 중
+        <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>의 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.30.0">Stack</a></b> 테마 사용 중
     </section>
 </footer>
 
@@ -589,7 +545,7 @@ SUPIR: <a class="link" href="https://github.com/Fanghua-Yu/SUPIR?tab=readme-ov-f
                 src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
                 
                 >
-            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
 <script>
     (function () {
         const customFont = document.createElement('link');

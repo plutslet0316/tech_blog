@@ -27,8 +27,8 @@
 &lt;p&gt;조금 더 찾아보니 커뮤니티 플러그인을 통해서도 동기화가 가능하다는 말도 있었습니다. 그런데 그것까지 찾아보는 건 조금 귀찮았습니다. 딸깍 한 번으로 플랫폼 간 동기화를 쉽게 하고 싶었거든요.&lt;/p&gt;
 &lt;p&gt;그래서 또 보니까, 이미 제가 다른 동기화 서비스를 이용 중이더군요. 그게 &lt;code&gt;Syncthing&lt;/code&gt;이었습니다.&lt;/p&gt;
 &lt;p&gt;결론만 말씀드리면, &lt;code&gt;Obsidian&lt;/code&gt;과 &lt;code&gt;Syncthing&lt;/code&gt;를 이용한 동기화는 성공적이었습니다.&lt;/p&gt;
-&lt;h3 id=&#34;syncthing-구성&#34;&gt;Syncthing 구성&lt;/h3&gt;
-&lt;p&gt;Syncthing은 별도의 서버 없이 개인과 개인 간 동기화를 목적으로 하는 오픈소스 프로젝트 입니다. 쉽게 사용할 수 있도록 GUI도 제공되고 있습니다. 물론 모바일 앱도 있고요.&lt;/p&gt;
+&lt;h3 id=&#34;syncthing-구성&#34;&gt;Syncthing 구성
+&lt;/h3&gt;&lt;p&gt;Syncthing은 별도의 서버 없이 개인과 개인 간 동기화를 목적으로 하는 오픈소스 프로젝트 입니다. 쉽게 사용할 수 있도록 GUI도 제공되고 있습니다. 물론 모바일 앱도 있고요.&lt;/p&gt;
 &lt;p&gt;대략적인 작동 방식은, 특정 폴더를 지정하면 해당 폴더 전체를 다른 기기에서 동기화 시켜서 완전 동일한 폴더가 복사 되는 방식이라고 볼 수 있습니다.&lt;/p&gt;
 &lt;p&gt;약간의 단점도 명확합니다. 로컬에 해당 파일을 그대로 복사하는 방식으로 동기화가 이뤄지기 때문에 각 저장소마다 파일 만큼의 용량을 차지하게 됩니다. 보안 때문이라면 이건 단점이 아니라 하나의 특징으로 봐야겠죠.&lt;/p&gt;
 &lt;p&gt;더 자세한 설명과 설치 방법은 아래 링크로 대체하겠습니다. 동기화 하고 싶은 기기마다 해당 싱크띵이 구성되어 있어야 합니다.&lt;/p&gt;
@@ -53,8 +53,8 @@
 &lt;/table&gt;
 &lt;p&gt;컴퓨터에서 파일이 저장되면 개인 서버에 해당 파일이 동기화 되고, 서버에서 휴대폰으로 한 번 더 동기화가 이뤄지는 방식입니다. 클라우드 서버처럼 혹은 NAS처럼 사용 중이라고 봐도 좋습니다.&lt;/p&gt;
 &lt;p&gt;위처럼 각 동기화 시키려는 플랫폼마다 Syncthing을 설치 및 구성해두었다면 준비는 끝입니다.&lt;/p&gt;
-&lt;h3 id=&#34;obsidian-동기화&#34;&gt;Obsidian 동기화&lt;/h3&gt;
-&lt;p&gt;Obsidian에서 동기화 하는 방법도 무척 쉽습니다.&lt;/p&gt;
+&lt;h3 id=&#34;obsidian-동기화&#34;&gt;Obsidian 동기화
+&lt;/h3&gt;&lt;p&gt;Obsidian에서 동기화 하는 방법도 무척 쉽습니다.&lt;/p&gt;
 &lt;p&gt;말 그대로 폴더를 전부 동기화 해버리면 끝입니다.&lt;/p&gt;
 &lt;p&gt;설명이 이걸로 끝일 정도로 정말 쉽습니다.&lt;/p&gt;
 &lt;p&gt;그래도 좀 더 적어보자면,&lt;/p&gt;
@@ -67,8 +67,8 @@
 &lt;li&gt;해당 기기의 옵시디언에서 해당 폴더를 엽니다.&lt;/li&gt;
 &lt;li&gt;파일이 모두 동기화 되었는지 확인합니다.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h3 id=&#34;사용-시-특징&#34;&gt;사용 시 특징&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;동기화 속도&lt;/strong&gt;
+&lt;h3 id=&#34;사용-시-특징&#34;&gt;사용 시 특징
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;동기화 속도&lt;/strong&gt;
 동기화 속도는 싱크띵의 동기화 속도를 따릅니다. 저장이 되어서 변경이 감지되면 수 초 내에 동기화가 완료됩니다. 옵시디언 노트가 마크다운 방식이라 용량이 적어서 동기화 자체는 굉장히 빠른 편입니다.&lt;/p&gt;
 &lt;p&gt;감지만 된다면 거의 즉시 동기화가 완료됩니다.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;동기화 반영&lt;/strong&gt;
@@ -81,12 +81,12 @@
 &lt;p&gt;&lt;strong&gt;동기화 트레픽&lt;/strong&gt;
 동기화가 이뤄지지 않을 때는 기본적으로 휴면 상태입니다. 작성하는 시점에서의 윈도우 환경에서의 메모리 용량이 49.3MB 정도 되는 군요. 네트워크는 변경점을 확인하기 위한 용도의 신호를 주기적으로 보내고 받는 것으로 보입니다. 그 마저도 WiFi 환경에서만 동작하도록 제한할 수 있었습니다.&lt;/p&gt;
 &lt;p&gt;50MB 이하의 메모리 사용량과 휴면 상태에서 변경을 확인하기 위한 용도의 신호를 주기적으로 주고 받습니다.&lt;/p&gt;
-&lt;h3 id=&#34;결론&#34;&gt;결론&lt;/h3&gt;
-&lt;p&gt;저는 일단 몇 주간 사용했을 때는 단점 없이 굉장히 편하게 사용했습니다. 주로 아이디어를 기록하는 용도로 사용하고 있는데, 앱 자체가 상당히 가볍다 보니 모바일로 대충 적은 걸 PC로 옮길 때의 스트레스가 없어졌습니다.&lt;/p&gt;
+&lt;h3 id=&#34;결론&#34;&gt;결론
+&lt;/h3&gt;&lt;p&gt;저는 일단 몇 주간 사용했을 때는 단점 없이 굉장히 편하게 사용했습니다. 주로 아이디어를 기록하는 용도로 사용하고 있는데, 앱 자체가 상당히 가볍다 보니 모바일로 대충 적은 걸 PC로 옮길 때의 스트레스가 없어졌습니다.&lt;/p&gt;
 &lt;p&gt;월마다 나가는 지출도 없고 동기화 속도도 굉장히 빠른 편이라서 편합니다. 잠깐 움직이면서 휴대폰에 적은 내용이 다시 컴퓨터에 앉으면 동기화가 완료되어 있어서 만족하고 있습니다.&lt;/p&gt;
 &lt;p&gt;개인적으로 사용할 목적의 노트 앱을 찾고 있고, 동기화 해서 다른 기기에서도 쉽게 옮기고 싶다면 위 방식을 고려해봐도 좋겠습니다.&lt;/p&gt;
-&lt;h3 id=&#34;관련-링크&#34;&gt;관련 링크&lt;/h3&gt;
-&lt;ul&gt;
+&lt;h3 id=&#34;관련-링크&#34;&gt;관련 링크
+&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;Syncthing - &lt;a class=&#34;link&#34; href=&#34;https://syncthing.net/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://syncthing.net/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Obsidian - &lt;a class=&#34;link&#34; href=&#34;https://obsidian.md/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -103,8 +103,8 @@
         
         <guid>https://tech.plutslet.pe.kr/post/%ED%83%80%EC%9E%85%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%EC%97%90%EC%84%9C-%EC%A0%84%EA%B0%9C-%EA%B5%AC%EB%AC%B8spread-syntax-%EC%82%AC%EC%9A%A9-%ED%8C%81/</guid>
         <description>&lt;p&gt;전개 구문(Spread syntax)이란, 자바스크립트와 타입스크립트에서 배열이나 객체를 말 그대로 펼치는 구문입니다.&lt;/p&gt;
-&lt;h3 id=&#34;배열에서-전개-구문&#34;&gt;배열에서 전개 구문&lt;/h3&gt;
-&lt;p&gt;배열에서 전개 구문의 대략적인 사용법은 아래와 같습니다.&lt;/p&gt;
+&lt;h3 id=&#34;배열에서-전개-구문&#34;&gt;배열에서 전개 구문
+&lt;/h3&gt;&lt;p&gt;배열에서 전개 구문의 대략적인 사용법은 아래와 같습니다.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-tsx&#34; data-lang=&#34;tsx&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;const&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;args&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; [&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;]
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;console&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;log&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;args&lt;/span&gt;)     &lt;span style=&#34;color:#75715e&#34;&gt;// [0, 1, 2]
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;console&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;log&lt;/span&gt;(...&lt;span style=&#34;color:#a6e22e&#34;&gt;args&lt;/span&gt;)  &lt;span style=&#34;color:#75715e&#34;&gt;// 0, 1, 2
@@ -148,8 +148,8 @@
 	
 	
 &gt;&lt;/p&gt;
-&lt;h3 id=&#34;객체에서-전개-구문&#34;&gt;객체에서 전개 구문&lt;/h3&gt;
-&lt;p&gt;객체에서의 사용도 배열과 비슷하지만, 조금 다른 점이 있습니다. 객체는 속성을 가지고 있기 때문이죠.&lt;/p&gt;
+&lt;h3 id=&#34;객체에서-전개-구문&#34;&gt;객체에서 전개 구문
+&lt;/h3&gt;&lt;p&gt;객체에서의 사용도 배열과 비슷하지만, 조금 다른 점이 있습니다. 객체는 속성을 가지고 있기 때문이죠.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-tsx&#34; data-lang=&#34;tsx&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;const&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;something1&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; { &lt;span style=&#34;color:#a6e22e&#34;&gt;x&lt;/span&gt;: &lt;span style=&#34;color:#66d9ef&#34;&gt;1&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;y&lt;/span&gt;: &lt;span style=&#34;color:#66d9ef&#34;&gt;2&lt;/span&gt; }
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;const&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;something2&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; { ...&lt;span style=&#34;color:#a6e22e&#34;&gt;something1&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;z&lt;/span&gt;: &lt;span style=&#34;color:#66d9ef&#34;&gt;3&lt;/span&gt; }
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;console&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;log&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;something2&lt;/span&gt;) &lt;span style=&#34;color:#75715e&#34;&gt;// { &amp;#34;x&amp;#34;: 1, &amp;#34;y&amp;#34;: 2, &amp;#34;z&amp;#34;: 3 }
@@ -178,8 +178,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;};
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;console&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;log&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;something&lt;/span&gt;) &lt;span style=&#34;color:#75715e&#34;&gt;// { &amp;#34;a&amp;#34;: 1, &amp;#34;b&amp;#34;: 2 } 
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;마무리&#34;&gt;마무리&lt;/h3&gt;
-&lt;p&gt;여기까지 간단하게 타입스크립트에서 전개 구문과 구문을 사용하는 팁을 소개해드렸습니다.&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;마무리&#34;&gt;마무리
+&lt;/h3&gt;&lt;p&gt;여기까지 간단하게 타입스크립트에서 전개 구문과 구문을 사용하는 팁을 소개해드렸습니다.&lt;/p&gt;
 &lt;p&gt;조금 더 자세한 설명과 내용을 알고싶다면 아래의 링크를 참고해보세요.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;타입스크립트 전개 구문 관련 문서&lt;/strong&gt;
 &lt;a class=&#34;link&#34; href=&#34;https://www.typescriptlang.org/docs/handbook/2/functions.html#rest-parameters-and-arguments&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -198,19 +198,19 @@
         <description>&lt;p&gt;오늘은 오픈 소스로 공개되어 있는 ‘SUPIR’ 라는 업스케일링 툴을 설치 및 구성하고 실행하기 까지의 과정을 기록하고자 합니다.&lt;br&gt;
 일단 SUPIR은 우분투 환경에서 구성해야 하며, 저 같은 윈도우 환경일 경우에는 wsl을 활용하면 윈도우에서도 우분투 환경을 쉽게 구성할 수 있습니다.&lt;br&gt;
 wsl 관련 설치법 등은 구글에 검색하면 많이 나오니 윈도우 환경에서 구성하고자 하면 해당 부분을 참고하여 우선 설치를 진행해주세요.&lt;/p&gt;
-&lt;h2 id=&#34;요구-사양&#34;&gt;요구 사양&lt;/h2&gt;
-&lt;p&gt;업스케일링 툴에서 사양을 많이 요구하는 것으로 보입니다. 깃허브의 가이드를 따라 대략 설치를 진행하게 되면 업스케일링 모델을 포함하여 대략 160GB 가량의 저장 용량을 차지하게 됩니다. 모델을 불러올 RAM 용량과 그래픽 카드의 메모리도 충분해야 원할하게 실행 및 업스케일링을 진행할 수 있습니다.&lt;/p&gt;
+&lt;h2 id=&#34;요구-사양&#34;&gt;요구 사양
+&lt;/h2&gt;&lt;p&gt;업스케일링 툴에서 사양을 많이 요구하는 것으로 보입니다. 깃허브의 가이드를 따라 대략 설치를 진행하게 되면 업스케일링 모델을 포함하여 대략 160GB 가량의 저장 용량을 차지하게 됩니다. 모델을 불러올 RAM 용량과 그래픽 카드의 메모리도 충분해야 원할하게 실행 및 업스케일링을 진행할 수 있습니다.&lt;/p&gt;
 &lt;p&gt;저는 위에서 설명 드린 것처럼 wsl 환경에서 진행하였고, wsl의 프로필을 활용하여 메모리 용량을 지정하여 구성하였습니다. 스왑 메모리도 지정하였는데, 일단 테스트 목적으로 진행하다 보니 일단 RAM 과 동일하게 지정하고 설치를 진행했습니다.&lt;/p&gt;
 &lt;p&gt;모델 불러오는 과정이 있다보니 SSD에 설치하는 것이 좋겠으나 용량 문제로 HDD에 설치를 진행했습니다. SSD의 여유가 있다면 로딩 속도를 위해 SSD에 설치하는 것도 고려해보시면 좋겠습니다.&lt;/p&gt;
-&lt;h4 id=&#34;구성-사양&#34;&gt;구성 사양&lt;/h4&gt;
-&lt;ul&gt;
+&lt;h4 id=&#34;구성-사양&#34;&gt;구성 사양
+&lt;/h4&gt;&lt;ul&gt;
 &lt;li&gt;GPU: RTX 4070 SUPER 12GB&lt;/li&gt;
 &lt;li&gt;RAM: 20GM&lt;/li&gt;
 &lt;li&gt;SWAP: 20GM&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;설치-및-구성&#34;&gt;설치 및 구성&lt;/h2&gt;
-&lt;h3 id=&#34;아나콘다conda-설치&#34;&gt;아나콘다(conda) 설치&lt;/h3&gt;
-&lt;p&gt;SUPIR는 다양한 패키지, 종속성및 환경 관리를 제공해주는 아나콘다(conda)를 사용하고 있습니다.&lt;br&gt;
+&lt;h2 id=&#34;설치-및-구성&#34;&gt;설치 및 구성
+&lt;/h2&gt;&lt;h3 id=&#34;아나콘다conda-설치&#34;&gt;아나콘다(conda) 설치
+&lt;/h3&gt;&lt;p&gt;SUPIR는 다양한 패키지, 종속성및 환경 관리를 제공해주는 아나콘다(conda)를 사용하고 있습니다.&lt;br&gt;
 이미 아나콘다가 설치되어 있으면 넘어가도 좋습니다.&lt;br&gt;
 설치되어 있지 않다면 우선 아나콘다를 설치해야 합니다.&lt;/p&gt;
 &lt;p&gt;설치:&lt;/p&gt;
@@ -239,8 +239,8 @@ wsl 관련 설치법 등은 구글에 검색하면 많이 나오니 윈도우 �
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://velog.io/@boom109/Anaconda-%EC%84%A4%EC%B9%98-on-Ubuntu-20.04-LTS&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://velog.io/@boom109/Anaconda-설치-on-Ubuntu-20.04-LTS&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;supir-설치-및-구성&#34;&gt;SUPIR 설치 및 구성&lt;/h4&gt;
-&lt;p&gt;SUPIR: &lt;a class=&#34;link&#34; href=&#34;https://github.com/Fanghua-Yu/SUPIR?tab=readme-ov-file&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;h4 id=&#34;supir-설치-및-구성&#34;&gt;SUPIR 설치 및 구성
+&lt;/h4&gt;&lt;p&gt;SUPIR: &lt;a class=&#34;link&#34; href=&#34;https://github.com/Fanghua-Yu/SUPIR?tab=readme-ov-file&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://github.com/Fanghua-Yu/SUPIR?tab=readme-ov-file&lt;/a&gt;&lt;br&gt;
 위의 링크로 이동하여 설치 가이드를 보고 진행해도 됩니다.&lt;br&gt;
 아래의 내용은 정리의 느낌으로 크게 다르지 않습니다.&lt;/p&gt;
@@ -285,8 +285,8 @@ SUPIR: &lt;a class=&#34;link&#34; href=&#34;https://github.com/Fanghua-Yu/SUPIR?
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;h3 id=&#34;실행&#34;&gt;실행&lt;/h3&gt;
-&lt;p&gt;컴퓨터 사양에 따라 옵션을 추가하여 실행할 수 있습니다. 옵션의 경우 깃허브에 자세히 안내되어 있으니 참고 바랍니다. &lt;br&gt;
+&lt;h3 id=&#34;실행&#34;&gt;실행
+&lt;/h3&gt;&lt;p&gt;컴퓨터 사양에 따라 옵션을 추가하여 실행할 수 있습니다. 옵션의 경우 깃허브에 자세히 안내되어 있으니 참고 바랍니다. &lt;br&gt;
 옵션 링크: &lt;a class=&#34;link&#34; href=&#34;https://github.com/Fanghua-Yu/SUPIR?tab=readme-ov-file#usage-of-supir&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://github.com/Fanghua-Yu/SUPIR?tab=readme-ov-file#usage-of-supir&lt;/a&gt; &lt;br&gt;
 실행은 두 가지 방식으로 나뉩니다.&lt;/p&gt;
@@ -319,8 +319,8 @@ SUPIR: &lt;a class=&#34;link&#34; href=&#34;https://github.com/Fanghua-Yu/SUPIR?
 	
 	
 &gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&#34;업스케일링&#34;&gt;업스케일링&lt;/h3&gt;
-&lt;p&gt;제가 가진 사진 중 화질이 조금 떨어지는 사진으로 업스케일링을 진행해봤습니다. 다른 설정은 건들이지 않고 가이드 이미지 대로만 진행해보았습니다.&lt;/p&gt;
+&lt;h3 id=&#34;업스케일링&#34;&gt;업스케일링
+&lt;/h3&gt;&lt;p&gt;제가 가진 사진 중 화질이 조금 떨어지는 사진으로 업스케일링을 진행해봤습니다. 다른 설정은 건들이지 않고 가이드 이미지 대로만 진행해보았습니다.&lt;/p&gt;
 &lt;p&gt;아래는 해당 업스케일링 과정을 모두 거친 후 캡처 이미지와 비포 에프터 사진입니다.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://tech.plutslet.pe.kr/post/supir-%EA%B5%AC%EC%84%B1%ED%95%B4%EC%84%9C-%EC%97%85%EC%8A%A4%EC%BC%80%EC%9D%BC%EB%A7%81-%ED%95%B4%EB%B3%B4%EA%B8%B0/%EC%97%85%EC%8A%A4%EC%BC%80%EC%9D%BC%EB%A7%81_%EC%99%84%EB%A3%8C_%EC%BA%A1%EC%B3%90.png&#34;
 	width=&#34;1930&#34;
@@ -440,8 +440,8 @@ crontab에 작성하는 기본적인 형태는 아래와 같습니다.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;* &lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt; * * * /실행위치/script.sh
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;등록을 마쳤으면 정상적으로 등록되었는지 아래의 명령으로 확인해볼 수 있습니다.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;crontab -l
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;참고링크&#34;&gt;참고링크&lt;/h3&gt;
-&lt;ul&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;참고링크&#34;&gt;참고링크
+&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;백업 스크립트 관련&lt;/p&gt;
 &lt;ul&gt;
@@ -467,16 +467,16 @@ crontab에 작성하는 기본적인 형태는 아래와 같습니다.&lt;/p&gt;
         
         <guid>https://tech.plutslet.pe.kr/post/uno-platform-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0/</guid>
         <description>&lt;p&gt;Uno Platform은 다중 플랫폼을 지원하는 .NET 개발 도구다.&lt;/p&gt;
-&lt;h3 id=&#34;특징&#34;&gt;특징&lt;/h3&gt;
-&lt;ul&gt;
+&lt;h3 id=&#34;특징&#34;&gt;특징
+&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;XAML를 이용해 화면을 구성하고, C# 언어로 기능을 작성한다.&lt;/li&gt;
 &lt;li&gt;Android, iOS, WebAssembly, macOS, Linux, WinUI 등 다양한 플랫폼을 지원한다.&lt;/li&gt;
 &lt;li&gt;플랫폼 별로 별도의 프로젝트를 생성하는 것이 아니라, 하나의 프로젝트로 동시에 다양한 플랫폼으로 빌드할 수 있다.&lt;/li&gt;
 &lt;li&gt;어떤 환경에서든 픽셀이 이동하는 위치를 픽셀 단위로 정확하게 제어(Pixel Perfect Control)할 수 있다.&lt;/li&gt;
 &lt;li&gt;‘Uno Gallery’를 통해 디자인 및 샘플 코드를 확인할 수 있다.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;다운로드-및-사용-방법&#34;&gt;다운로드 및 사용 방법&lt;/h3&gt;
-&lt;ul&gt;
+&lt;h3 id=&#34;다운로드-및-사용-방법&#34;&gt;다운로드 및 사용 방법
+&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;터미널로 다운로드 방법
 &lt;ol&gt;
 &lt;li&gt;‘Visual Studio Installer’를 이용한다면 2022 버전의 3개의 워크로드를 설치해야 한다.
@@ -505,8 +505,8 @@ crontab에 작성하는 기본적인 형태는 아래와 같습니다.&lt;/p&gt;
 &lt;/ol&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;프로젝트-만들기&#34;&gt;프로젝트 만들기&lt;/h3&gt;
-&lt;ol&gt;
+&lt;h3 id=&#34;프로젝트-만들기&#34;&gt;프로젝트 만들기
+&lt;/h3&gt;&lt;ol&gt;
 &lt;li&gt;새 프로젝트 만들기 클릭&lt;/li&gt;
 &lt;li&gt;용도에 맞게 ‘Uno’ 키워드의 템플릿(Uno Platform App) 선택 후 다음&lt;/li&gt;
 &lt;li&gt;프로젝트 이름 지정 후 다음
@@ -543,18 +543,18 @@ crontab에 작성하는 기본적인 형태는 아래와 같습니다.&lt;/p&gt;
         <pubDate>Tue, 27 Feb 2024 22:44:50 +0900</pubDate>
         
         <guid>https://tech.plutslet.pe.kr/post/ef-core-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0/</guid>
-        <description>&lt;h3 id=&#34;ef-core&#34;&gt;EF Core&lt;/h3&gt;
-&lt;p&gt;데이터베이스와 객체 지향 언어 간에 호환되지 않는 데이터를 변환해 매핑해주는 기법을 객체 관계 매핑(ORM)이라고 합니다.&lt;br&gt;
+        <description>&lt;h3 id=&#34;ef-core&#34;&gt;EF Core
+&lt;/h3&gt;&lt;p&gt;데이터베이스와 객체 지향 언어 간에 호환되지 않는 데이터를 변환해 매핑해주는 기법을 객체 관계 매핑(ORM)이라고 합니다.&lt;br&gt;
 EF Core 는 .Net 기반 개체를 이용하여 데이터베이스를 작업할 수 있도록 해줍니다.&lt;/p&gt;
-&lt;h3 id=&#34;요구사항&#34;&gt;요구사항&lt;/h3&gt;
-&lt;ul&gt;
+&lt;h3 id=&#34;요구사항&#34;&gt;요구사항
+&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;.NET SDK&lt;/strong&gt; : &lt;a class=&#34;link&#34; href=&#34;https://dotnet.microsoft.com/en-us/download&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://dotnet.microsoft.com/en-us/download&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Visual Studio&lt;/strong&gt; : &lt;a class=&#34;link&#34; href=&#34;https://visualstudio.microsoft.com/ko/vs/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://visualstudio.microsoft.com/ko/vs/&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;설치&#34;&gt;설치&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;EntityFrameworkCore 패키지 설치&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;설치&#34;&gt;설치
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;EntityFrameworkCore 패키지 설치&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;검색을 통해 설치
 &lt;ul&gt;
@@ -619,15 +619,15 @@ EF Core 는 .Net 기반 개체를 이용하여 데이터베이스를 작업할 �
 &lt;ul&gt;
 &lt;li&gt;설치: &lt;code&gt;Install-Package Microsoft.EntityFrameworkCore.Tools&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;ef-core-시작하기&#34;&gt;EF Core 시작하기&lt;/h3&gt;
-&lt;ol&gt;
+&lt;h3 id=&#34;ef-core-시작하기&#34;&gt;EF Core 시작하기
+&lt;/h3&gt;&lt;ol&gt;
 &lt;li&gt;Visual Studio 실행 후 새 프로젝트 만들기&lt;/li&gt;
 &lt;li&gt;C# 태그가 있는 콘솔 앱을 선택해 다음 클릭&lt;/li&gt;
 &lt;li&gt;이름(예, EFCoreTest)을 입력하고 만들기 클릭&lt;/li&gt;
 &lt;li&gt;위의 설치 방법을 참고해 원하는 방법으로 패키지 설치&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h3 id=&#34;dbcontext-구성&#34;&gt;&lt;strong&gt;DBContext 구성&lt;/strong&gt;&lt;/h3&gt;
-&lt;ul&gt;
+&lt;h3 id=&#34;dbcontext-구성&#34;&gt;&lt;strong&gt;DBContext 구성&lt;/strong&gt;
+&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;데이터베이스와 연결하고 쿼리 및 저장하는 데 필수적인 요소&lt;/li&gt;
 &lt;li&gt;아래와 같이 &lt;code&gt;DbContext&lt;/code&gt; 를 상속한 클래스 내부에 &lt;code&gt;Entity&lt;/code&gt; 와 DB 연결 정보 등을 추가할 수 있습니다.&lt;/li&gt;
 &lt;/ul&gt;
@@ -662,8 +662,8 @@ DB와의 연결은 여러가지 방식을 사용할 수 있습니다. 자세한 
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; TestDbContext(optionsBuilder.Options);
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;모델-만들기&#34;&gt;모델 만들기&lt;/h3&gt;
-&lt;ul&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;모델-만들기&#34;&gt;모델 만들기
+&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;클래스 형태로 구성한 &lt;code&gt;Entity&lt;/code&gt; 를 위에서 만든 &lt;code&gt;DbContext&lt;/code&gt; 에 속성으로 정의하는 것만으로도 DB의 테이블과 연결시킬 수 있습니다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;ol&gt;
@@ -695,8 +695,8 @@ DB와의 연결은 여러가지 방식을 사용할 수 있습니다. 자세한 
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    ...
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;데이터베이스-만들기&#34;&gt;데이터베이스 만들기&lt;/h3&gt;
-&lt;ul&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;데이터베이스-만들기&#34;&gt;데이터베이스 만들기
+&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;위에서 구성한 데이터베이스를 서버에서 만들기 위해서는 마이그레이션이라는 과정이 필요합니다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;ol&gt;
@@ -711,8 +711,8 @@ DB와의 연결은 여러가지 방식을 사용할 수 있습니다. 자세한 
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;h3 id=&#34;기본적인-사용-방법&#34;&gt;기본적인 사용 방법&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;데이터베이스 연결&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;기본적인-사용-방법&#34;&gt;기본적인 사용 방법
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;데이터베이스 연결&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;위에서 만든 &lt;code&gt;DBContext&lt;/code&gt; 를 가져옵니다.&lt;/li&gt;
 &lt;/ul&gt;
@@ -752,8 +752,8 @@ DB와의 연결은 여러가지 방식을 사용할 수 있습니다. 자세한 
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;dc.SaveChanges();
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;이번엔 설치와 간단한 사용법까지 알아봤습니다.&lt;br&gt;
 다음에 기회가 되면 더 많은 내용을 다뤄보겠습니다.&lt;/p&gt;
-&lt;h3 id=&#34;참고링크&#34;&gt;참고링크&lt;/h3&gt;
-&lt;ul&gt;
+&lt;h3 id=&#34;참고링크&#34;&gt;참고링크
+&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;공식:  &lt;a class=&#34;link&#34; href=&#34;https://learn.microsoft.com/ko-kr/ef/core/get-started/overview/first-app?tabs=visual-studio&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://learn.microsoft.com/ko-kr/ef/core/get-started/overview/first-app?tabs=visual-studio&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.entityframeworktutorial.net/efcore/entity-framework-core.aspx&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -808,8 +808,8 @@ input의 accept를 지정하기만 하면 간단하게 제한할 수 있죠.&lt;
 &lt;p&gt;대략 아래와 같이 작성할 수 있습니다.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;meta&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;name&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;viewport&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;content&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;width=device-width,initial-scale=1.0,user-scalable=no&amp;#34;&lt;/span&gt; /&amp;gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;mata&lt;/code&gt; 태그 안에 지정할 수 있는 다양한 옵션값이 있으니 관심있으시면 조금 더 알아보는 것도 좋을 것 같습니다.&lt;/p&gt;
-&lt;h3 id=&#34;참고-링크&#34;&gt;참고 링크&lt;/h3&gt;
-&lt;ul&gt;
+&lt;h3 id=&#34;참고-링크&#34;&gt;참고 링크
+&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://talkwithcode.tistory.com/7&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://talkwithcode.tistory.com/7&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://taeminimini.tistory.com/438&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -828,15 +828,15 @@ input의 accept를 지정하기만 하면 간단하게 제한할 수 있죠.&lt;
 &lt;code&gt;npm run dev&lt;/code&gt; 통해 실행한 프로젝트에서는 위의 코드로도 잘 작동해서 문제가 없을 줄 알았습니다.&lt;br&gt;
 하지만 빌드해서 확인한 페이지에서는 이미지가 표시되지 않았습니다.&lt;br&gt;
 이유는 과연 뭘까요?&lt;/p&gt;
-&lt;h3 id=&#34;문제&#34;&gt;문제&lt;/h3&gt;
-&lt;p&gt;문제의 원인을 파악하고 보니 생각보다 간단한 문제였습니다.&lt;br&gt;
+&lt;h3 id=&#34;문제&#34;&gt;문제
+&lt;/h3&gt;&lt;p&gt;문제의 원인을 파악하고 보니 생각보다 간단한 문제였습니다.&lt;br&gt;
 배포된 프로젝트에서 이미지를 가져올 때는 src가 위에서처럼 &amp;lsquo;/&amp;rsquo; 부터 시작하는 상대주소로 되어 있으면 안됩니다.&lt;br&gt;
 상대주소로 된 링크를 참고한다면 대체 어떤 곳을 참고해야 할까요.&lt;br&gt;
 참고할 주소를 찾지 못하게 되는 것이죠.&lt;/p&gt;
 &lt;p&gt;로컬호스트이 아니라 빌드하여 배포한 프로젝트라면 src 부분은 &amp;lsquo;http://&amp;rsquo; 부터 시작하는 절대 링크 형태로 구성되어야 합니다.&lt;br&gt;
 그럼, Vue에서 이미지의 src를 동적으로 할당하는 방법을 알아 봅시다.&lt;/p&gt;
-&lt;h3 id=&#34;해결&#34;&gt;해결&lt;/h3&gt;
-&lt;p&gt;아래의 방법을 사용하면 문자열로 된 상대주소를 동적으로 할당할 수 있게 됩니다.&lt;/p&gt;
+&lt;h3 id=&#34;해결&#34;&gt;해결
+&lt;/h3&gt;&lt;p&gt;아래의 방법을 사용하면 문자열로 된 상대주소를 동적으로 할당할 수 있게 됩니다.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;require 사용해 이미지 불러오기&lt;/p&gt;&lt;/blockquote&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;require&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;`@/assets/images/img.png`&lt;/span&gt;)
@@ -852,8 +852,8 @@ config에 사용하도록 설정된 module에 따라 사용할 수 없는 경우
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;img&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;src&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;/images/img.png&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;/&amp;gt;&lt;/span&gt;;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;말 그대로 이미지를 프로젝트 내부에서 &lt;code&gt;assets&lt;/code&gt; 폴더가 아닌 &lt;code&gt;public&lt;/code&gt;에 넣어두는 방법입니다.&lt;br&gt;
 public 폴더에 넣어두면 상대 주소를 사용해도 정상적으로 불러옵니다.&lt;/p&gt;
-&lt;h3 id=&#34;참고링크&#34;&gt;참고링크&lt;/h3&gt;
-&lt;ul&gt;
+&lt;h3 id=&#34;참고링크&#34;&gt;참고링크
+&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://blogcreator.blog/post/39&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://blogcreator.blog/post/39&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://stackoverflow.com/questions/40491506/vue-js-dynamic-images-not-working-with-webpack&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -868,13 +868,13 @@ public 폴더에 넣어두면 상대 주소를 사용해도 정상적으로 불�
         
         <guid>https://tech.plutslet.pe.kr/post/%EB%AA%A8%EB%B0%94%EC%9D%BC-%ED%99%98%EA%B2%BD%EC%97%90%EC%84%9C%EC%9D%98-css-%EB%86%92%EC%9D%B4-%EB%8B%A8%EC%9C%84/</guid>
         <description>&lt;p&gt;css에서 hight를 조절하다가 알게된 점을 기록합니다.&lt;/p&gt;
-&lt;h3 id=&#34;문제&#34;&gt;문제&lt;/h3&gt;
-&lt;p&gt;대략 상황은 이랬습니다.&lt;br&gt;
+&lt;h3 id=&#34;문제&#34;&gt;문제
+&lt;/h3&gt;&lt;p&gt;대략 상황은 이랬습니다.&lt;br&gt;
 main 태그의 높이를 vh 단위로 지정해서 사용하던 중 모바일 환경에서는 높이가 의도한 대로 지정되지 않았습니다.&lt;br&gt;
 태그의 높이를 모바일 브라우저의 상단, 하단 메뉴의 크기를 반영해서 지정하는 것이 아니라 그냥 화면의 크기 만큼 높이를 지정해버리는 것이었죠.
 그래서 화면이 일부 잘린 것처럼 보였고, 잘린 부분은 아예 접근할 수 없게 되어 버리는 것입니다.&lt;/p&gt;
-&lt;h3 id=&#34;해결&#34;&gt;해결&lt;/h3&gt;
-&lt;p&gt;여러가지를 조사하던 중 높이 단위가 vh만 있던 게 아니더군요.&lt;br&gt;
+&lt;h3 id=&#34;해결&#34;&gt;해결
+&lt;/h3&gt;&lt;p&gt;여러가지를 조사하던 중 높이 단위가 vh만 있던 게 아니더군요.&lt;br&gt;
 모바일 브라우저에 대응되는 높이 단위는 아래와 같습니다.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;svh: Small Viewport Height, 가장 작은 화면 영역을 의미하는 높이 단위입니다. 상, 하단 메뉴가 없어도 해당 높이를 반영하여 값을 가져옵니다.&lt;/li&gt;
@@ -887,8 +887,8 @@ main 태그의 높이를 vh 단위로 지정해서 사용하던 중 모바일 �
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-css&#34; data-lang=&#34;css&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;main&lt;/span&gt; { &lt;span style=&#34;color:#66d9ef&#34;&gt;height&lt;/span&gt;:&lt;span style=&#34;color:#ae81ff&#34;&gt;100&lt;/span&gt;dvh; }
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;이 높이 단위를 더 자세히 살펴보고 싶다면 아래의 링크도 확인해주세요.&lt;br&gt;
 더 자세하게 설명되어 있습니다.&lt;/p&gt;
-&lt;h3 id=&#34;참고-자료&#34;&gt;참고 자료&lt;/h3&gt;
-&lt;ul&gt;
+&lt;h3 id=&#34;참고-자료&#34;&gt;참고 자료
+&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://web.dev/blog/viewport-units?hl=ko&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://web.dev/blog/viewport-units?hl=ko&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://mong-blog.tistory.com/entry/CSSJS-vh-%eb%b2%84%ea%b7%b8-%ed%95%b4%ea%b2%b0%eb%b0%a9%eb%b2%95dvh-%ec%82%ac%ec%9a%a9%eb%b2%95-js-%ea%b3%84%ec%82%b0%eb%b2%95&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -903,8 +903,8 @@ main 태그의 높이를 vh 단위로 지정해서 사용하던 중 모바일 �
         
         <guid>https://tech.plutslet.pe.kr/post/s3-%EC%9D%B4%EB%AF%B8%EC%A7%80-%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C-cors-%EB%AC%B8%EC%A0%9C-%ED%95%B4%EA%B2%B0/</guid>
         <description>&lt;p&gt;최근 Vue 프로젝트에서 S3 URL을 다운로드되는 기능을 구현해야 하는 일이 있었습니다. fetch를 이용해서 파일을 blob 형태로 받아와 다운로드 시키도록 하도록 처리했죠. 다른 파일들은 다운로드가 잘 이뤄졌는데, 어떤 페이지에서는 이미지가 CORS 오류로 다운로드되지 않는 문제가 발생했습니다. 이 글은 해당 문제를 정리한 내용입니다.&lt;/p&gt;
-&lt;h3 id=&#34;문제&#34;&gt;문제&lt;/h3&gt;
-&lt;p&gt;위에서 언급했듯이 S3 URL을 가지고 있었고, 해당 링크를 이용해 다운로드 되도록 기능을 구현한 상태였습니다.&lt;br&gt;
+&lt;h3 id=&#34;문제&#34;&gt;문제
+&lt;/h3&gt;&lt;p&gt;위에서 언급했듯이 S3 URL을 가지고 있었고, 해당 링크를 이용해 다운로드 되도록 기능을 구현한 상태였습니다.&lt;br&gt;
 다른 페이지에서는 모두 동작하는데, 이미지를 보여주고 해당 이미지를 다운로드 할 수 있는 페이지에서만 CORS 문제를 일으켰습니다.&lt;/p&gt;
 &lt;p&gt;콘솔 창에 나타난 문구는 대략 이런 문구였습니다.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;No &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Access-Control-Allow-Origin&amp;#39;&lt;/span&gt; header is present on the requested resource. Origin &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;http://localhost:5173&amp;#39;&lt;/span&gt; is therefore not allowed access. If an opaque response serves your needs, set the request&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;s mode to &amp;#39;&lt;/span&gt;no-cors&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&amp;#39;&lt;/span&gt; to fetch the resource with CORS disabled.
@@ -916,8 +916,8 @@ main 태그의 높이를 vh 단위로 지정해서 사용하던 중 모바일 �
 &lt;p&gt;정답부터 말하자면,&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;캐시가 문제였습니다.&lt;/strong&gt;&lt;/p&gt;&lt;/blockquote&gt;
-&lt;h3 id=&#34;해결&#34;&gt;해결&lt;/h3&gt;
-&lt;p&gt;문제의 원인은 생각보다 간단했습니다.&lt;br&gt;
+&lt;h3 id=&#34;해결&#34;&gt;해결
+&lt;/h3&gt;&lt;p&gt;문제의 원인은 생각보다 간단했습니다.&lt;br&gt;
 S3의 이미지가 이미 다운로드되어 페이지에서 노출이 되는 상태였고, 해당 이미지는 그렇게 캐시된 상태가 되었습니다.&lt;br&gt;
 그런 다음 fetch를 이용해 이미지 다운로드 받을 경우, 이미 해당 이미지의 캐시가 남아있기 때문에 다운로드 받지 못하는 상태였던 거죠.&lt;/p&gt;
 &lt;p&gt;해당 문제를 해결할 때 도움받은 블로그 글은 이사님이 찾아주셨습니다. 아래의 링크를 남겨두었으니 참고해주세요.&lt;/p&gt;
@@ -927,8 +927,8 @@ S3의 이미지가 이미 다운로드되어 페이지에서 노출이 되는 �
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;저는 추가로 CORS 모드로 설정하는  &lt;code&gt;mode: &amp;quot;cors&amp;quot;&lt;/code&gt; 같은 부분 도 추가로 작성해서 다운로드 받도록 하고 있습니다.&lt;br&gt;
 아직 모르는 게 많은 저이지만,&lt;/p&gt;
 &lt;p&gt;오늘도 하나씩 배워갑니다.&lt;/p&gt;
-&lt;h3 id=&#34;참고자료&#34;&gt;참고자료&lt;/h3&gt;
-&lt;ul&gt;
+&lt;h3 id=&#34;참고자료&#34;&gt;참고자료
+&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://velog.io/@hyesungoh/Webview-app%ec%97%90%ec%84%9c-%ec%9d%b4%eb%af%b8%ec%a7%80-%ec%a0%80%ec%9e%a5-%ea%b8%b0%eb%8a%a5-%ea%b0%9c%eb%b0%9c%ea%b8%b0-w-AWS-s3#aws-s3-cors&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://velog.io/@hyesungoh/Webview-app에서-이미지-저장-기능-개발기-w-AWS-s3#aws-s3-cors&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -941,15 +941,15 @@ S3의 이미지가 이미 다운로드되어 페이지에서 노출이 되는 �
         
         <guid>https://tech.plutslet.pe.kr/post/github-%ED%8E%98%EC%9D%B4%EC%A7%80-%EC%BB%A4%EC%8A%A4%ED%85%80-%EB%8F%84%EB%A9%94%EC%9D%B8-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0/</guid>
         <description>&lt;p&gt;깃허브 페이지로 블로그를 만들 때부터 개인 도메인으로 연결하고 싶다는 생각이 있었습니다. 이 글은 깃허브 페이지에서 커스텀 도메인 설정하며 정리한 내용입니다.&lt;/p&gt;
-&lt;h3 id=&#34;시작&#34;&gt;시작&lt;/h3&gt;
-&lt;p&gt;기본적으로 깃허브 페이지를 만들면 아래의 URL 형태로 만들어 집니다.&lt;/p&gt;
+&lt;h3 id=&#34;시작&#34;&gt;시작
+&lt;/h3&gt;&lt;p&gt;기본적으로 깃허브 페이지를 만들면 아래의 URL 형태로 만들어 집니다.&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;https://깃허브아이디.github.io/
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;저의 경우는 &lt;a class=&#34;link&#34; href=&#34;https://plutslet0316.github.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://plutslet0316.github.io/&lt;/a&gt; 입니다.&lt;br&gt;
 위의 URL을 아래처럼 제 개인 도메인으로 변경할 생각입니다.&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;https://blog.plutslet.pe.kr/
-&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;도메인-dns-설정&#34;&gt;도메인 DNS 설정&lt;/h3&gt;
-&lt;p&gt;현재 사용 중인 DNS 관리 사이트에서 아래의 설정을 진행합니다.&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;도메인-dns-설정&#34;&gt;도메인 DNS 설정
+&lt;/h3&gt;&lt;p&gt;현재 사용 중인 DNS 관리 사이트에서 아래의 설정을 진행합니다.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;레코드 타입: CNAME&lt;/li&gt;
 &lt;li&gt;서브 도메인(Name): 원하는 도메인 - blog&lt;/li&gt;
@@ -970,8 +970,8 @@ S3의 이미지가 이미 다운로드되어 페이지에서 노출이 되는 �
 		data-flex-basis=&#34;982px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;h3 id=&#34;깃허브에서-커스텀-도메인-설정&#34;&gt;깃허브에서 커스텀 도메인 설정&lt;/h3&gt;
-&lt;ol&gt;
+&lt;h3 id=&#34;깃허브에서-커스텀-도메인-설정&#34;&gt;깃허브에서 커스텀 도메인 설정
+&lt;/h3&gt;&lt;ol&gt;
 &lt;li&gt;원하는 저장소에서 Setting → Pages 을 차례로 클릭해 깃허브 페이지 설정창으로 이동합니다.&lt;/li&gt;
 &lt;li&gt;Custom domain 항목을 찾아 입력란에 원하는 도메인을 입력 후 Save 버튼을 클릭합니다.&lt;/li&gt;
 &lt;li&gt;깃허브에서 DNS 확인을 진행하고, 이후 완료가 되면 해당 도메인으로 접근할 수 있게 됩니다.&lt;/li&gt;
@@ -991,8 +991,8 @@ S3의 이미지가 이미 다운로드되어 페이지에서 노출이 되는 �
 		data-flex-basis=&#34;1655px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;h3 id=&#34;참고자료&#34;&gt;참고자료&lt;/h3&gt;
-&lt;ul&gt;
+&lt;h3 id=&#34;참고자료&#34;&gt;참고자료
+&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;깃허브 공식: &lt;a class=&#34;link&#34; href=&#34;https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Github 블로그에 Custom도메인 연결하기: &lt;a class=&#34;link&#34; href=&#34;https://mishka.kr/12&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -1010,14 +1010,14 @@ S3의 이미지가 이미 다운로드되어 페이지에서 노출이 되는 �
         <pubDate>Wed, 24 Jan 2024 23:06:58 +0900</pubDate>
         
         <guid>https://tech.plutslet.pe.kr/post/hugo%EC%99%80-github%EB%A1%9C-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0/</guid>
-        <description>&lt;h3 id=&#34;hugo&#34;&gt;Hugo&lt;/h3&gt;
-&lt;ul&gt;
+        <description>&lt;h3 id=&#34;hugo&#34;&gt;Hugo
+&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;빌드 속도가 빠릅니다.&lt;/li&gt;
 &lt;li&gt;핫리로드 기능을 지원합니다.&lt;/li&gt;
 &lt;li&gt;한글로 작성해도 문제없이 출력됩니다.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;요구사항&#34;&gt;요구사항&lt;/h3&gt;
-&lt;ul&gt;
+&lt;h3 id=&#34;요구사항&#34;&gt;요구사항
+&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Git&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://git-scm.com/book/en/v2/Getting-Started-Installing-Git&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://git-scm.com/book/en/v2/Getting-Started-Installing-Git&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Go&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://go.dev/doc/install&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -1049,13 +1049,13 @@ S3의 이미지가 이미 다운로드되어 페이지에서 노출이 되는 �
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;hugo-확장판-설치&#34;&gt;Hugo 확장판 설치&lt;/h3&gt;
-&lt;ul&gt;
+&lt;h3 id=&#34;hugo-확장판-설치&#34;&gt;Hugo 확장판 설치
+&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;위에서 설치한 패키지 툴을 이용해서 확장판설치&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;choco install hugo-extended&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;hugo로-블로그-구축하기&#34;&gt;Hugo로 블로그 구축하기&lt;/h3&gt;
-&lt;ol&gt;
+&lt;h3 id=&#34;hugo로-블로그-구축하기&#34;&gt;Hugo로 블로그 구축하기
+&lt;/h3&gt;&lt;ol&gt;
 &lt;li&gt;원하는 위치에서 &lt;code&gt;hugo new site 폴더이름&lt;/code&gt;
 &lt;ul&gt;
 &lt;li&gt;해당 위치에 폴더이름으로 hugo 사이트가 만들어 진다.&lt;/li&gt;
@@ -1090,8 +1090,8 @@ S3의 이미지가 이미 다운로드되어 페이지에서 노출이 되는 �
 &lt;/li&gt;
 &lt;li&gt;로컬 테스트: &lt;code&gt;hugo server&lt;/code&gt;&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h3 id=&#34;깃허브에-업로드&#34;&gt;깃허브에 업로드&lt;/h3&gt;
-&lt;ul&gt;
+&lt;h3 id=&#34;깃허브에-업로드&#34;&gt;깃허브에 업로드
+&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;깃허브에 업로드하기 위해서 레파지토리가 두개 필요합니다.
 &lt;ol&gt;
 &lt;li&gt;Hugo로 만들어진 블로그 생성기 (private)&lt;/li&gt;
@@ -1113,10 +1113,10 @@ S3의 이미지가 이미 다운로드되어 페이지에서 노출이 되는 �
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git add .
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git commit -m &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;test&amp;#34;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git push origin master
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;깃허브-페이지-활성화&#34;&gt;깃허브 페이지 활성화&lt;/h3&gt;
-&lt;p&gt;위에서 만든 2번 레파지토리의 깃허브 페이지를 활성화하면 깃블로그 구축이 완료됩니다.&lt;/p&gt;
-&lt;h3 id=&#34;참고자료&#34;&gt;참고자료&lt;/h3&gt;
-&lt;ul&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;깃허브-페이지-활성화&#34;&gt;깃허브 페이지 활성화
+&lt;/h3&gt;&lt;p&gt;위에서 만든 2번 레파지토리의 깃허브 페이지를 활성화하면 깃블로그 구축이 완료됩니다.&lt;/p&gt;
+&lt;h3 id=&#34;참고자료&#34;&gt;참고자료
+&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;공식 설치 지침: &lt;a class=&#34;link&#34; href=&#34;https://gohugo.io/installation/windows/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://gohugo.io/installation/windows/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;한글 자료Hugo로 개인 블로그 만드는 법: &lt;a class=&#34;link&#34; href=&#34;https://selfinvestfriends.tistory.com/78&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;

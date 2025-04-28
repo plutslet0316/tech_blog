@@ -13,8 +13,8 @@
         
         <guid>https://tech.plutslet.pe.kr/post/s3-%EC%9D%B4%EB%AF%B8%EC%A7%80-%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C-cors-%EB%AC%B8%EC%A0%9C-%ED%95%B4%EA%B2%B0/</guid>
         <description>&lt;p&gt;최근 Vue 프로젝트에서 S3 URL을 다운로드되는 기능을 구현해야 하는 일이 있었습니다. fetch를 이용해서 파일을 blob 형태로 받아와 다운로드 시키도록 하도록 처리했죠. 다른 파일들은 다운로드가 잘 이뤄졌는데, 어떤 페이지에서는 이미지가 CORS 오류로 다운로드되지 않는 문제가 발생했습니다. 이 글은 해당 문제를 정리한 내용입니다.&lt;/p&gt;
-&lt;h3 id=&#34;문제&#34;&gt;문제&lt;/h3&gt;
-&lt;p&gt;위에서 언급했듯이 S3 URL을 가지고 있었고, 해당 링크를 이용해 다운로드 되도록 기능을 구현한 상태였습니다.&lt;br&gt;
+&lt;h3 id=&#34;문제&#34;&gt;문제
+&lt;/h3&gt;&lt;p&gt;위에서 언급했듯이 S3 URL을 가지고 있었고, 해당 링크를 이용해 다운로드 되도록 기능을 구현한 상태였습니다.&lt;br&gt;
 다른 페이지에서는 모두 동작하는데, 이미지를 보여주고 해당 이미지를 다운로드 할 수 있는 페이지에서만 CORS 문제를 일으켰습니다.&lt;/p&gt;
 &lt;p&gt;콘솔 창에 나타난 문구는 대략 이런 문구였습니다.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;No &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Access-Control-Allow-Origin&amp;#39;&lt;/span&gt; header is present on the requested resource. Origin &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;http://localhost:5173&amp;#39;&lt;/span&gt; is therefore not allowed access. If an opaque response serves your needs, set the request&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;s mode to &amp;#39;&lt;/span&gt;no-cors&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&amp;#39;&lt;/span&gt; to fetch the resource with CORS disabled.
@@ -26,8 +26,8 @@
 &lt;p&gt;정답부터 말하자면,&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;캐시가 문제였습니다.&lt;/strong&gt;&lt;/p&gt;&lt;/blockquote&gt;
-&lt;h3 id=&#34;해결&#34;&gt;해결&lt;/h3&gt;
-&lt;p&gt;문제의 원인은 생각보다 간단했습니다.&lt;br&gt;
+&lt;h3 id=&#34;해결&#34;&gt;해결
+&lt;/h3&gt;&lt;p&gt;문제의 원인은 생각보다 간단했습니다.&lt;br&gt;
 S3의 이미지가 이미 다운로드되어 페이지에서 노출이 되는 상태였고, 해당 이미지는 그렇게 캐시된 상태가 되었습니다.&lt;br&gt;
 그런 다음 fetch를 이용해 이미지 다운로드 받을 경우, 이미 해당 이미지의 캐시가 남아있기 때문에 다운로드 받지 못하는 상태였던 거죠.&lt;/p&gt;
 &lt;p&gt;해당 문제를 해결할 때 도움받은 블로그 글은 이사님이 찾아주셨습니다. 아래의 링크를 남겨두었으니 참고해주세요.&lt;/p&gt;
@@ -37,8 +37,8 @@ S3의 이미지가 이미 다운로드되어 페이지에서 노출이 되는 �
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;저는 추가로 CORS 모드로 설정하는  &lt;code&gt;mode: &amp;quot;cors&amp;quot;&lt;/code&gt; 같은 부분 도 추가로 작성해서 다운로드 받도록 하고 있습니다.&lt;br&gt;
 아직 모르는 게 많은 저이지만,&lt;/p&gt;
 &lt;p&gt;오늘도 하나씩 배워갑니다.&lt;/p&gt;
-&lt;h3 id=&#34;참고자료&#34;&gt;참고자료&lt;/h3&gt;
-&lt;ul&gt;
+&lt;h3 id=&#34;참고자료&#34;&gt;참고자료
+&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://velog.io/@hyesungoh/Webview-app%ec%97%90%ec%84%9c-%ec%9d%b4%eb%af%b8%ec%a7%80-%ec%a0%80%ec%9e%a5-%ea%b8%b0%eb%8a%a5-%ea%b0%9c%eb%b0%9c%ea%b8%b0-w-AWS-s3#aws-s3-cors&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://velog.io/@hyesungoh/Webview-app에서-이미지-저장-기능-개발기-w-AWS-s3#aws-s3-cors&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;

@@ -19,8 +19,8 @@
 &lt;p&gt;대략 아래와 같이 작성할 수 있습니다.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;meta&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;name&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;viewport&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;content&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;width=device-width,initial-scale=1.0,user-scalable=no&amp;#34;&lt;/span&gt; /&amp;gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;mata&lt;/code&gt; 태그 안에 지정할 수 있는 다양한 옵션값이 있으니 관심있으시면 조금 더 알아보는 것도 좋을 것 같습니다.&lt;/p&gt;
-&lt;h3 id=&#34;참고-링크&#34;&gt;참고 링크&lt;/h3&gt;
-&lt;ul&gt;
+&lt;h3 id=&#34;참고-링크&#34;&gt;참고 링크
+&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://talkwithcode.tistory.com/7&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://talkwithcode.tistory.com/7&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://taeminimini.tistory.com/438&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;

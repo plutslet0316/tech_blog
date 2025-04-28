@@ -13,13 +13,13 @@
         
         <guid>https://tech.plutslet.pe.kr/post/%EB%AA%A8%EB%B0%94%EC%9D%BC-%ED%99%98%EA%B2%BD%EC%97%90%EC%84%9C%EC%9D%98-css-%EB%86%92%EC%9D%B4-%EB%8B%A8%EC%9C%84/</guid>
         <description>&lt;p&gt;css에서 hight를 조절하다가 알게된 점을 기록합니다.&lt;/p&gt;
-&lt;h3 id=&#34;문제&#34;&gt;문제&lt;/h3&gt;
-&lt;p&gt;대략 상황은 이랬습니다.&lt;br&gt;
+&lt;h3 id=&#34;문제&#34;&gt;문제
+&lt;/h3&gt;&lt;p&gt;대략 상황은 이랬습니다.&lt;br&gt;
 main 태그의 높이를 vh 단위로 지정해서 사용하던 중 모바일 환경에서는 높이가 의도한 대로 지정되지 않았습니다.&lt;br&gt;
 태그의 높이를 모바일 브라우저의 상단, 하단 메뉴의 크기를 반영해서 지정하는 것이 아니라 그냥 화면의 크기 만큼 높이를 지정해버리는 것이었죠.
 그래서 화면이 일부 잘린 것처럼 보였고, 잘린 부분은 아예 접근할 수 없게 되어 버리는 것입니다.&lt;/p&gt;
-&lt;h3 id=&#34;해결&#34;&gt;해결&lt;/h3&gt;
-&lt;p&gt;여러가지를 조사하던 중 높이 단위가 vh만 있던 게 아니더군요.&lt;br&gt;
+&lt;h3 id=&#34;해결&#34;&gt;해결
+&lt;/h3&gt;&lt;p&gt;여러가지를 조사하던 중 높이 단위가 vh만 있던 게 아니더군요.&lt;br&gt;
 모바일 브라우저에 대응되는 높이 단위는 아래와 같습니다.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;svh: Small Viewport Height, 가장 작은 화면 영역을 의미하는 높이 단위입니다. 상, 하단 메뉴가 없어도 해당 높이를 반영하여 값을 가져옵니다.&lt;/li&gt;
@@ -32,8 +32,8 @@ main 태그의 높이를 vh 단위로 지정해서 사용하던 중 모바일 �
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-css&#34; data-lang=&#34;css&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;main&lt;/span&gt; { &lt;span style=&#34;color:#66d9ef&#34;&gt;height&lt;/span&gt;:&lt;span style=&#34;color:#ae81ff&#34;&gt;100&lt;/span&gt;dvh; }
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;이 높이 단위를 더 자세히 살펴보고 싶다면 아래의 링크도 확인해주세요.&lt;br&gt;
 더 자세하게 설명되어 있습니다.&lt;/p&gt;
-&lt;h3 id=&#34;참고-자료&#34;&gt;참고 자료&lt;/h3&gt;
-&lt;ul&gt;
+&lt;h3 id=&#34;참고-자료&#34;&gt;참고 자료
+&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://web.dev/blog/viewport-units?hl=ko&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://web.dev/blog/viewport-units?hl=ko&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://mong-blog.tistory.com/entry/CSSJS-vh-%eb%b2%84%ea%b7%b8-%ed%95%b4%ea%b2%b0%eb%b0%a9%eb%b2%95dvh-%ec%82%ac%ec%9a%a9%eb%b2%95-js-%ea%b3%84%ec%82%b0%eb%b2%95&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;

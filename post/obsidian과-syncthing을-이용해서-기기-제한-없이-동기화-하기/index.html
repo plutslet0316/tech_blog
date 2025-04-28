@@ -1,30 +1,18 @@
 <!DOCTYPE html>
 <html lang="ko" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='최근에 Obsidian을 사용해보고 있습니다. 상당히 간단하면서도 그래프나 캔버스 등의 도구를 사용할 수 있다는 게 장점인 노트 앱이죠.
-이런저런 자료에서 가져온 대략적인 특징은 아래와 같습니다.
-Obsidian 특징
-100% 로컬에 저장됩니다. 노션과 같은 다른 노트 앱은 클라우드 저장이 기본이지만, 옵시디언은 우선적으로 로컬에 폴더와 파일의 형태로 저장됩니다. 보안이 신경 쓰인다면 이 부분에서 걱정이 없습니다. 저장되는 확장자가 .md, 즉 마크다운입니다. 다른 도구로 열어서 수정도 가능하고, 내용만 복사하여 다른 곳으로 옮기기 훨씬 쉽습니다. 오픈소스 프로젝트라 생태계가 방대합니다. 옵시디언 앱 내부에서 커뮤니티에서 테마나 플러그인을 쉽게 찾아 적용할 수 있습니다. 단점이 있다면 관련 플러그인을 통해서 해결할 수도 있죠. 저는 이 앱을 사용하기 전에 동기화가 가능한가? 라는 질문을 먼저 던졌습니다. 공식 동기화 서비스가 있긴 했습니다. 달마다 4달러의 유료 서비스로 말이죠. 8달러는 게시까지 지원됩니다.
-'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="최근에 Obsidian을 사용해보고 있습니다. 상당히 간단하면서도 그래프나 캔버스 등의 도구를 사용할 수 있다는 게 장점인 노트 앱이죠.\n이런저런 자료에서 가져온 대략적인 특징은 아래와 같습니다.\nObsidian 특징\n100% 로컬에 저장됩니다. 노션과 같은 다른 노트 앱은 클라우드 저장이 기본이지만, 옵시디언은 우선적으로 로컬에 폴더와 파일의 형태로 저장됩니다. 보안이 신경 쓰인다면 이 부분에서 걱정이 없습니다. 저장되는 확장자가 .md, 즉 마크다운입니다. 다른 도구로 열어서 수정도 가능하고, 내용만 복사하여 다른 곳으로 옮기기 훨씬 쉽습니다. 오픈소스 프로젝트라 생태계가 방대합니다. 옵시디언 앱 내부에서 커뮤니티에서 테마나 플러그인을 쉽게 찾아 적용할 수 있습니다. 단점이 있다면 관련 플러그인을 통해서 해결할 수도 있죠. 저는 이 앱을 사용하기 전에 동기화가 가능한가? 라는 질문을 먼저 던졌습니다. 공식 동기화 서비스가 있긴 했습니다. 달마다 4달러의 유료 서비스로 말이죠. 8달러는 게시까지 지원됩니다.\n">
 <title>Obsidian과 Syncthing을 이용해서 기기 제한 없이 동기화 하기</title>
 
 <link rel='canonical' href='https://tech.plutslet.pe.kr/post/obsidian%EA%B3%BC-syncthing%EC%9D%84-%EC%9D%B4%EC%9A%A9%ED%95%B4%EC%84%9C-%EA%B8%B0%EA%B8%B0-%EC%A0%9C%ED%95%9C-%EC%97%86%EC%9D%B4-%EB%8F%99%EA%B8%B0%ED%99%94-%ED%95%98%EA%B8%B0/'>
 
-<link rel="stylesheet" href="/scss/style.min.24ef1cc321916467896e8c70c10c0ad7b98c2a8df14298032fb637216e397f50.css"><meta property='og:title' content='Obsidian과 Syncthing을 이용해서 기기 제한 없이 동기화 하기'>
-<meta property='og:description' content='최근에 Obsidian을 사용해보고 있습니다. 상당히 간단하면서도 그래프나 캔버스 등의 도구를 사용할 수 있다는 게 장점인 노트 앱이죠.
-이런저런 자료에서 가져온 대략적인 특징은 아래와 같습니다.
-Obsidian 특징
-100% 로컬에 저장됩니다. 노션과 같은 다른 노트 앱은 클라우드 저장이 기본이지만, 옵시디언은 우선적으로 로컬에 폴더와 파일의 형태로 저장됩니다. 보안이 신경 쓰인다면 이 부분에서 걱정이 없습니다. 저장되는 확장자가 .md, 즉 마크다운입니다. 다른 도구로 열어서 수정도 가능하고, 내용만 복사하여 다른 곳으로 옮기기 훨씬 쉽습니다. 오픈소스 프로젝트라 생태계가 방대합니다. 옵시디언 앱 내부에서 커뮤니티에서 테마나 플러그인을 쉽게 찾아 적용할 수 있습니다. 단점이 있다면 관련 플러그인을 통해서 해결할 수도 있죠. 저는 이 앱을 사용하기 전에 동기화가 가능한가? 라는 질문을 먼저 던졌습니다. 공식 동기화 서비스가 있긴 했습니다. 달마다 4달러의 유료 서비스로 말이죠. 8달러는 게시까지 지원됩니다.
-'>
+<link rel="stylesheet" href="/scss/style.min.b9c8156d464c343bdacaf14a871581fb94cbbdb9dd5cbce4ba017361187cc930.css"><meta property='og:title' content="Obsidian과 Syncthing을 이용해서 기기 제한 없이 동기화 하기">
+<meta property='og:description' content="최근에 Obsidian을 사용해보고 있습니다. 상당히 간단하면서도 그래프나 캔버스 등의 도구를 사용할 수 있다는 게 장점인 노트 앱이죠.\n이런저런 자료에서 가져온 대략적인 특징은 아래와 같습니다.\nObsidian 특징\n100% 로컬에 저장됩니다. 노션과 같은 다른 노트 앱은 클라우드 저장이 기본이지만, 옵시디언은 우선적으로 로컬에 폴더와 파일의 형태로 저장됩니다. 보안이 신경 쓰인다면 이 부분에서 걱정이 없습니다. 저장되는 확장자가 .md, 즉 마크다운입니다. 다른 도구로 열어서 수정도 가능하고, 내용만 복사하여 다른 곳으로 옮기기 훨씬 쉽습니다. 오픈소스 프로젝트라 생태계가 방대합니다. 옵시디언 앱 내부에서 커뮤니티에서 테마나 플러그인을 쉽게 찾아 적용할 수 있습니다. 단점이 있다면 관련 플러그인을 통해서 해결할 수도 있죠. 저는 이 앱을 사용하기 전에 동기화가 가능한가? 라는 질문을 먼저 던졌습니다. 공식 동기화 서비스가 있긴 했습니다. 달마다 4달러의 유료 서비스로 말이죠. 8달러는 게시까지 지원됩니다.\n">
 <meta property='og:url' content='https://tech.plutslet.pe.kr/post/obsidian%EA%B3%BC-syncthing%EC%9D%84-%EC%9D%B4%EC%9A%A9%ED%95%B4%EC%84%9C-%EA%B8%B0%EA%B8%B0-%EC%A0%9C%ED%95%9C-%EC%97%86%EC%9D%B4-%EB%8F%99%EA%B8%B0%ED%99%94-%ED%95%98%EA%B8%B0/'>
 <meta property='og:site_name' content='Plutslet0316'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2025-04-28T23:41:26&#43;09:00'/><meta property='article:modified_time' content='2025-04-28T23:41:26&#43;09:00'/>
 <meta name="twitter:title" content="Obsidian과 Syncthing을 이용해서 기기 제한 없이 동기화 하기">
-<meta name="twitter:description" content="최근에 Obsidian을 사용해보고 있습니다. 상당히 간단하면서도 그래프나 캔버스 등의 도구를 사용할 수 있다는 게 장점인 노트 앱이죠.
-이런저런 자료에서 가져온 대략적인 특징은 아래와 같습니다.
-Obsidian 특징
-100% 로컬에 저장됩니다. 노션과 같은 다른 노트 앱은 클라우드 저장이 기본이지만, 옵시디언은 우선적으로 로컬에 폴더와 파일의 형태로 저장됩니다. 보안이 신경 쓰인다면 이 부분에서 걱정이 없습니다. 저장되는 확장자가 .md, 즉 마크다운입니다. 다른 도구로 열어서 수정도 가능하고, 내용만 복사하여 다른 곳으로 옮기기 훨씬 쉽습니다. 오픈소스 프로젝트라 생태계가 방대합니다. 옵시디언 앱 내부에서 커뮤니티에서 테마나 플러그인을 쉽게 찾아 적용할 수 있습니다. 단점이 있다면 관련 플러그인을 통해서 해결할 수도 있죠. 저는 이 앱을 사용하기 전에 동기화가 가능한가? 라는 질문을 먼저 던졌습니다. 공식 동기화 서비스가 있긴 했습니다. 달마다 4달러의 유료 서비스로 말이죠. 8달러는 게시까지 지원됩니다.
-"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<meta name="twitter:description" content="최근에 Obsidian을 사용해보고 있습니다. 상당히 간단하면서도 그래프나 캔버스 등의 도구를 사용할 수 있다는 게 장점인 노트 앱이죠.\n이런저런 자료에서 가져온 대략적인 특징은 아래와 같습니다.\nObsidian 특징\n100% 로컬에 저장됩니다. 노션과 같은 다른 노트 앱은 클라우드 저장이 기본이지만, 옵시디언은 우선적으로 로컬에 폴더와 파일의 형태로 저장됩니다. 보안이 신경 쓰인다면 이 부분에서 걱정이 없습니다. 저장되는 확장자가 .md, 즉 마크다운입니다. 다른 도구로 열어서 수정도 가능하고, 내용만 복사하여 다른 곳으로 옮기기 훨씬 쉽습니다. 오픈소스 프로젝트라 생태계가 방대합니다. 옵시디언 앱 내부에서 커뮤니티에서 테마나 플러그인을 쉽게 찾아 적용할 수 있습니다. 단점이 있다면 관련 플러그인을 통해서 해결할 수도 있죠. 저는 이 앱을 사용하기 전에 동기화가 가능한가? 라는 질문을 먼저 던졌습니다. 공식 동기화 서비스가 있긴 했습니다. 달마다 4달러의 유료 서비스로 말이죠. 8달러는 게시까지 지원됩니다.\n"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 <link rel="manifest" href="/site.webmanifest">
@@ -88,7 +76,7 @@ Obsidian 특징
             <h1 class="site-name"><a href="/">Plutslet0316</a></h1>
             <h2 class="site-description"></h2>
         </div>
-    </header><ol class="social-menu">
+    </header><ol class="menu-social">
             
                 <li>
                     <a 
@@ -172,31 +160,12 @@ Obsidian 특징
             </a>
         </li>
         
+        <li class="menu-bottom-section">
+            <ol class="menu">
 
-        <div class="menu-bottom-section">
-                <li id="i18n-switch">  
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-  <path d="M4 5h7" />
-  <path d="M9 3v2c0 4.418 -2.239 8 -5 8" />
-  <path d="M5 9c-.003 2.144 2.952 3.908 6.7 4" />
-  <path d="M12 20l4 -9l4 9" />
-  <path d="M19.1 18h-6.2" />
-</svg>
-
-
-
-                    <select name="language" onchange="window.location.href = this.selectedOptions[0].value">
-                        
-                            <option value="https://tech.plutslet.pe.kr/" selected></option>
-                        
-                    </select>
-                </li>
-            
-            
-            
-                <li id="dark-mode-toggle">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
   <circle cx="8" cy="12" r="2" />
   <rect x="2" y="6" width="20" height="12" rx="6" />
@@ -204,7 +173,7 @@ Obsidian 특징
 
 
 
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
   <circle cx="16" cy="12" r="2" />
   <rect x="2" y="6" width="20" height="12" rx="6" />
@@ -212,10 +181,11 @@ Obsidian 특징
 
 
 
-                    <span>다크 모드</span>
-                </li>
-            
-        </div>
+                        <span>다크 모드</span>
+                    </li>
+                
+            </ol>
+        </li>
     </ol>
 </aside>
 
@@ -257,20 +227,6 @@ Obsidian 특징
         
 
         
-            <div>
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="12" cy="12" r="9" />
-  <polyline points="12 7 12 12 15 15" />
-</svg>
-
-
-
-                <time class="article-time--reading">
-                    4 분 정도
-                </time>
-            </div>
-        
     </footer>
     
 
@@ -297,8 +253,8 @@ Obsidian 특징
 <p>조금 더 찾아보니 커뮤니티 플러그인을 통해서도 동기화가 가능하다는 말도 있었습니다. 그런데 그것까지 찾아보는 건 조금 귀찮았습니다. 딸깍 한 번으로 플랫폼 간 동기화를 쉽게 하고 싶었거든요.</p>
 <p>그래서 또 보니까, 이미 제가 다른 동기화 서비스를 이용 중이더군요. 그게 <code>Syncthing</code>이었습니다.</p>
 <p>결론만 말씀드리면, <code>Obsidian</code>과 <code>Syncthing</code>를 이용한 동기화는 성공적이었습니다.</p>
-<h3 id="syncthing-구성">Syncthing 구성</h3>
-<p>Syncthing은 별도의 서버 없이 개인과 개인 간 동기화를 목적으로 하는 오픈소스 프로젝트 입니다. 쉽게 사용할 수 있도록 GUI도 제공되고 있습니다. 물론 모바일 앱도 있고요.</p>
+<h3 id="syncthing-구성">Syncthing 구성
+</h3><p>Syncthing은 별도의 서버 없이 개인과 개인 간 동기화를 목적으로 하는 오픈소스 프로젝트 입니다. 쉽게 사용할 수 있도록 GUI도 제공되고 있습니다. 물론 모바일 앱도 있고요.</p>
 <p>대략적인 작동 방식은, 특정 폴더를 지정하면 해당 폴더 전체를 다른 기기에서 동기화 시켜서 완전 동일한 폴더가 복사 되는 방식이라고 볼 수 있습니다.</p>
 <p>약간의 단점도 명확합니다. 로컬에 해당 파일을 그대로 복사하는 방식으로 동기화가 이뤄지기 때문에 각 저장소마다 파일 만큼의 용량을 차지하게 됩니다. 보안 때문이라면 이건 단점이 아니라 하나의 특징으로 봐야겠죠.</p>
 <p>더 자세한 설명과 설치 방법은 아래 링크로 대체하겠습니다. 동기화 하고 싶은 기기마다 해당 싱크띵이 구성되어 있어야 합니다.</p>
@@ -323,8 +279,8 @@ Obsidian 특징
 </table></div>
 <p>컴퓨터에서 파일이 저장되면 개인 서버에 해당 파일이 동기화 되고, 서버에서 휴대폰으로 한 번 더 동기화가 이뤄지는 방식입니다. 클라우드 서버처럼 혹은 NAS처럼 사용 중이라고 봐도 좋습니다.</p>
 <p>위처럼 각 동기화 시키려는 플랫폼마다 Syncthing을 설치 및 구성해두었다면 준비는 끝입니다.</p>
-<h3 id="obsidian-동기화">Obsidian 동기화</h3>
-<p>Obsidian에서 동기화 하는 방법도 무척 쉽습니다.</p>
+<h3 id="obsidian-동기화">Obsidian 동기화
+</h3><p>Obsidian에서 동기화 하는 방법도 무척 쉽습니다.</p>
 <p>말 그대로 폴더를 전부 동기화 해버리면 끝입니다.</p>
 <p>설명이 이걸로 끝일 정도로 정말 쉽습니다.</p>
 <p>그래도 좀 더 적어보자면,</p>
@@ -337,8 +293,8 @@ Obsidian 특징
 <li>해당 기기의 옵시디언에서 해당 폴더를 엽니다.</li>
 <li>파일이 모두 동기화 되었는지 확인합니다.</li>
 </ol>
-<h3 id="사용-시-특징">사용 시 특징</h3>
-<p><strong>동기화 속도</strong>
+<h3 id="사용-시-특징">사용 시 특징
+</h3><p><strong>동기화 속도</strong>
 동기화 속도는 싱크띵의 동기화 속도를 따릅니다. 저장이 되어서 변경이 감지되면 수 초 내에 동기화가 완료됩니다. 옵시디언 노트가 마크다운 방식이라 용량이 적어서 동기화 자체는 굉장히 빠른 편입니다.</p>
 <p>감지만 된다면 거의 즉시 동기화가 완료됩니다.</p>
 <p><strong>동기화 반영</strong>
@@ -351,12 +307,12 @@ Obsidian 특징
 <p><strong>동기화 트레픽</strong>
 동기화가 이뤄지지 않을 때는 기본적으로 휴면 상태입니다. 작성하는 시점에서의 윈도우 환경에서의 메모리 용량이 49.3MB 정도 되는 군요. 네트워크는 변경점을 확인하기 위한 용도의 신호를 주기적으로 보내고 받는 것으로 보입니다. 그 마저도 WiFi 환경에서만 동작하도록 제한할 수 있었습니다.</p>
 <p>50MB 이하의 메모리 사용량과 휴면 상태에서 변경을 확인하기 위한 용도의 신호를 주기적으로 주고 받습니다.</p>
-<h3 id="결론">결론</h3>
-<p>저는 일단 몇 주간 사용했을 때는 단점 없이 굉장히 편하게 사용했습니다. 주로 아이디어를 기록하는 용도로 사용하고 있는데, 앱 자체가 상당히 가볍다 보니 모바일로 대충 적은 걸 PC로 옮길 때의 스트레스가 없어졌습니다.</p>
+<h3 id="결론">결론
+</h3><p>저는 일단 몇 주간 사용했을 때는 단점 없이 굉장히 편하게 사용했습니다. 주로 아이디어를 기록하는 용도로 사용하고 있는데, 앱 자체가 상당히 가볍다 보니 모바일로 대충 적은 걸 PC로 옮길 때의 스트레스가 없어졌습니다.</p>
 <p>월마다 나가는 지출도 없고 동기화 속도도 굉장히 빠른 편이라서 편합니다. 잠깐 움직이면서 휴대폰에 적은 내용이 다시 컴퓨터에 앉으면 동기화가 완료되어 있어서 만족하고 있습니다.</p>
 <p>개인적으로 사용할 목적의 노트 앱을 찾고 있고, 동기화 해서 다른 기기에서도 쉽게 옮기고 싶다면 위 방식을 고려해봐도 좋겠습니다.</p>
-<h3 id="관련-링크">관련 링크</h3>
-<ul>
+<h3 id="관련-링크">관련 링크
+</h3><ul>
 <li>Syncthing - <a class="link" href="https://syncthing.net/"  target="_blank" rel="noopener"
     >https://syncthing.net/</a></li>
 <li>Obsidian - <a class="link" href="https://obsidian.md/"  target="_blank" rel="noopener"
@@ -393,7 +349,7 @@ Obsidian 특징
     
     <section class="powerby">
         <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a>로 만듦 <br />
-        <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>의 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.20.0">Stack</a></b> 테마 사용 중
+        <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>의 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.30.0">Stack</a></b> 테마 사용 중
     </section>
 </footer>
 
@@ -482,7 +438,7 @@ Obsidian 특징
                 src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
                 
                 >
-            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
 <script>
     (function () {
         const customFont = document.createElement('link');

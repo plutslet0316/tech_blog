@@ -13,16 +13,16 @@
         
         <guid>https://tech.plutslet.pe.kr/post/uno-platform-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0/</guid>
         <description>&lt;p&gt;Uno Platform은 다중 플랫폼을 지원하는 .NET 개발 도구다.&lt;/p&gt;
-&lt;h3 id=&#34;특징&#34;&gt;특징&lt;/h3&gt;
-&lt;ul&gt;
+&lt;h3 id=&#34;특징&#34;&gt;특징
+&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;XAML를 이용해 화면을 구성하고, C# 언어로 기능을 작성한다.&lt;/li&gt;
 &lt;li&gt;Android, iOS, WebAssembly, macOS, Linux, WinUI 등 다양한 플랫폼을 지원한다.&lt;/li&gt;
 &lt;li&gt;플랫폼 별로 별도의 프로젝트를 생성하는 것이 아니라, 하나의 프로젝트로 동시에 다양한 플랫폼으로 빌드할 수 있다.&lt;/li&gt;
 &lt;li&gt;어떤 환경에서든 픽셀이 이동하는 위치를 픽셀 단위로 정확하게 제어(Pixel Perfect Control)할 수 있다.&lt;/li&gt;
 &lt;li&gt;‘Uno Gallery’를 통해 디자인 및 샘플 코드를 확인할 수 있다.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;다운로드-및-사용-방법&#34;&gt;다운로드 및 사용 방법&lt;/h3&gt;
-&lt;ul&gt;
+&lt;h3 id=&#34;다운로드-및-사용-방법&#34;&gt;다운로드 및 사용 방법
+&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;터미널로 다운로드 방법
 &lt;ol&gt;
 &lt;li&gt;‘Visual Studio Installer’를 이용한다면 2022 버전의 3개의 워크로드를 설치해야 한다.
@@ -51,8 +51,8 @@
 &lt;/ol&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;프로젝트-만들기&#34;&gt;프로젝트 만들기&lt;/h3&gt;
-&lt;ol&gt;
+&lt;h3 id=&#34;프로젝트-만들기&#34;&gt;프로젝트 만들기
+&lt;/h3&gt;&lt;ol&gt;
 &lt;li&gt;새 프로젝트 만들기 클릭&lt;/li&gt;
 &lt;li&gt;용도에 맞게 ‘Uno’ 키워드의 템플릿(Uno Platform App) 선택 후 다음&lt;/li&gt;
 &lt;li&gt;프로젝트 이름 지정 후 다음

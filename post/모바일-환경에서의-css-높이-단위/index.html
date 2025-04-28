@@ -1,36 +1,18 @@
 <!DOCTYPE html>
 <html lang="ko" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='css에서 hight를 조절하다가 알게된 점을 기록합니다.
-문제 대략 상황은 이랬습니다.
-main 태그의 높이를 vh 단위로 지정해서 사용하던 중 모바일 환경에서는 높이가 의도한 대로 지정되지 않았습니다.
-태그의 높이를 모바일 브라우저의 상단, 하단 메뉴의 크기를 반영해서 지정하는 것이 아니라 그냥 화면의 크기 만큼 높이를 지정해버리는 것이었죠. 그래서 화면이 일부 잘린 것처럼 보였고, 잘린 부분은 아예 접근할 수 없게 되어 버리는 것입니다.
-해결 여러가지를 조사하던 중 높이 단위가 vh만 있던 게 아니더군요.
-모바일 브라우저에 대응되는 높이 단위는 아래와 같습니다.
-'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="css에서 hight를 조절하다가 알게된 점을 기록합니다.\n문제\r대략 상황은 이랬습니다.\nmain 태그의 높이를 vh 단위로 지정해서 사용하던 중 모바일 환경에서는 높이가 의도한 대로 지정되지 않았습니다.\n태그의 높이를 모바일 브라우저의 상단, 하단 메뉴의 크기를 반영해서 지정하는 것이 아니라 그냥 화면의 크기 만큼 높이를 지정해버리는 것이었죠. 그래서 화면이 일부 잘린 것처럼 보였고, 잘린 부분은 아예 접근할 수 없게 되어 버리는 것입니다.\n해결\r여러가지를 조사하던 중 높이 단위가 vh만 있던 게 아니더군요.\n모바일 브라우저에 대응되는 높이 단위는 아래와 같습니다.\n">
 <title>모바일 환경에서의 css 높이 단위</title>
 
 <link rel='canonical' href='https://tech.plutslet.pe.kr/post/%EB%AA%A8%EB%B0%94%EC%9D%BC-%ED%99%98%EA%B2%BD%EC%97%90%EC%84%9C%EC%9D%98-css-%EB%86%92%EC%9D%B4-%EB%8B%A8%EC%9C%84/'>
 
-<link rel="stylesheet" href="/scss/style.min.24ef1cc321916467896e8c70c10c0ad7b98c2a8df14298032fb637216e397f50.css"><meta property='og:title' content='모바일 환경에서의 css 높이 단위'>
-<meta property='og:description' content='css에서 hight를 조절하다가 알게된 점을 기록합니다.
-문제 대략 상황은 이랬습니다.
-main 태그의 높이를 vh 단위로 지정해서 사용하던 중 모바일 환경에서는 높이가 의도한 대로 지정되지 않았습니다.
-태그의 높이를 모바일 브라우저의 상단, 하단 메뉴의 크기를 반영해서 지정하는 것이 아니라 그냥 화면의 크기 만큼 높이를 지정해버리는 것이었죠. 그래서 화면이 일부 잘린 것처럼 보였고, 잘린 부분은 아예 접근할 수 없게 되어 버리는 것입니다.
-해결 여러가지를 조사하던 중 높이 단위가 vh만 있던 게 아니더군요.
-모바일 브라우저에 대응되는 높이 단위는 아래와 같습니다.
-'>
+<link rel="stylesheet" href="/scss/style.min.b9c8156d464c343bdacaf14a871581fb94cbbdb9dd5cbce4ba017361187cc930.css"><meta property='og:title' content="모바일 환경에서의 css 높이 단위">
+<meta property='og:description' content="css에서 hight를 조절하다가 알게된 점을 기록합니다.\n문제\r대략 상황은 이랬습니다.\nmain 태그의 높이를 vh 단위로 지정해서 사용하던 중 모바일 환경에서는 높이가 의도한 대로 지정되지 않았습니다.\n태그의 높이를 모바일 브라우저의 상단, 하단 메뉴의 크기를 반영해서 지정하는 것이 아니라 그냥 화면의 크기 만큼 높이를 지정해버리는 것이었죠. 그래서 화면이 일부 잘린 것처럼 보였고, 잘린 부분은 아예 접근할 수 없게 되어 버리는 것입니다.\n해결\r여러가지를 조사하던 중 높이 단위가 vh만 있던 게 아니더군요.\n모바일 브라우저에 대응되는 높이 단위는 아래와 같습니다.\n">
 <meta property='og:url' content='https://tech.plutslet.pe.kr/post/%EB%AA%A8%EB%B0%94%EC%9D%BC-%ED%99%98%EA%B2%BD%EC%97%90%EC%84%9C%EC%9D%98-css-%EB%86%92%EC%9D%B4-%EB%8B%A8%EC%9C%84/'>
 <meta property='og:site_name' content='Plutslet0316'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='CSS' /><meta property='article:tag' content='vh' /><meta property='article:tag' content='높이 단위' /><meta property='article:tag' content='모바일 브라우저' /><meta property='article:published_time' content='2024-02-08T00:31:19&#43;09:00'/><meta property='article:modified_time' content='2024-02-08T00:31:19&#43;09:00'/>
 <meta name="twitter:title" content="모바일 환경에서의 css 높이 단위">
-<meta name="twitter:description" content="css에서 hight를 조절하다가 알게된 점을 기록합니다.
-문제 대략 상황은 이랬습니다.
-main 태그의 높이를 vh 단위로 지정해서 사용하던 중 모바일 환경에서는 높이가 의도한 대로 지정되지 않았습니다.
-태그의 높이를 모바일 브라우저의 상단, 하단 메뉴의 크기를 반영해서 지정하는 것이 아니라 그냥 화면의 크기 만큼 높이를 지정해버리는 것이었죠. 그래서 화면이 일부 잘린 것처럼 보였고, 잘린 부분은 아예 접근할 수 없게 되어 버리는 것입니다.
-해결 여러가지를 조사하던 중 높이 단위가 vh만 있던 게 아니더군요.
-모바일 브라우저에 대응되는 높이 단위는 아래와 같습니다.
-"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<meta name="twitter:description" content="css에서 hight를 조절하다가 알게된 점을 기록합니다.\n문제\r대략 상황은 이랬습니다.\nmain 태그의 높이를 vh 단위로 지정해서 사용하던 중 모바일 환경에서는 높이가 의도한 대로 지정되지 않았습니다.\n태그의 높이를 모바일 브라우저의 상단, 하단 메뉴의 크기를 반영해서 지정하는 것이 아니라 그냥 화면의 크기 만큼 높이를 지정해버리는 것이었죠. 그래서 화면이 일부 잘린 것처럼 보였고, 잘린 부분은 아예 접근할 수 없게 되어 버리는 것입니다.\n해결\r여러가지를 조사하던 중 높이 단위가 vh만 있던 게 아니더군요.\n모바일 브라우저에 대응되는 높이 단위는 아래와 같습니다.\n"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 <link rel="manifest" href="/site.webmanifest">
@@ -94,7 +76,7 @@ main 태그의 높이를 vh 단위로 지정해서 사용하던 중 모바일 �
             <h1 class="site-name"><a href="/">Plutslet0316</a></h1>
             <h2 class="site-description"></h2>
         </div>
-    </header><ol class="social-menu">
+    </header><ol class="menu-social">
             
                 <li>
                     <a 
@@ -178,31 +160,12 @@ main 태그의 높이를 vh 단위로 지정해서 사용하던 중 모바일 �
             </a>
         </li>
         
+        <li class="menu-bottom-section">
+            <ol class="menu">
 
-        <div class="menu-bottom-section">
-                <li id="i18n-switch">  
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-  <path d="M4 5h7" />
-  <path d="M9 3v2c0 4.418 -2.239 8 -5 8" />
-  <path d="M5 9c-.003 2.144 2.952 3.908 6.7 4" />
-  <path d="M12 20l4 -9l4 9" />
-  <path d="M19.1 18h-6.2" />
-</svg>
-
-
-
-                    <select name="language" onchange="window.location.href = this.selectedOptions[0].value">
-                        
-                            <option value="https://tech.plutslet.pe.kr/" selected></option>
-                        
-                    </select>
-                </li>
-            
-            
-            
-                <li id="dark-mode-toggle">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
   <circle cx="8" cy="12" r="2" />
   <rect x="2" y="6" width="20" height="12" rx="6" />
@@ -210,7 +173,7 @@ main 태그의 높이를 vh 단위로 지정해서 사용하던 중 모바일 �
 
 
 
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
   <circle cx="16" cy="12" r="2" />
   <rect x="2" y="6" width="20" height="12" rx="6" />
@@ -218,10 +181,11 @@ main 태그의 높이를 vh 단위로 지정해서 사용하던 중 모바일 �
 
 
 
-                    <span>다크 모드</span>
-                </li>
-            
-        </div>
+                        <span>다크 모드</span>
+                    </li>
+                
+            </ol>
+        </li>
     </ol>
 </aside>
 
@@ -271,20 +235,6 @@ main 태그의 높이를 vh 단위로 지정해서 사용하던 중 모바일 �
         
 
         
-            <div>
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="12" cy="12" r="9" />
-  <polyline points="12 7 12 12 15 15" />
-</svg>
-
-
-
-                <time class="article-time--reading">
-                    1 분 정도
-                </time>
-            </div>
-        
     </footer>
     
 
@@ -297,13 +247,13 @@ main 태그의 높이를 vh 단위로 지정해서 사용하던 중 모바일 �
     
     
     <p>css에서 hight를 조절하다가 알게된 점을 기록합니다.</p>
-<h3 id="문제">문제</h3>
-<p>대략 상황은 이랬습니다.<br>
+<h3 id="문제">문제
+</h3><p>대략 상황은 이랬습니다.<br>
 main 태그의 높이를 vh 단위로 지정해서 사용하던 중 모바일 환경에서는 높이가 의도한 대로 지정되지 않았습니다.<br>
 태그의 높이를 모바일 브라우저의 상단, 하단 메뉴의 크기를 반영해서 지정하는 것이 아니라 그냥 화면의 크기 만큼 높이를 지정해버리는 것이었죠.
 그래서 화면이 일부 잘린 것처럼 보였고, 잘린 부분은 아예 접근할 수 없게 되어 버리는 것입니다.</p>
-<h3 id="해결">해결</h3>
-<p>여러가지를 조사하던 중 높이 단위가 vh만 있던 게 아니더군요.<br>
+<h3 id="해결">해결
+</h3><p>여러가지를 조사하던 중 높이 단위가 vh만 있던 게 아니더군요.<br>
 모바일 브라우저에 대응되는 높이 단위는 아래와 같습니다.</p>
 <ul>
 <li>svh: Small Viewport Height, 가장 작은 화면 영역을 의미하는 높이 단위입니다. 상, 하단 메뉴가 없어도 해당 높이를 반영하여 값을 가져옵니다.</li>
@@ -316,8 +266,8 @@ main 태그의 높이를 vh 단위로 지정해서 사용하던 중 모바일 �
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#f92672">main</span> { <span style="color:#66d9ef">height</span>:<span style="color:#ae81ff">100</span>dvh; }
 </span></span></code></pre></div><p>이 높이 단위를 더 자세히 살펴보고 싶다면 아래의 링크도 확인해주세요.<br>
 더 자세하게 설명되어 있습니다.</p>
-<h3 id="참고-자료">참고 자료</h3>
-<ul>
+<h3 id="참고-자료">참고 자료
+</h3><ul>
 <li><a class="link" href="https://web.dev/blog/viewport-units?hl=ko"  target="_blank" rel="noopener"
     >https://web.dev/blog/viewport-units?hl=ko</a></li>
 <li><a class="link" href="https://mong-blog.tistory.com/entry/CSSJS-vh-%eb%b2%84%ea%b7%b8-%ed%95%b4%ea%b2%b0%eb%b0%a9%eb%b2%95dvh-%ec%82%ac%ec%9a%a9%eb%b2%95-js-%ea%b3%84%ec%82%b0%eb%b2%95"  target="_blank" rel="noopener"
@@ -364,7 +314,7 @@ main 태그의 높이를 vh 단위로 지정해서 사용하던 중 모바일 �
     
     <section class="powerby">
         <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a>로 만듦 <br />
-        <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>의 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.20.0">Stack</a></b> 테마 사용 중
+        <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>의 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.30.0">Stack</a></b> 테마 사용 중
     </section>
 </footer>
 
@@ -453,7 +403,7 @@ main 태그의 높이를 vh 단위로 지정해서 사용하던 중 모바일 �
                 src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
                 
                 >
-            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
 <script>
     (function () {
         const customFont = document.createElement('link');
